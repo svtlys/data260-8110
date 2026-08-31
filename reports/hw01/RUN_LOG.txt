@@ -1,0 +1,93 @@
+
+=== run_experiment.py — 40-run non-determinism experiment ===
+(venv) (base) svtlys@Alyssas-MacBook-Air data260-8110 % python run_experiment.py
+
+=== Running 20 runs at temperature=0.7 ===
+  run 1/20: tags=['Spacious 2BR Apartment', 'Near Downtown San Jose', 'Pet-Friendly'] latency=82797ms
+  run 2/20: tags=['Pet-Friendly', 'Updated Kitchen', 'Downtown Proximity'] latency=95481ms
+  run 3/20: tags=['2BR Apartment', 'San Jose', 'Pet-Friendly'] latency=174366ms
+  run 4/20: tags=['Near Downtown San Jose', 'Pet-Friendly', 'Updated Kitchen'] latency=164897ms
+  run 5/20: tags=['Spacious 2BR Apartment', 'Near Downtown San Jose', 'Pet-Friendly'] latency=90950ms
+  run 6/20: tags=['downtown_location', 'light_rail_access', 'pet_friendly'] latency=106226ms
+'  run 7/20: tags=['Downtown_San_Jose', 'Updated_Kitchen', 'Pet_Friendly'] latency=105601ms
+  run 8/20: tags=['Pet-Friendly', 'Near Downtown San Jose', 'Updated Kitchen'] latency=106575ms
+  run 9/20: tags=['Near Downtown', 'Pet-Friendly', 'Updated Kitchen'] latency=156379ms
+  run 10/20: tags=['Pet-Friendly', 'Downtown Location', 'Off-Street Parking'] latency=144684ms
+  run 11/20: tags=['downtown_san_jose', '2br_apartment', 'light_rail_access'] latency=136478ms
+  run 12/20: tags=['2BR Apartment', 'Downtown San Jose', 'Pet-Friendly'] latency=156387ms
+  run 13/20: tags=['Spacious 2BR', 'Near Downtown San Jose', 'Pet-Friendly'] latency=144744ms
+  run 14/20: tags=['Spacious 2BR Apartment', 'Near Downtown San Jose', 'Pet-Friendly'] latency=134314ms
+  run 15/20: tags=['Near Downtown San Jose', 'Pet-Friendly', 'Updated Kitchen'] latency=240060ms
+  run 16/20: tags=['Downtown San Jose', 'Updated Kitchen', 'In-Unit Laundry'] latency=205565ms
+  run 17/20: tags=['San Jose Downtown', 'Available Oct 1', 'Pet-Friendly'] latency=186443ms
+  run 18/20: tags=['Downtown Proximity', 'Updated Kitchen', 'Pet-Friendly'] latency=161212ms
+  run 19/20: tags=['Near Downtown San Jose', 'Updated Kitchen Laundry', 'Pet-Friendly Apartment'] latency=138985ms
+  run 20/20: tags=['Spacious 2BR', 'Downtown San Jose', 'Pet-Friendly'] latency=133221ms
+
+=== Running 20 runs at temperature=0.0 ===
+  run 1/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=146834ms
+  run 2/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=148146ms
+  run 3/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=152887ms
+  run 4/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=134276ms
+  run 5/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=140969ms
+  run 6/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=142882ms
+  run 7/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=142840ms
+  run 8/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=145895ms
+  run 9/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=146602ms
+  run 10/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=149167ms
+  run 11/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=158058ms
+  run 12/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=150319ms
+  run 13/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=168697ms
+  run 14/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=136402ms
+  run 15/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=165655ms
+  run 16/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=154570ms
+  run 17/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=181531ms
+  run 18/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=154353ms
+  run 19/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=143575ms
+  run 20/20: tags=['Spacious 2BR', 'Pet-Friendly', 'Downtown San Jose'] latency=146264ms
+
+Raw results saved to reports/hw01/raw/nondeterminism_results.json and reports/hw01/raw/nondeterminism_results.csv
+
+=== SUMMARY ===
+
+--- Temperature 0.7 ---
+{
+  "distinct_tag_sets": 15,
+  "tags_in_all_runs": [],
+  "tags_in_exactly_one_run": [
+    "2br_apartment",
+    "Available Oct 1",
+    "Downtown Location",
+    "Downtown_San_Jose",
+    "In-Unit Laundry",
+    "Near Downtown",
+    "Off-Street Parking",
+    "Pet-Friendly Apartment",
+    "Pet_Friendly",
+    "San Jose",
+    "San Jose Downtown",
+    "Updated Kitchen Laundry",
+    "Updated_Kitchen",
+    "downtown_location",
+    "downtown_san_jose",
+    "pet_friendly"
+  ],
+  "latency_p50_ms": 141834.8,
+  "latency_p95_ms": 207289.6,
+  "latency_p99_ms": 233505.6
+}
+
+--- Temperature 0.0 ---
+{
+  "distinct_tag_sets": 1,
+  "tags_in_all_runs": [
+    "Downtown San Jose",
+    "Pet-Friendly",
+    "Spacious 2BR"
+  ],
+  "tags_in_exactly_one_run": [],
+  "latency_p50_ms": 147490.3,
+  "latency_p95_ms": 169338.6,
+  "latency_p99_ms": 179092.4
+}
+

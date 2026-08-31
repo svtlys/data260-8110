@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HW1-AlyssaGomez</title>
+</head>
+<body>
+  <h1>Rental Housing Listing</h1>
+
+  <form id="listingForm">
+    <div>
+      <label for="address">Property Address:</label><br />
+      <input
+        type="text"
+        id="address"
+        name="address"
+        placeholder="e.g. 123 Main St, San Jose, CA"
+        autofocus
+        required
+      />
+    </div>
+    <br />
+
+    <div>
+      <label for="landlordName">Landlord / Property Manager Name:</label><br />
+      <input
+        type="text"
+        id="landlordName"
+        name="landlordName"
+        placeholder="e.g. Jane Smith Property Management"
+        required
+      />
+    </div>
+    <br />
+
+    <div>
+      <label for="submitterEmail">Your Email:</label><br />
+      <input
+        type="email"
+        id="submitterEmail"
+        name="submitterEmail"
+        placeholder="e.g. you@example.com"
+        required
+      />
+    </div>
+    <br />
+
+    <div>
+      <label for="description">Listing Description:</label><br />
+      <textarea
+        id="description"
+        name="description"
+        placeholder="Describe the unit: amenities, square footage, nearby transit, lease terms, etc."
+        required
+      ></textarea>
+    </div>
+    <br />
+
+    <div>
+      <label for="category">Unit Type:</label><br />
+      <select id="category" name="category">
+        <option value="Studio">Studio</option>
+        <option value="1 Bedroom">1 Bedroom</option>
+        <option value="2 Bedroom">2 Bedroom</option>
+        <option value="3+ Bedroom">3+ Bedroom</option>
+      </select>
+    </div>
+    <br />
+
+    <div>
+      <input type="checkbox" id="terms" name="terms" />
+      <label for="terms">I agree to the terms and conditions.</label>
+    </div>
+    <br />
+
+    <button type="submit">Submit Listing</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>
