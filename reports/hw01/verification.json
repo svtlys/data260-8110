@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-08-31T04:12:34.882236+00:00",
+  "total_checks": 20,
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "file exists and non-empty: DOMAIN_SCHEMA.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: AGENT.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application/app.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/Dockerfile",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/agents_demo.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/hw1_client.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: src/model_client.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: run_experiment.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw01/RUN_LOG.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw01/METRICS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw01/AI_USE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw01/cases/nondeterminism_input.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "non-determinism raw JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "non-determinism raw CSV exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw results contain 40 runs",
+      "passed": true,
+      "detail": "found 40"
+    },
+    {
+      "check": "Dockerfile has FROM instruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Dockerfile exposes a port",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Ollama reachable and qwen3:8b pulled",
+      "passed": true,
+      "detail": "NAME        ID              SIZE      MODIFIED    \nqwen3:8b    500a1f067a9f    5.2 GB    5 hours ago"
+    }
+  ]
+}
