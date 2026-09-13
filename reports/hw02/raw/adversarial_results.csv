@@ -1,0 +1,6 @@
+run,attempts,valid,latency_ms
+0,10,False,1472966.2
+1,1,True,47026.9
+2,2,True,198057.7
+3,2,True,280161.4
+4,5,True,1709020.6

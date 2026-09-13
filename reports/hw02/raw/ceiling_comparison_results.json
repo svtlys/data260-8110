@@ -1,0 +1,282 @@
+[
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 65758.8369846344,
+    "run": 0,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 36530.709981918335,
+    "run": 1,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 64466.891050338745,
+    "run": 2,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 24114.649057388306,
+    "run": 3,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 53554.56900596619,
+    "run": 4,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 56720.229148864746,
+    "run": 5,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 542083.2760334015,
+    "run": 6,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 71016.75987243652,
+    "run": 7,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 173749.577999115,
+    "run": 8,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 50169.04926300049,
+    "run": 9,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 58147.992849349976,
+    "run": 10,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 55727.680921554565,
+    "run": 11,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 23079.997301101685,
+    "run": 12,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 89443.22299957275,
+    "run": 13,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 85291.04590415955,
+    "run": 14,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 56271.064043045044,
+    "run": 15,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 449778.1159877777,
+    "run": 16,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 36896.83675765991,
+    "run": 17,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 64229.18915748596,
+    "run": 18,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 982864.0518188477,
+    "run": 19,
+    "ceiling": 2
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 51725.91996192932,
+    "run": 0,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 38713.79804611206,
+    "run": 1,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 64795.65906524658,
+    "run": 2,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 33781.37183189392,
+    "run": 3,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 284456.17413520813,
+    "run": 4,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 36202.92401313782,
+    "run": 5,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 62908.61225128174,
+    "run": 6,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 195633.59570503235,
+    "run": 7,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 63030.073165893555,
+    "run": 8,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 56573.49896430969,
+    "run": 9,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 211738.89112472534,
+    "run": 10,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 68704.11109924316,
+    "run": 11,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 36254.13799285889,
+    "run": 12,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 82917.65189170837,
+    "run": 13,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 49136.369943618774,
+    "run": 14,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 52645.30086517334,
+    "run": 15,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 64922.41096496582,
+    "run": 16,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 62426.0139465332,
+    "run": 17,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 32969.38490867615,
+    "run": 18,
+    "ceiling": 10
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 77651.21388435364,
+    "run": 19,
+    "ceiling": 10
+  }
+]

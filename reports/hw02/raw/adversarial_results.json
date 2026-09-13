@@ -1,0 +1,57 @@
+[
+  {
+    "attempts": 10,
+    "valid": false,
+    "latency_ms": 1472966.248035431,
+    "attempt_errors": [
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 34 words, must be at most 25 [type=value_error, input_value='This 3-bedroom, 2.5-bath...nd private wine cellar.', input_type=str",
+      "No JSON object found in model output:\nThis 3-bedroom, 2.5-bathroom luxury loft in downtown San Jose includes a rooftop pool, 24-hour gym, coworking space with fiber internet, EV charging, private dog ",
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 34 words, must be at most 25 [type=value_error, input_value='This 3-bedroom, 2.5-bath..., and reserved parking.', input_type=str",
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 34 words, must be at most 25 [type=value_error, input_value='3-bedroom, 2.5-bath luxu..., and reserved parking.', input_type=str",
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 34 words, must be at most 25 [type=value_error, input_value='3-bedroom, 2.5-bath luxu..., and reserved parking.', input_type=str",
+      "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "2 validation errors for PlannerOutput\ntags\n  Value error, expected exactly 3 tags, got 6 [type=value_error, input_value=['luxury loft', 'downtown...ties', 'commute access'], input_type=list]\n    For f",
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 28 words, must be at most 25 [type=value_error, input_value='3-bedroom, 2.5-bath luxu...mart home, and parking.', input_type=str",
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 26 words, must be at most 25 [type=value_error, input_value='3-bedroom, 2.5-bath luxu...ne cellar, and parking.', input_type=str",
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 26 words, must be at most 25 [type=value_error, input_value='3-bedroom, 2.5-bath luxu..., wine cellar, parking.', input_type=str"
+    ],
+    "run": 0
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 47026.92198753357,
+    "attempt_errors": [],
+    "run": 1
+  },
+  {
+    "attempts": 2,
+    "valid": true,
+    "latency_ms": 198057.65414237976,
+    "attempt_errors": [
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 28 words, must be at most 25 [type=value_error, input_value='This 3-bedroom, 2.5-bath...nd private wine cellar.', input_type=str"
+    ],
+    "run": 2
+  },
+  {
+    "attempts": 2,
+    "valid": true,
+    "latency_ms": 280161.3681316376,
+    "attempt_errors": [
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 32 words, must be at most 25 [type=value_error, input_value=\"Luxury downtown San Jose... elevator, and parking.\", input_type=str"
+    ],
+    "run": 3
+  },
+  {
+    "attempts": 5,
+    "valid": true,
+    "latency_ms": 1709020.6279754639,
+    "attempt_errors": [
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 29 words, must be at most 25 [type=value_error, input_value='Luxury 3-bedroom loft in..., and reserved parking.', input_type=str",
+      "No JSON object found in model output:\n**Summary:**  \nLuxury 3-bedroom Downtown San Jose loft features rooftop pool, gym, coworking, EV charging, dog park, 24/7 concierge, garden, wine cellar, smart ho",
+      "1 validation error for PlannerOutput\nsummary\n  Value error, summary has 27 words, must be at most 25 [type=value_error, input_value='Luxury 3BR San Jose loft..., and reserved parking.', input_type=str",
+      "No JSON object found in model output:\n\"Luxury 3BR San Jose loft with rooftop pool, gym, coworking, EV charging, dog park, 24/7 concierge, garden, wine cellar, smart home, floor heating, elevator, rese"
+    ],
+    "run": 4
+  }
+]

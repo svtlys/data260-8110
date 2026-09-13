@@ -1,0 +1,452 @@
+[
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 70756.34384155273,
+    "final_output": {
+      "tags": [
+        "NearDowntown",
+        "PetFriendly",
+        "UpdatedKitchen"
+      ],
+      "summary": "Spacious 2BR near downtown San Jose with updated kitchen, pet-friendly, and off-street parking available October 1st."
+    },
+    "run": 0,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 49001.93405151367,
+    "final_output": {
+      "tags": [
+        "2BR Apartment",
+        "San Jose Downtown",
+        "Pet-Friendly"
+      ],
+      "summary": "Bright 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and off-street parking available October 1st."
+    },
+    "run": 1,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 62186.75518035889,
+    "final_output": {
+      "tags": [
+        "Spacious 2BR Apartment",
+        "Downtown Proximity",
+        "Pet-Friendly Parking"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and off-street parking."
+    },
+    "run": 2,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 24994.171857833862,
+    "final_output": {
+      "tags": [
+        "Downtown San Jose",
+        "Pet-Friendly Apartment",
+        "Light Rail Access"
+      ],
+      "summary": "Spacious 2BR apartment near Downtown San Jose with updated kitchen, pet-friendly, and light rail access available October 1st."
+    },
+    "run": 3,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 88796.31066322327,
+    "final_output": {
+      "tags": [
+        "Pet-Friendly",
+        "Light Rail Access",
+        "Downtown San Jose"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose, pet-friendly, light rail access, and updated kitchen."
+    },
+    "run": 4,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 40222.70488739014,
+    "final_output": {
+      "tags": [
+        "Pet-Friendly",
+        "Updated Kitchen",
+        "Downtown San Jose"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose, pet-friendly with updated kitchen, in-unit laundry, and light rail access."
+    },
+    "run": 5,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 50430.793046951294,
+    "final_output": {
+      "tags": [
+        "downtown san jose",
+        "light rail access",
+        "updated kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, light rail access, and pet-friendly options available October 1st."
+    },
+    "run": 6,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 465870.92781066895,
+    "final_output": {
+      "tags": [
+        "San Jose Downtown",
+        "Light Rail Access",
+        "Updated Kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose, close to light rail, updated kitchen, pet-friendly, and includes off-street parking."
+    },
+    "run": 7,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 321737.53118515015,
+    "final_output": {
+      "tags": [
+        "2BR Apartment",
+        "Downtown San Jose",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose offers pet-friendly access, light rail proximity, updated kitchen, and off-street parking."
+    },
+    "run": 8,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 40198.75502586365,
+    "final_output": {
+      "tags": [
+        "San Jose Downtown",
+        "Pet-Friendly",
+        "Updated Kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and close to light rail and shops, available October 1st."
+    },
+    "run": 9,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 29316.982984542847,
+    "final_output": {
+      "tags": [
+        "2BR Apartment",
+        "Downtown San Jose",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose features updated kitchen, pet-friendly policy, and light rail access."
+    },
+    "run": 10,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 59640.14410972595,
+    "final_output": {
+      "tags": [
+        "Pet-Friendly",
+        "Updated Kitchen",
+        "Downtown San Jose"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and walkable to shops."
+    },
+    "run": 11,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 46109.7731590271,
+    "final_output": {
+      "tags": [
+        "downtown san jose",
+        "light rail access",
+        "updated kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with light rail access, updated kitchen, and pet-friendly availability starting October 1st."
+    },
+    "run": 12,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 72455.5652141571,
+    "final_output": {
+      "tags": [
+        "Spacious 2BR",
+        "Downtown San Jose",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2-bedroom apartment near downtown San Jose with updated kitchen, in-unit laundry, and pet-friendly options available October 1st."
+    },
+    "run": 13,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 58310.307025909424,
+    "final_output": {
+      "tags": [
+        "NearDowntownSanJose",
+        "PetFriendly",
+        "OffStreetParking"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, off-street parking, and light rail access available October 1st."
+    },
+    "run": 14,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 57295.671224594116,
+    "final_output": {
+      "tags": [
+        "San Jose Downtown",
+        "Updated Kitchen",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and convenient amenities."
+    },
+    "run": 15,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 68875.70309638977,
+    "final_output": {
+      "tags": [
+        "San Jose Downtown",
+        "2BR Apartment",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with light rail access, updated kitchen, pet-friendly, and off-street parking available Oct 1."
+    },
+    "run": 16,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 47484.53402519226,
+    "final_output": {
+      "tags": [
+        "Downtown San Jose",
+        "Pet-Friendly",
+        "Available Oct 1"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose, pet-friendly, available Oct 1 with updated kitchen and laundry."
+    },
+    "run": 17,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 106431.01596832275,
+    "final_output": {
+      "tags": [
+        "2BR Apartment",
+        "Downtown San Jose",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with pet-friendly, light rail access, and off-street parking."
+    },
+    "run": 18,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 96616.81199073792,
+    "final_output": {
+      "tags": [
+        "San Jose Downtown",
+        "Pet-Friendly",
+        "Updated Kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and off-street parking available October 1st."
+    },
+    "run": 19,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 101265.43188095093,
+    "final_output": {
+      "tags": [
+        "San Jose Downtown",
+        "Light Rail Access",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with light rail access, updated kitchen, and pet-friendly availability."
+    },
+    "run": 20,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 35622.56407737732,
+    "final_output": {
+      "tags": [
+        "SanJoseDowntown",
+        "UpdatedKitchen",
+        "PetFriendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose features updated kitchen, pet-friendly, and light rail access. Available October 1st."
+    },
+    "run": 21,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 83569.09704208374,
+    "final_output": {
+      "tags": [
+        "Pet-Friendly",
+        "Downtown Access",
+        "Updated Kitchen"
+      ],
+      "summary": "Bright 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and off-street parking available October 1st."
+    },
+    "run": 22,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 66182.23094940186,
+    "final_output": {
+      "tags": [
+        "2BR apartment",
+        "downtown San Jose",
+        "light rail access"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose, close to light rail, pet-friendly, available October 1st."
+    },
+    "run": 23,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 159808.60996246338,
+    "final_output": {
+      "tags": [
+        "2BR Apartment",
+        "Downtown San Jose",
+        "Pet-Friendly"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and off-street parking."
+    },
+    "run": 24,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 28760.612964630127,
+    "final_output": {
+      "tags": [
+        "Downtown San Jose",
+        "Pet-Friendly Apartment",
+        "Light Rail Access"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose offers updated kitchen, pet-friendly access, and light rail proximity with October 1st availability."
+    },
+    "run": 25,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 28469.055891036987,
+    "final_output": {
+      "tags": [
+        "Pet Friendly",
+        "Light Rail Access",
+        "Updated Kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose, pet-friendly with updated kitchen, light rail access, and off-street parking available October 1st."
+    },
+    "run": 26,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 68633.56637954712,
+    "final_output": {
+      "tags": [
+        "Pet-Friendly",
+        "Updated Kitchen",
+        "Near Downtown"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose, updated kitchen, pet-friendly, and includes parking."
+    },
+    "run": 27,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 24602.24175453186,
+    "final_output": {
+      "tags": [
+        "Downtown San Jose",
+        "Pet-Friendly",
+        "Updated Kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and off-street parking available October 1st."
+    },
+    "run": 28,
+    "category": "valid_first_attempt"
+  },
+  {
+    "attempts": 1,
+    "valid": true,
+    "latency_ms": 67351.25184059143,
+    "final_output": {
+      "tags": [
+        "Near Downtown",
+        "Pet-Friendly",
+        "Updated Kitchen"
+      ],
+      "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen, pet-friendly, and off-street parking available October 1st."
+    },
+    "run": 29,
+    "category": "valid_first_attempt"
+  }
+]

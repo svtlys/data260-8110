@@ -1,0 +1,175 @@
+=== agent_graph.py — normal run (happy path) ===
+(venv) (base) svtlys@Alyssas-MacBook-Air code % python agent_graph.py
+=== STREAMING GRAPH EXECUTION ===
+
+--- NODE: Supervisor ---
+    turn_count -> 1
+    router: no proposal yet -> planner
+>>> supervisor produced: {'turn_count': 1}
+
+--- NODE: Planner ---
+[turn 1] input_tokens=172 output_tokens=842 total_tokens=1014
+>>> planner produced: {'planner_proposal': {'tags': ['Downtown San Jose', 'Pet-Friendly', 'Updated Kitchen'], 'summary': 'Spacious 2BR near downtown San Jose, pet-friendly with updated kitchen and light rail access.'}, 'reviewer_feedback': None}
+
+--- NODE: Supervisor ---
+    turn_count -> 2
+    router: proposal exists, no feedback yet -> reviewer
+>>> supervisor produced: {'turn_count': 2}
+
+--- NODE: Reviewer ---
+[turn 2] input_tokens=422 output_tokens=470 total_tokens=892
+>>> reviewer produced: {'reviewer_feedback': {'has_issues': False, 'notes': ''}}
+
+--- NODE: Supervisor ---
+    turn_count -> 3
+    router: no issues -> END
+>>> supervisor produced: {'turn_count': 3}
+
+=== FINAL STATE ===
+{
+  "supervisor": {
+    "turn_count": 3
+  }
+}
+
+=== agent_graph.py — forced self-correction loop test (reviewer_node temporarily patched to always return has_issues=True) ===
+--- NODE: Supervisor --- turn_count -> 1 -> planner
+--- NODE: Planner --- [turn 1] input_tokens=172 output_tokens=611 total_tokens=783, validation: PASSED
+--- NODE: Supervisor --- turn_count -> 2 -> reviewer
+--- NODE: Reviewer --- [turn 2] input_tokens=438 output_tokens=480 total_tokens=918 -> has_issues: True (forced)
+--- NODE: Supervisor --- turn_count -> 3 -> planner (retry)
+--- NODE: Planner --- [turn 3] input_tokens=635 output_tokens=1595 total_tokens=2230, validation: PASSED
+--- NODE: Supervisor --- turn_count -> 4 -> reviewer
+--- NODE: Reviewer --- [turn 4] input_tokens=901 output_tokens=533 total_tokens=1434 -> has_issues: True (forced)
+--- NODE: Supervisor --- turn_count -> 5 -> planner (retry)
+--- NODE: Planner --- [turn 5] input_tokens=1098 output_tokens=535 total_tokens=1633, validation: PASSED
+--- NODE: Supervisor --- turn_count -> 6 -> reviewer
+--- NODE: Reviewer --- [turn 6] input_tokens=1364 output_tokens=531 total_tokens=1895 -> has_issues: True (forced)
+--- NODE: Supervisor --- turn_count -> 7 -> planner (retry)
+--- NODE: Planner --- [turn 7] input_tokens=1561 output_tokens=634 total_tokens=2195
+    validation: FAILED - 2 validation errors for PlannerOutput
+    tags: Field required [type=missing, input_value={'has_issues': False, 'notes': ''}, input_type=dict]
+    summary: Field required [type=missing, input_value={'has_issues': False, 'notes': ''}, input_type=dict]
+--- NODE: Supervisor --- turn_count -> 8 -> planner (no proposal, retry after validation failure)
+--- NODE: Planner --- [turn 8] input_tokens=1889 output_tokens=720 total_tokens=2609, validation: PASSED
+--- NODE: Supervisor --- turn_count -> 9 -> reviewer
+--- NODE: Reviewer --- [turn 9] input_tokens=2155 output_tokens=424 total_tokens=2579 -> has_issues: True (forced)
+--- NODE: Supervisor --- turn_count -> 10 -> turn ceiling reached -> END
+
+=== FINAL STATE ===
+{
+  "supervisor": {
+    "turn_count": 10
+  }
+}
+
+Note: this run captured a genuine, non-forced Pydantic validation failure at turn 7 (the model
+returned Reviewer-shaped JSON {"has_issues": false, "notes": ""} instead of Planner-shaped JSON,
+likely due to context confusion from the long accumulated conversation history). This served as
+real evidence for Part 4 requirements 1-2, not a synthetic test.
+
+
+=== run_schema_experiment.py — 30-run schema validation experiment ===
+(venv) (base) svtlys@Alyssas-MacBook-Air data260-8110 % python run_schema_experiment.py
+=== Running 30 runs (turn_ceiling=10) ===
+
+run 1/30: attempts=1 valid=True category=valid_first_attempt latency=70756ms
+run 2/30: attempts=1 valid=True category=valid_first_attempt latency=49002ms
+run 3/30: attempts=1 valid=True category=valid_first_attempt latency=62187ms
+run 4/30: attempts=1 valid=True category=valid_first_attempt latency=24994ms
+run 5/30: attempts=1 valid=True category=valid_first_attempt latency=88796ms
+run 6/30: attempts=1 valid=True category=valid_first_attempt latency=40223ms
+run 7/30: attempts=1 valid=True category=valid_first_attempt latency=50431ms
+run 8/30: attempts=1 valid=True category=valid_first_attempt latency=465871ms
+run 9/30: attempts=1 valid=True category=valid_first_attempt latency=321738ms
+run 10/30: attempts=1 valid=True category=valid_first_attempt latency=40199ms
+run 11/30: attempts=1 valid=True category=valid_first_attempt latency=29317ms
+run 12/30: attempts=1 valid=True category=valid_first_attempt latency=59640ms
+run 13/30: attempts=1 valid=True category=valid_first_attempt latency=46110ms
+run 14/30: attempts=1 valid=True category=valid_first_attempt latency=72456ms
+run 15/30: attempts=1 valid=True category=valid_first_attempt latency=58310ms
+run 16/30: attempts=1 valid=True category=valid_first_attempt latency=57296ms
+run 17/30: attempts=1 valid=True category=valid_first_attempt latency=68876ms
+run 18/30: attempts=1 valid=True category=valid_first_attempt latency=47485ms
+run 19/30: attempts=1 valid=True category=valid_first_attempt latency=106431ms
+run 20/30: attempts=1 valid=True category=valid_first_attempt latency=96617ms
+run 21/30: attempts=1 valid=True category=valid_first_attempt latency=101265ms
+run 22/30: attempts=1 valid=True category=valid_first_attempt latency=35623ms
+run 23/30: attempts=1 valid=True category=valid_first_attempt latency=83569ms
+run 24/30: attempts=1 valid=True category=valid_first_attempt latency=66182ms
+run 25/30: attempts=1 valid=True category=valid_first_attempt latency=159809ms
+run 26/30: attempts=1 valid=True category=valid_first_attempt latency=28761ms
+run 27/30: attempts=1 valid=True category=valid_first_attempt latency=28469ms
+run 28/30: attempts=1 valid=True category=valid_first_attempt latency=68634ms
+run 29/30: attempts=1 valid=True category=valid_first_attempt latency=24602ms
+run 30/30: attempts=1 valid=True category=valid_first_attempt latency=67351ms
+
+Raw results saved to reports/hw02/raw/schema_validation_results.json and .csv
+
+=== SUMMARY (30 runs) ===
+Outcome                      Count    Mean latency (ms)
+valid_first_attempt          30       84033.2
+valid_after_1_retry          0        0.0
+valid_after_2plus_retries    0        0.0
+abandoned_at_ceiling         0        0.0
+
+
+=== run_ceiling_experiment.py — turn ceiling comparison (2 vs 10, 20 runs each) ===
+(venv) (base) svtlys@Alyssas-MacBook-Air data260-8110 % python run_ceiling_experiment.py
+
+=== Running 20 runs with turn_ceiling=2 ===
+[20 runs, all attempts=1 valid=True, latencies ranging 23080ms-982864ms]
+
+=== Running 20 runs with turn_ceiling=10 ===
+[20 runs, all attempts=1 valid=True, latencies ranging 32969ms-284456ms]
+
+Raw results saved to reports/hw02/raw/ceiling_comparison_results.json and .csv
+
+=== SUMMARY ===
+
+--- Ceiling = 2 ---
+Completion rate: 100.0% (20/20)
+Mean latency: 151994.7 ms
+
+--- Ceiling = 10 ---
+Completion rate: 100.0% (20/20)
+Mean latency: 81359.4 ms
+
+
+=== run_adversarial_experiment.py — adversarial input (5 runs) ===
+(venv) (base) svtlys@Alyssas-MacBook-Air data260-8110 % python run_adversarial_experiment.py
+=== Running 5 adversarial runs (turn_ceiling=10) ===
+
+run 1/5: attempts=10 valid=False latency=1472966ms
+    errors along the way: summary word-count violations (34, 34, 34 words), malformed JSON,
+    wrong tag count (6 instead of 3), summary word-count violations (28, 26, 26 words)
+run 2/5: attempts=1 valid=True latency=47027ms
+run 3/5: attempts=2 valid=True latency=198058ms
+    errors along the way: summary has 28 words, must be at most 25
+run 4/5: attempts=2 valid=True latency=280161ms
+    errors along the way: summary has 32 words, must be at most 25
+run 5/5: attempts=5 valid=True latency=1709021ms
+    errors along the way: summary word-count violations (29, 27 words), malformed JSON (2x)
+
+Raw results saved to reports/hw02/raw/adversarial_results.json and .csv
+
+=== SUMMARY ===
+Hit turn ceiling: 1/5 runs
+
+
+=== verify_hw02.py — self-check smoke test ===
+[PASS] file exists and non-empty: code/web_application/index.html
+[PASS] file exists and non-empty: code/web_application/app.js
+[PASS] file exists and non-empty: code/main.py
+[PASS] file exists and non-empty: code/agent_graph.py
+[PASS] file exists and non-empty: src/model_client.py
+[PASS] file exists and non-empty: run_schema_experiment.py
+[PASS] file exists and non-empty: run_ceiling_experiment.py
+[PASS] file exists and non-empty: run_adversarial_experiment.py
+[PASS] file exists and non-empty: reports/hw02/RUN_LOG.txt
+[PASS] file exists and non-empty: reports/hw02/METRICS.md
+[PASS] file exists and non-empty: reports/hw02/AI_USE.md
+[PASS] file exists and non-empty: reports/hw02/cases/schema_input.json
+[PASS] file exists and non-empty: reports/hw02/cases/adversarial_input.json
+[PASS] FastAPI backend responds on port 8010 - got HTTP 200
+[NOTE: paste remaining LangGraph/raw-file/Ollama check results here once verify_hw02.py finishes running to completion] 

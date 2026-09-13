@@ -1,0 +1,112 @@
+{
+  "homework": "HW2",
+  "sid4": "8110",
+  "commit_hash": "22e952d95ad6c355e61e0cbc08bee85c89453c30",
+  "model_config": {
+    "model": "qwen3:8b",
+    "port_base": 8010
+  },
+  "seed": 8110,
+  "verify_seed": 268110,
+  "timestamp": "2026-09-13T03:22:29.100448+00:00",
+  "total_checks": 19,
+  "passed": 16,
+  "failed": 3,
+  "checks": [
+    {
+      "check": "file exists and non-empty: code/web_application/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application/app.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/main.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/agent_graph.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: src/model_client.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: run_schema_experiment.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: run_ceiling_experiment.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: run_adversarial_experiment.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw02/RUN_LOG.txt",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw02/METRICS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw02/AI_USE.md",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw02/cases/schema_input.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw02/cases/adversarial_input.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FastAPI backend responds on port 8010",
+      "passed": true,
+      "detail": "got HTTP 200 (start the server with: uvicorn main:app --port 8010, from code/)"
+    },
+    {
+      "check": "LangGraph script finishes (does not hang)",
+      "passed": false,
+      "detail": "timed out after 300s"
+    },
+    {
+      "check": "reports/hw02/raw/schema_validation_results.json has 30 runs",
+      "passed": true,
+      "detail": "found 30"
+    },
+    {
+      "check": "reports/hw02/raw/ceiling_comparison_results.json has 40 runs",
+      "passed": true,
+      "detail": "found 40"
+    },
+    {
+      "check": "reports/hw02/raw/adversarial_results.json has 5 runs",
+      "passed": true,
+      "detail": "found 5"
+    },
+    {
+      "check": "Ollama reachable and qwen3:8b pulled",
+      "passed": true,
+      "detail": "NAME        ID              SIZE      MODIFIED    \nqwen3:8b    500a1f067a9f    5.2 GB    13 days ago"
+    }
+  ]
+}

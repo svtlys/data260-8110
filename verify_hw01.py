@@ -19,7 +19,6 @@ def check(name, condition, detail=""):
     print(f"[{status}] {name} {('- ' + detail) if detail else ''}")
 
 
-# 1. Required files exist
 required_files = [
     "DOMAIN_SCHEMA.md",
     "AGENT.md",
@@ -41,7 +40,6 @@ for f in required_files:
     exists_and_nonempty = path.exists() and path.stat().st_size > 0
     check(f"file exists and non-empty: {f}", exists_and_nonempty)
 
-# 2. Raw non-determinism results exist
 raw_json = ROOT / "reports/hw01/raw/nondeterminism_results.json"
 raw_csv = ROOT / "reports/hw01/raw/nondeterminism_results.csv"
 check("non-determinism raw JSON exists", raw_json.exists() and raw_json.stat().st_size > 0)
@@ -52,14 +50,12 @@ if raw_json.exists():
         data = json.load(fp)
     check("raw results contain 40 runs", len(data) == 40, f"found {len(data)}")
 
-# 3. Docker image builds (optional -- can be slow, so just check Dockerfile is valid-looking)
 dockerfile = ROOT / "code/Dockerfile"
 if dockerfile.exists():
     content = dockerfile.read_text()
     check("Dockerfile has FROM instruction", "FROM" in content)
     check("Dockerfile exposes a port", "EXPOSE" in content)
 
-# 4. Ollama is reachable
 try:
     result = subprocess.run(["ollama", "list"], capture_output=True, text=True, timeout=10)
     ollama_ok = result.returncode == 0 and "qwen3:8b" in result.stdout
@@ -67,7 +63,6 @@ try:
 except Exception as e:
     check("Ollama reachable and qwen3:8b pulled", False, str(e))
 
-# Write results
 output = {
     "timestamp": datetime.now(timezone.utc).isoformat(),
     "total_checks": len(checks),
