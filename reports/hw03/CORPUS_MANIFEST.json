@@ -1,0 +1,22 @@
+[
+  {
+    "filename": "ca_tenants_guide.txt",
+    "byte_size": 434058,
+    "sha256": "cd4a5cd4dde400cd4419997fce59467bc2cd5a875e0813a91d2a298fe73d0052"
+  },
+  {
+    "filename": "hud_fair_housing.txt",
+    "byte_size": 573155,
+    "sha256": "de58ce85b9479a3e6b7d619b1366a84986cd979dea8d19fe4867f7a7c69d0265"
+  },
+  {
+    "filename": "sanjose_resources.txt",
+    "byte_size": 1794,
+    "sha256": "411961e48f530c1a86be54fbd1d217e42bf64e2cb1aa43ea60b1a23d8d25303b"
+  },
+  {
+    "filename": "sanjose_tpo.txt",
+    "byte_size": 12775,
+    "sha256": "899d11358d9c469e287e9273681b34f54abd605c92182711a461af6a5962aec1"
+  }
+]

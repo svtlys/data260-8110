@@ -1,3 +1,5 @@
+from starlette.middleware.sessions import SessionMiddleware
+from auth import router as auth_router
 from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
@@ -11,6 +13,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.add_middleware(
+    SessionMiddleware,
+    secret_key="s8110-hw3-secret-key",
+    https_only=True,
+    same_site="lax",
+)
+
+app.include_router(auth_router)
 
 listings = [
     {

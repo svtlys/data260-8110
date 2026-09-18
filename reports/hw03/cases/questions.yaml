@@ -1,0 +1,35 @@
+# questions.yaml
+# 5 domain questions for the retrieval comparison (Part 2).
+# Committed BEFORE running any retrieval experiments, so expected answers
+# are locked in before seeing actual model/retriever output.
+
+questions:
+  - id: q1
+    question: "What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?"
+    expected_answer: "One 5% increase in a 12-month period."
+    expected_source: "sanjose_tpo.txt"
+    single_source: true
+
+  - id: q2
+    question: "How much relocation assistance is a tenant in a 2-bedroom unit entitled to under San Jose's Tenant Protection Ordinance just-cause provisions?"
+    expected_answer: "$10,353 (base relocation benefit for a 2-bedroom unit)."
+    expected_source: "sanjose_tpo.txt"
+    single_source: true
+
+  - id: q3
+    question: "Under the Fair Housing Act, on what protected characteristics may a public housing agency not deny someone the opportunity to rent?"
+    expected_answer: "Race, color, religion, sex, national origin, disability, or familial status."
+    expected_source: "hud_fair_housing.txt"
+    single_source: false
+
+  - id: q4
+    question: "What is a tenancy, according to California's tenant rights guide?"
+    expected_answer: "The tenant's right to use and possess the landlord's rental unit."
+    expected_source: "ca_tenants_guide.txt"
+    single_source: false
+
+  - id: q5
+    question: "What free service does the City of San Jose offer to help landlords and tenants resolve disputes without going to court?"
+    expected_answer: "The Housing Mediation Program -- a voluntary, no-cost neutral platform for resolving disputes such as non-payment of rent, lease issues, and roommate disputes."
+    expected_source: "sanjose_resources.txt"
+    single_source: true
