@@ -1,0 +1,123 @@
+=== curl -i -X POST /login (capturing Set-Cookie header with 3 attributes) ===
+HTTP/1.1 302 Found
+date: Fri, 18 Sep 2026 02:11:30 GMT
+server: uvicorn
+content-length: 0
+location: /dashboard
+vary: Cookie
+set-cookie: session=eyJ1c2VyIjogImxhbmRsb3JkIiwgImxhc3RfYWN0aXZpdHkiOiAxNzg5Njk3NDkxLjQzNjM2Mn0=.aqyd0w.i_IRY0VKrTGX0H2SO8czNoCUbAk; path=/; Max-Age=1209600; httponly; samesite=lax; secure
+
+(all 3 required attributes present: httponly, samesite=lax, secure)
+
+
+=== generate_manifest.py — CORPUS_MANIFEST.json generation ===
+ca_tenants_guide.txt: 434058 bytes, sha256=cd4a5cd4dde400cd4419997fce59467bc2cd5a875e0813a91d2a298fe73d0052
+hud_fair_housing.txt: 573155 bytes, sha256=de58ce85b9479a3e6b7d619b1366a84986cd979dea8d19fe4867f7a7c69d0265
+sanjose_resources.txt: 1794 bytes, sha256=411961e48f530c1a86be54fbd1d217e42bf64e2cb1aa43ea60b1a23d8d25303b
+sanjose_tpo.txt: 12775 bytes, sha256=899d11358d9c469e287e9273681b34f54abd605c92182711a461af6a5962aec1
+
+Total corpus size: 1021782 bytes (997.8 KB)
+Manifest written to reports/hw03/CORPUS_MANIFEST.json
+
+
+=== warmup_tiny_shakespeare.py — LlamaIndex + embeddings smoke test ===
+Downloading Tiny Shakespeare...
+Loaded 1115394 characters.
+Loading embedding model (sentence-transformers/all-MiniLM-L6-v2)...
+Produced 1291 chunks.
+Index built successfully.
+
+=== Retrieval results for: 'What does the king say about betrayal?' ===
+
+Rank 1 | score=0.5814
+Preview: "is our way, If we will keep in favour with the king, To be her men and wear her livery..."
+
+Rank 2 | score=0.5694
+Preview: "I am clear from this misdeed of Edward's, No more my king, for he dishonours me..."
+
+Rank 3 | score=0.5681
+Preview: "on the Duke of Norfolk. KING EDWARD IV: Have a tongue to doom my brother's death..."
+
+Warm-up complete -- LlamaIndex + embeddings are working.
+
+
+=== chunking_comparison.py — full 3-technique, 5-question retrieval comparison ===
+Loading corpus...
+Loaded 4 documents: ['ca_tenants_guide.txt', 'hud_fair_housing.txt', 'sanjose_resources.txt', 'sanjose_tpo.txt']
+
+Building Token-based index...
+Token chunking produced 953 chunks.
+
+Building Semantic index...
+Semantic chunking produced 302 chunks.
+
+Building Sentence-window index...
+Sentence-window chunking produced 5935 chunks.
+
+--- Q1: "What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?" ---
+Token          rank1 store=0.8010 cosine=0.8097 len=1262
+Semantic       rank1 store=0.7661 cosine=0.7864 len=4525
+SentenceWindow rank1 store=0.8276 cosine=0.7688 len=158 (near-exact match: "the maximum allowable rent increase is one 5% increase in a 12-month period")
+
+--- Q2: "How much relocation assistance is a tenant in a 2-bedroom unit entitled to..." ---
+Token          rank1 store=0.7071 cosine=0.7284 len=1068
+Semantic       rank1 store=0.7092 cosine=0.6683 len=1191
+SentenceWindow rank1 store=0.7350 cosine=0.6984 len=441 (contains exact relocation table: $10,353 for 2-Bedroom)
+
+--- Q3: "Under the Fair Housing Act, on what protected characteristics..." ---
+Token          rank1 store=0.7142 cosine=0.6470 len=1217
+Semantic       rank1 store=0.6638 cosine=0.6031 len=2994
+SentenceWindow rank1 store=0.7524 cosine=0.6998 len=1189
+
+--- Q4: "What is a tenancy, according to California's tenant rights guide?" ---
+Token          rank1 store=0.7153 cosine=0.6743 len=734
+Semantic       rank1 store=0.7480 cosine=0.6100 len=233
+SentenceWindow rank1 store=0.7856 cosine=0.7317 len=86 (near-exact: "The tenant's right to use and possess the landlord's rental unit is called a tenancy.")
+
+--- Q5: "What free service does the City of San Jose offer..." ---
+Token          rank1 store=0.7032 cosine=0.5974 len=639
+Semantic       rank1 store=0.6052 cosine=0.5467 len=819
+SentenceWindow rank1 store=0.6142 cosine=0.6474 len=261
+
+Raw results saved to reports/hw03/raw/chunking_comparison_results.json and .csv
+Chunk stats saved to reports/hw03/raw/chunk_stats.json
+
+Chunk counts: {'Token': 953, 'Semantic': 302, 'SentenceWindow': 5935}
+Avg chunk lengths: {'Token': 1156.0, 'Semantic': 3361.3, 'SentenceWindow': 171.0}
+
+Note: Confidently-wrong example found at Q1, Semantic technique, rank 3 (cosine=0.659):
+retrieved a chunk about security deposit interest/itemized deduction fees under CA Civil
+Code Section 1950.6, not actually about rent increase percentages -- likely matched due to
+shared "maximum allowable" / dollar-figure / landlord-tenant-financial-obligation phrasing.
+
+
+=== verify_hw03.py — self-check smoke test ===
+(venv) (base) svtlys@Alyssas-MacBook-Air data260-8110 % cd ~/Documents/sjsu/fall2026/data260/data260-8110
+source venv/bin/activate
+python verify_hw03.py
+[PASS] file exists and non-empty: code/auth.py 
+[PASS] file exists and non-empty: code/templates/home.html 
+[PASS] file exists and non-empty: code/templates/login.html 
+[PASS] file exists and non-empty: code/templates/dashboard.html 
+[PASS] file exists and non-empty: chunking_comparison.py 
+[PASS] file exists and non-empty: generate_manifest.py 
+[PASS] file exists and non-empty: reports/hw03/RUN_LOG.txt 
+[PASS] file exists and non-empty: reports/hw03/METRICS.md 
+[PASS] file exists and non-empty: reports/hw03/AI_USE.md 
+[PASS] file exists and non-empty: reports/hw03/SOURCES.md 
+[PASS] file exists and non-empty: reports/hw03/CORPUS_MANIFEST.json 
+[PASS] file exists and non-empty: reports/hw03/cases/questions.yaml 
+[PASS] file exists and non-empty: reports/hw03/raw/chunking_comparison_results.json 
+[PASS] file exists and non-empty: reports/hw03/raw/chunking_comparison_results.csv 
+[PASS] file exists and non-empty: reports/hw03/raw/chunk_stats.json 
+[PASS] CORPUS_MANIFEST.json hashes match files on disk 
+[PASS] FastAPI app responds on port 8010 - got HTTP 200 (start with: uvicorn main:app --port 8010, from code/)
+[PASS] Login with valid credentials redirects (302) - got HTTP 302
+[PASS] All 3 chunking techniques present in raw results - found: {'Semantic', 'Token', 'SentenceWindow'}
+[PASS] Raw results non-empty (retrieval did not hang/fail silently) - 45 rows
+[PASS] questions.yaml has exactly 5 questions - found 5
+[PASS] At least 2 questions marked single_source - found 3
+
+22/22 checks passed.
+Commit hash recorded: d02e0147c550e97fe3b7004e21b9b2d7e7b5ab36
+Results written to /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw03/verification.json

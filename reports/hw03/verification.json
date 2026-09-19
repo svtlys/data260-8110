@@ -1,0 +1,127 @@
+{
+  "homework": "HW3",
+  "sid4": "8110",
+  "commit_hash": "d02e0147c550e97fe3b7004e21b9b2d7e7b5ab36",
+  "model_config": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "port_base": 8010
+  },
+  "seed": 8110,
+  "verify_seed": 268110,
+  "timestamp": "2026-09-19T00:01:27.259678+00:00",
+  "total_checks": 22,
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "file exists and non-empty: code/auth.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/templates/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/templates/login.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/templates/dashboard.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: chunking_comparison.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: generate_manifest.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/RUN_LOG.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/METRICS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/AI_USE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/SOURCES.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/CORPUS_MANIFEST.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/cases/questions.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/raw/chunking_comparison_results.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/raw/chunking_comparison_results.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw03/raw/chunk_stats.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CORPUS_MANIFEST.json hashes match files on disk",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FastAPI app responds on port 8010",
+      "passed": true,
+      "detail": "got HTTP 200 (start with: uvicorn main:app --port 8010, from code/)"
+    },
+    {
+      "check": "Login with valid credentials redirects (302)",
+      "passed": true,
+      "detail": "got HTTP 302"
+    },
+    {
+      "check": "All 3 chunking techniques present in raw results",
+      "passed": true,
+      "detail": "found: {'Semantic', 'Token', 'SentenceWindow'}"
+    },
+    {
+      "check": "Raw results non-empty (retrieval did not hang/fail silently)",
+      "passed": true,
+      "detail": "45 rows"
+    },
+    {
+      "check": "questions.yaml has exactly 5 questions",
+      "passed": true,
+      "detail": "found 5"
+    },
+    {
+      "check": "At least 2 questions marked single_source",
+      "passed": true,
+      "detail": "found 3"
+    }
+  ]
+}

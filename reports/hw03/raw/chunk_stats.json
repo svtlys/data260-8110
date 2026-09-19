@@ -1,0 +1,12 @@
+{
+  "chunk_counts": {
+    "Token": 953,
+    "Semantic": 302,
+    "SentenceWindow": 5935
+  },
+  "avg_chunk_length": {
+    "Token": 1156.00314795383,
+    "Semantic": 3361.2781456953644,
+    "SentenceWindow": 171.03723673125526
+  }
+}
