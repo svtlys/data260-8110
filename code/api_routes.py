@@ -1,12 +1,14 @@
+
 from datetime import datetime, timezone
 
 import bcrypt
 from fastapi import APIRouter, Depends, Response, Request, HTTPException
 from pydantic import BaseModel
-from sqlalchemy.orm import Session as OrmSession
+from sqlalchemy.orm import Session as OrmSession, joinedload
 
 from db import get_db
-from models import Listing, User, Session as SessionModel
+from models import Listing, User, Session as SessionModel, ListingEvent
+from query_counter import CountQueries
 
 router = APIRouter(prefix="/api")
 
@@ -50,12 +52,11 @@ def login(payload: LoginRequest, response: Response, db: OrmSession = Depends(ge
     db.commit()
     db.refresh(session)
 
-    # Opaque token only -- no user data stored in the cookie itself
     response.set_cookie(
         key="session_token",
         value=session.id,
         httponly=True,
-        secure=False,  # set True behind real HTTPS
+        secure=False,
         samesite="lax",
         max_age=7200,
     )
@@ -152,3 +153,73 @@ def delete_listing(listing_id: int, db: OrmSession = Depends(get_db), user: User
     db.delete(listing)
     db.commit()
     return {"deleted": listing_id}
+
+
+# --- N+1 demonstration endpoints (Part 3) ---
+@router.get("/listings-naive")
+def get_listings_naive(
+    page: int = 1,
+    page_size: int = 10,
+    db: OrmSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """
+    Intentionally naive: one query for the page of listings, then one
+    SEPARATE query per listing to fetch its related events -- the
+    classic N+1 pattern.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Login required")
+
+    with CountQueries() as counter:
+        offset = (page - 1) * page_size
+        listings = db.query(Listing).offset(offset).limit(page_size).all()
+
+        results = []
+        for listing in listings:
+            events = db.query(ListingEvent).filter(ListingEvent.listing_id == listing.id).all()
+            results.append({
+                "id": listing.id,
+                "address": listing.address,
+                "landlordName": listing.landlord_name,
+                "events": [{"id": e.id, "note": e.note} for e in events],
+            })
+
+    return {"data": results, "sql_query_count": counter.count}
+
+
+@router.get("/listings-fixed")
+def get_listings_fixed(
+    page: int = 1,
+    page_size: int = 10,
+    db: OrmSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """
+    Fixed version: eager-loads related events for the whole page in
+    a single additional query (via joinedload), instead of one query
+    per listing.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Login required")
+
+    with CountQueries() as counter:
+        offset = (page - 1) * page_size
+        listings = (
+            db.query(Listing)
+            .options(joinedload(Listing.events))
+            .offset(offset)
+            .limit(page_size)
+            .all()
+        )
+
+        results = []
+        for listing in listings:
+            results.append({
+                "id": listing.id,
+                "address": listing.address,
+                "landlordName": listing.landlord_name,
+                "events": [{"id": e.id, "note": e.note} for e in listing.events],
+            })
+
+    return {"data": results, "sql_query_count": counter.count}

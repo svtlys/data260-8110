@@ -1,0 +1,1262 @@
+[
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 0,
+    "sql_query_count": 11,
+    "latency_ms": 7.061004638671875
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 1,
+    "sql_query_count": 11,
+    "latency_ms": 4.80198860168457
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 2,
+    "sql_query_count": 11,
+    "latency_ms": 4.591226577758789
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 3,
+    "sql_query_count": 11,
+    "latency_ms": 4.436016082763672
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 4,
+    "sql_query_count": 11,
+    "latency_ms": 4.348993301391602
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 5,
+    "sql_query_count": 11,
+    "latency_ms": 4.354000091552734
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 6,
+    "sql_query_count": 11,
+    "latency_ms": 4.532098770141602
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 7,
+    "sql_query_count": 11,
+    "latency_ms": 4.851102828979492
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 8,
+    "sql_query_count": 11,
+    "latency_ms": 4.06193733215332
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 9,
+    "sql_query_count": 11,
+    "latency_ms": 4.072904586791992
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 10,
+    "sql_query_count": 11,
+    "latency_ms": 5.14984130859375
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 11,
+    "sql_query_count": 11,
+    "latency_ms": 3.637075424194336
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 12,
+    "sql_query_count": 11,
+    "latency_ms": 3.6079883575439453
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 13,
+    "sql_query_count": 11,
+    "latency_ms": 4.59599494934082
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 14,
+    "sql_query_count": 11,
+    "latency_ms": 4.364013671875
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 15,
+    "sql_query_count": 11,
+    "latency_ms": 4.134893417358398
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 16,
+    "sql_query_count": 11,
+    "latency_ms": 3.755807876586914
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 17,
+    "sql_query_count": 11,
+    "latency_ms": 4.231929779052734
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 18,
+    "sql_query_count": 11,
+    "latency_ms": 4.19306755065918
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 19,
+    "sql_query_count": 11,
+    "latency_ms": 4.309177398681641
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 20,
+    "sql_query_count": 11,
+    "latency_ms": 4.39906120300293
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 21,
+    "sql_query_count": 11,
+    "latency_ms": 4.153013229370117
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 22,
+    "sql_query_count": 11,
+    "latency_ms": 4.115104675292969
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 23,
+    "sql_query_count": 11,
+    "latency_ms": 4.1980743408203125
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 24,
+    "sql_query_count": 11,
+    "latency_ms": 4.024744033813477
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 25,
+    "sql_query_count": 11,
+    "latency_ms": 4.32896614074707
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 26,
+    "sql_query_count": 11,
+    "latency_ms": 4.238128662109375
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 27,
+    "sql_query_count": 11,
+    "latency_ms": 3.7500858306884766
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 28,
+    "sql_query_count": 11,
+    "latency_ms": 3.728151321411133
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "run": 29,
+    "sql_query_count": 11,
+    "latency_ms": 3.782987594604492
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 0,
+    "sql_query_count": 1,
+    "latency_ms": 3.2999515533447266
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 1,
+    "sql_query_count": 1,
+    "latency_ms": 1.9690990447998047
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 2,
+    "sql_query_count": 1,
+    "latency_ms": 1.9981861114501953
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 3,
+    "sql_query_count": 1,
+    "latency_ms": 1.9459724426269531
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 4,
+    "sql_query_count": 1,
+    "latency_ms": 1.8291473388671875
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 5,
+    "sql_query_count": 1,
+    "latency_ms": 1.7719268798828125
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 6,
+    "sql_query_count": 1,
+    "latency_ms": 1.8181800842285156
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 7,
+    "sql_query_count": 1,
+    "latency_ms": 1.9261837005615234
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 8,
+    "sql_query_count": 1,
+    "latency_ms": 1.966238021850586
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 9,
+    "sql_query_count": 1,
+    "latency_ms": 1.8970966339111328
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 10,
+    "sql_query_count": 1,
+    "latency_ms": 1.811981201171875
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 11,
+    "sql_query_count": 1,
+    "latency_ms": 1.8770694732666016
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 12,
+    "sql_query_count": 1,
+    "latency_ms": 1.8198490142822266
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 13,
+    "sql_query_count": 1,
+    "latency_ms": 1.950979232788086
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 14,
+    "sql_query_count": 1,
+    "latency_ms": 1.9466876983642578
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 15,
+    "sql_query_count": 1,
+    "latency_ms": 1.9257068634033203
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 16,
+    "sql_query_count": 1,
+    "latency_ms": 1.795053482055664
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 17,
+    "sql_query_count": 1,
+    "latency_ms": 1.865386962890625
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 18,
+    "sql_query_count": 1,
+    "latency_ms": 1.8010139465332031
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 19,
+    "sql_query_count": 1,
+    "latency_ms": 1.9650459289550781
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 20,
+    "sql_query_count": 1,
+    "latency_ms": 1.9922256469726562
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 21,
+    "sql_query_count": 1,
+    "latency_ms": 2.032041549682617
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 22,
+    "sql_query_count": 1,
+    "latency_ms": 1.943826675415039
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 23,
+    "sql_query_count": 1,
+    "latency_ms": 1.9278526306152344
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 24,
+    "sql_query_count": 1,
+    "latency_ms": 1.9309520721435547
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 25,
+    "sql_query_count": 1,
+    "latency_ms": 1.8918514251708984
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 26,
+    "sql_query_count": 1,
+    "latency_ms": 2.012968063354492
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 27,
+    "sql_query_count": 1,
+    "latency_ms": 1.9459724426269531
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 28,
+    "sql_query_count": 1,
+    "latency_ms": 2.0079612731933594
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "run": 29,
+    "sql_query_count": 1,
+    "latency_ms": 1.8939971923828125
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 0,
+    "sql_query_count": 51,
+    "latency_ms": 14.27602767944336
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 1,
+    "sql_query_count": 51,
+    "latency_ms": 12.030839920043945
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 2,
+    "sql_query_count": 51,
+    "latency_ms": 11.041879653930664
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 3,
+    "sql_query_count": 51,
+    "latency_ms": 10.606050491333008
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 4,
+    "sql_query_count": 51,
+    "latency_ms": 11.471986770629883
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 5,
+    "sql_query_count": 51,
+    "latency_ms": 8.603811264038086
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 6,
+    "sql_query_count": 51,
+    "latency_ms": 8.714914321899414
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 7,
+    "sql_query_count": 51,
+    "latency_ms": 8.456945419311523
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 8,
+    "sql_query_count": 51,
+    "latency_ms": 8.375167846679688
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 9,
+    "sql_query_count": 51,
+    "latency_ms": 8.257865905761719
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 10,
+    "sql_query_count": 51,
+    "latency_ms": 8.272171020507812
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 11,
+    "sql_query_count": 51,
+    "latency_ms": 8.561134338378906
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 12,
+    "sql_query_count": 51,
+    "latency_ms": 8.420944213867188
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 13,
+    "sql_query_count": 51,
+    "latency_ms": 8.182048797607422
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 14,
+    "sql_query_count": 51,
+    "latency_ms": 8.169889450073242
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 15,
+    "sql_query_count": 51,
+    "latency_ms": 8.191108703613281
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 16,
+    "sql_query_count": 51,
+    "latency_ms": 8.767127990722656
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 17,
+    "sql_query_count": 51,
+    "latency_ms": 8.421182632446289
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 18,
+    "sql_query_count": 51,
+    "latency_ms": 8.48078727722168
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 19,
+    "sql_query_count": 51,
+    "latency_ms": 8.213996887207031
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 20,
+    "sql_query_count": 51,
+    "latency_ms": 8.229970932006836
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 21,
+    "sql_query_count": 51,
+    "latency_ms": 8.500099182128906
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 22,
+    "sql_query_count": 51,
+    "latency_ms": 8.383989334106445
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 23,
+    "sql_query_count": 51,
+    "latency_ms": 8.148908615112305
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 24,
+    "sql_query_count": 51,
+    "latency_ms": 8.176088333129883
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 25,
+    "sql_query_count": 51,
+    "latency_ms": 20.825862884521484
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 26,
+    "sql_query_count": 51,
+    "latency_ms": 8.738040924072266
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 27,
+    "sql_query_count": 51,
+    "latency_ms": 8.512020111083984
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 28,
+    "sql_query_count": 51,
+    "latency_ms": 8.249759674072266
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "run": 29,
+    "sql_query_count": 51,
+    "latency_ms": 8.224010467529297
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 0,
+    "sql_query_count": 1,
+    "latency_ms": 2.330780029296875
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 1,
+    "sql_query_count": 1,
+    "latency_ms": 2.164125442504883
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 2,
+    "sql_query_count": 1,
+    "latency_ms": 2.1162033081054688
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 3,
+    "sql_query_count": 1,
+    "latency_ms": 2.0890235900878906
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 4,
+    "sql_query_count": 1,
+    "latency_ms": 2.2110939025878906
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 5,
+    "sql_query_count": 1,
+    "latency_ms": 1.9567012786865234
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 6,
+    "sql_query_count": 1,
+    "latency_ms": 1.9791126251220703
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 7,
+    "sql_query_count": 1,
+    "latency_ms": 1.954793930053711
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 8,
+    "sql_query_count": 1,
+    "latency_ms": 1.9659996032714844
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 9,
+    "sql_query_count": 1,
+    "latency_ms": 1.9600391387939453
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 10,
+    "sql_query_count": 1,
+    "latency_ms": 1.89208984375
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 11,
+    "sql_query_count": 1,
+    "latency_ms": 1.8608570098876953
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 12,
+    "sql_query_count": 1,
+    "latency_ms": 1.9369125366210938
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 13,
+    "sql_query_count": 1,
+    "latency_ms": 2.1560192108154297
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 14,
+    "sql_query_count": 1,
+    "latency_ms": 2.228260040283203
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 15,
+    "sql_query_count": 1,
+    "latency_ms": 2.301931381225586
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 16,
+    "sql_query_count": 1,
+    "latency_ms": 2.214193344116211
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 17,
+    "sql_query_count": 1,
+    "latency_ms": 2.0859241485595703
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 18,
+    "sql_query_count": 1,
+    "latency_ms": 2.088785171508789
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 19,
+    "sql_query_count": 1,
+    "latency_ms": 2.0780563354492188
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 20,
+    "sql_query_count": 1,
+    "latency_ms": 2.2749900817871094
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 21,
+    "sql_query_count": 1,
+    "latency_ms": 2.088785171508789
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 22,
+    "sql_query_count": 1,
+    "latency_ms": 2.004861831665039
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 23,
+    "sql_query_count": 1,
+    "latency_ms": 1.985788345336914
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 24,
+    "sql_query_count": 1,
+    "latency_ms": 1.9731521606445312
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 25,
+    "sql_query_count": 1,
+    "latency_ms": 1.9311904907226562
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 26,
+    "sql_query_count": 1,
+    "latency_ms": 1.9850730895996094
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 27,
+    "sql_query_count": 1,
+    "latency_ms": 1.979827880859375
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 28,
+    "sql_query_count": 1,
+    "latency_ms": 1.9099712371826172
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "run": 29,
+    "sql_query_count": 1,
+    "latency_ms": 2.061128616333008
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 0,
+    "sql_query_count": 201,
+    "latency_ms": 29.53505516052246
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 1,
+    "sql_query_count": 201,
+    "latency_ms": 30.78174591064453
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 2,
+    "sql_query_count": 201,
+    "latency_ms": 30.30705451965332
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 3,
+    "sql_query_count": 201,
+    "latency_ms": 29.138803482055664
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 4,
+    "sql_query_count": 201,
+    "latency_ms": 29.607057571411133
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 5,
+    "sql_query_count": 201,
+    "latency_ms": 28.977155685424805
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 6,
+    "sql_query_count": 201,
+    "latency_ms": 29.60681915283203
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 7,
+    "sql_query_count": 201,
+    "latency_ms": 29.176712036132812
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 8,
+    "sql_query_count": 201,
+    "latency_ms": 29.649972915649414
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 9,
+    "sql_query_count": 201,
+    "latency_ms": 28.98883819580078
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 10,
+    "sql_query_count": 201,
+    "latency_ms": 29.33502197265625
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 11,
+    "sql_query_count": 201,
+    "latency_ms": 29.26778793334961
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 12,
+    "sql_query_count": 201,
+    "latency_ms": 29.628276824951172
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 13,
+    "sql_query_count": 201,
+    "latency_ms": 29.06203269958496
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 14,
+    "sql_query_count": 201,
+    "latency_ms": 29.295921325683594
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 15,
+    "sql_query_count": 201,
+    "latency_ms": 28.96714210510254
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 16,
+    "sql_query_count": 201,
+    "latency_ms": 29.85405921936035
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 17,
+    "sql_query_count": 201,
+    "latency_ms": 29.057025909423828
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 18,
+    "sql_query_count": 201,
+    "latency_ms": 29.443979263305664
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 19,
+    "sql_query_count": 201,
+    "latency_ms": 29.3121337890625
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 20,
+    "sql_query_count": 201,
+    "latency_ms": 29.633045196533203
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 21,
+    "sql_query_count": 201,
+    "latency_ms": 29.067039489746094
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 22,
+    "sql_query_count": 201,
+    "latency_ms": 29.45089340209961
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 23,
+    "sql_query_count": 201,
+    "latency_ms": 29.10900115966797
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 24,
+    "sql_query_count": 201,
+    "latency_ms": 29.518842697143555
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 25,
+    "sql_query_count": 201,
+    "latency_ms": 29.034852981567383
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 26,
+    "sql_query_count": 201,
+    "latency_ms": 29.368162155151367
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 27,
+    "sql_query_count": 201,
+    "latency_ms": 29.02698516845703
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 28,
+    "sql_query_count": 201,
+    "latency_ms": 29.769182205200195
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "run": 29,
+    "sql_query_count": 201,
+    "latency_ms": 28.94902229309082
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 0,
+    "sql_query_count": 1,
+    "latency_ms": 3.7839412689208984
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 1,
+    "sql_query_count": 1,
+    "latency_ms": 4.049777984619141
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 2,
+    "sql_query_count": 1,
+    "latency_ms": 3.885030746459961
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 3,
+    "sql_query_count": 1,
+    "latency_ms": 3.721952438354492
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 4,
+    "sql_query_count": 1,
+    "latency_ms": 3.6580562591552734
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 5,
+    "sql_query_count": 1,
+    "latency_ms": 3.72314453125
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 6,
+    "sql_query_count": 1,
+    "latency_ms": 15.976905822753906
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 7,
+    "sql_query_count": 1,
+    "latency_ms": 4.267215728759766
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 8,
+    "sql_query_count": 1,
+    "latency_ms": 4.343271255493164
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 9,
+    "sql_query_count": 1,
+    "latency_ms": 3.863096237182617
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 10,
+    "sql_query_count": 1,
+    "latency_ms": 3.679037094116211
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 11,
+    "sql_query_count": 1,
+    "latency_ms": 3.6821365356445312
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 12,
+    "sql_query_count": 1,
+    "latency_ms": 3.651142120361328
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 13,
+    "sql_query_count": 1,
+    "latency_ms": 3.7479400634765625
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 14,
+    "sql_query_count": 1,
+    "latency_ms": 3.773927688598633
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 15,
+    "sql_query_count": 1,
+    "latency_ms": 3.634929656982422
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 16,
+    "sql_query_count": 1,
+    "latency_ms": 3.7119388580322266
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 17,
+    "sql_query_count": 1,
+    "latency_ms": 3.9908885955810547
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 18,
+    "sql_query_count": 1,
+    "latency_ms": 3.9339065551757812
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 19,
+    "sql_query_count": 1,
+    "latency_ms": 3.641843795776367
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 20,
+    "sql_query_count": 1,
+    "latency_ms": 3.8328170776367188
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 21,
+    "sql_query_count": 1,
+    "latency_ms": 4.224061965942383
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 22,
+    "sql_query_count": 1,
+    "latency_ms": 3.7500858306884766
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 23,
+    "sql_query_count": 1,
+    "latency_ms": 3.7162303924560547
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 24,
+    "sql_query_count": 1,
+    "latency_ms": 3.6559104919433594
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 25,
+    "sql_query_count": 1,
+    "latency_ms": 3.813028335571289
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 26,
+    "sql_query_count": 1,
+    "latency_ms": 3.7047863006591797
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 27,
+    "sql_query_count": 1,
+    "latency_ms": 4.069089889526367
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 28,
+    "sql_query_count": 1,
+    "latency_ms": 3.7071704864501953
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "run": 29,
+    "sql_query_count": 1,
+    "latency_ms": 3.7279129028320312
+  }
+]

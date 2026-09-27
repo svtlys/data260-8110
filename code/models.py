@@ -1,3 +1,11 @@
+"""
+models.py
+
+SQLAlchemy ORM models: the primary domain entity (rental listings),
+a related test-data table (listing_events, for the N+1 exercise),
+plus users and sessions tables for authentication.
+"""
+
 import uuid
 from datetime import datetime, timedelta, timezone
 
@@ -13,6 +21,21 @@ class Listing(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     address = Column(String(255), nullable=False)          # primary field
     landlord_name = Column(String(255), nullable=False)    # secondary field
+
+    events = relationship("ListingEvent")
+
+
+class ListingEvent(Base):
+    """
+    Test data only for now, per the assignment -- a minimal related table
+    just to create the N+1 pattern. A full related entity with its own
+    CRUD comes in a later homework.
+    """
+    __tablename__ = "listing_events"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    listing_id = Column(Integer, ForeignKey("listings.id"), nullable=False)
+    note = Column(String(255), nullable=False)
 
 
 class User(Base):
