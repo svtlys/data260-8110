@@ -1,0 +1,29 @@
+[
+  {
+    "k": 1,
+    "retrieved_sources": [
+      "sanjose_tpo.txt"
+    ],
+    "answer": "The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1]."
+  },
+  {
+    "k": 3,
+    "retrieved_sources": [
+      "sanjose_tpo.txt",
+      "sanjose_tpo.txt",
+      "sanjose_resources.txt"
+    ],
+    "answer": "The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1]."
+  },
+  {
+    "k": 5,
+    "retrieved_sources": [
+      "sanjose_tpo.txt",
+      "sanjose_tpo.txt",
+      "sanjose_resources.txt",
+      "sanjose_tpo.txt",
+      "ca_tenants_guide.txt"
+    ],
+    "answer": "The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1]."
+  }
+]

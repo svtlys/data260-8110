@@ -1,0 +1,250 @@
+{
+  "homework": "HW4",
+  "sid4": "8110",
+  "commit_hash": "8d068c290b38911b6ee97b114ad7a5ea21bce5ea",
+  "model_config": {
+    "llm": "qwen3:8b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "port_base": 8010
+  },
+  "seed": 8110,
+  "verify_seed": 268110,
+  "timestamp": "2026-09-28T01:04:04.056770+00:00",
+  "total_checks": 46,
+  "passed": 46,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "file exists and non-empty: code/db.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/models.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/init_db.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/api_routes.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/seed_hw04.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/query_counter.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/measure_n1.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/rag.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application_react/src/App.jsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application_react/src/components/Login.jsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application_react/src/components/Home.jsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application_react/src/components/CreateRecord.jsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application_react/src/components/UpdateRecord.jsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: code/web_application_react/src/components/DeleteRecord.jsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/RUN_LOG.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/METRICS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/AI_USE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/raw/n1_measurement_results.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/raw/n1_measurement_results.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/raw/rag_comparison_results.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/raw/rag_topk_sweep_results.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/raw/rag_evaluation_table.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists and non-empty: reports/hw04/raw/rag_console_output.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "connection variable is named db_session_basede26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "database name is s8110_rel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RAG corpus has at least 5 documents",
+      "passed": true,
+      "detail": "found 5"
+    },
+    {
+      "check": "FastAPI responds on port 8010",
+      "passed": true,
+      "detail": "HTTP 401"
+    },
+    {
+      "check": "listings endpoint rejects unauthenticated requests",
+      "passed": true,
+      "detail": "HTTP 401"
+    },
+    {
+      "check": "login with valid credentials succeeds",
+      "passed": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "check": "session cookie is HttpOnly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "session cookie is an opaque token (no user data)",
+      "passed": true,
+      "detail": "token length 32"
+    },
+    {
+      "check": "session cookie authenticates /api/me",
+      "passed": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "check": "seeded data present (at least 5000 listings)",
+      "passed": true,
+      "detail": "5001 listings"
+    },
+    {
+      "check": "naive list endpoint returns data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fixed list endpoint returns data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "naive and fixed return the same listing ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "naive issues page_size+1 queries, fixed issues 1",
+      "passed": true,
+      "detail": "naive=11 fixed=1"
+    },
+    {
+      "check": "logged-out session cannot be reused",
+      "passed": true,
+      "detail": "HTTP 401"
+    },
+    {
+      "check": "N+1 raw data has 180 measured requests",
+      "passed": true,
+      "detail": "found 180"
+    },
+    {
+      "check": "N+1 raw data has 30 requests per page size and version",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded query counts are page_size+1 (naive) and 1 (fixed)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RAG results cover six questions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "every question has an answer for all three configurations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "context-engineered RAG refused Q5 and Q6 (assignment-mandated refusal wording)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "top_k sweep covers k = 1, 3, 5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Ollama reachable with qwen3:8b pulled",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

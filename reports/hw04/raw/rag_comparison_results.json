@@ -1,0 +1,86 @@
+[
+  {
+    "question_id": "Q1",
+    "kind": "single_chunk",
+    "question": "What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?",
+    "expected_source": "sanjose_tpo.txt",
+    "retrieved_sources": [
+      "sanjose_tpo.txt",
+      "sanjose_tpo.txt",
+      "sanjose_resources.txt"
+    ],
+    "no_rag_answer": "The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is **7% per year**, but it is calculated based on the **Consumer Price Index (CPI)** for the previous year. Specifically, the allowable increase is the **lesser of 7% or the CPI increase**. This means if the CPI increase is lower than 7%, the rent can only be increased by the CPI amount. \n\n**Answer:** The maximum allowable rent increase is **7% per year**, adjusted based on the Consumer Price Index (CPI) for the previous year.",
+    "basic_rag_answer": "The maximum allowable rent increase under San Jose's Apartment Rent Ordinance (ARO) is **one 5% increase in a 12-month period**. This applies to rent-stabilized apartment buildings with three or more units constructed before September 7, 1979. Exceptions exist for specific circumstances, such as service reductions or voluntary vacates, but the standard cap remains 5% annually.",
+    "context_rag_answer": "The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1]."
+  },
+  {
+    "question_id": "Q2",
+    "kind": "two_chunks",
+    "question": "Under the Ellis Act process, how much notice must most tenant households receive, and what is the relocation assistance for a 2-bedroom unit?",
+    "expected_source": "sanjose_tpo.txt",
+    "retrieved_sources": [
+      "sanjose_tpo.txt",
+      "sanjose_tpo.txt",
+      "sanjose_tpo.txt"
+    ],
+    "no_rag_answer": "Under the Ellis Act process, most tenant households must receive **90 days' notice** before eviction. Relocation assistance for a 2-bedroom unit is typically **150% of the unit's monthly rent**, calculated for the duration of the tenant's lease or as specified by local regulations. This assistance is intended to help tenants cover moving costs and temporary housing expenses. \n\n**Answer:**  \n- **Notice:** 90 days  \n- **Relocation Assistance:** 150% of the 2-bedroom unit's monthly rent (amount varies based on rent and local laws).",
+    "basic_rag_answer": "Under the Ellis Act process, most tenant households must receive **120 days' notice**. For a 2-bedroom unit, the **relocation assistance** is **$14,494** (combining the base assistance of $10,353 and qualified assistance of $4,141). \n\n**Answer:**  \n- **Notice:** 120 days  \n- **Relocation Assistance (2-bedroom):** $14,494",
+    "context_rag_answer": "Under the Ellis Act process, most tenant households must receive a **120-Day Notice** [1]. For a 2-bedroom unit, the relocation assistance is **$10,353** [1]."
+  },
+  {
+    "question_id": "Q3",
+    "kind": "cross_document_similar",
+    "question": "What kinds of damage or cleaning can a landlord deduct from a security deposit in California?",
+    "expected_source": "ca_security_deposits.txt",
+    "retrieved_sources": [
+      "ca_tenants_guide.txt",
+      "ca_tenants_guide.txt",
+      "ca_security_deposits.txt"
+    ],
+    "no_rag_answer": "In California, a landlord can deduct from a security deposit for the following reasons:  \n1. **Damage beyond normal wear and tear**: This includes broken fixtures, leaks, stains, or other damage caused by the tenant (e.g., cracked tiles, broken windows).  \n2. **Cleaning costs**: If the property requires more than routine cleaning due to excessive dirt, grime, or stains (e.g., a carpet stained with food or a bathroom with mold).  \n3. **Other specific expenses**: Such as pest control for infestations caused by the tenant, or repairs needed due to the tenant's actions (e.g., a broken lock requiring replacement).  \n\n**Important rules**:  \n- The landlord must provide an **itemized list** of deductions within **21 days** of the tenant vacating.  \n- Deductions cannot cover **normal wear and tear** (e.g., faded paint or slightly worn carpet).  \n- The security deposit cannot be used for **unpaid rent, utility bills, or other charges**.  \n- If the tenant disputes deductions, they may request a **written explanation** and potentially pursue legal action.  \n\nLandlords must also keep the deposit in a **separate account** and return the remaining balance promptly.",
+    "basic_rag_answer": "In California, a landlord may deduct from a security deposit for the following types of damage or cleaning, as outlined in the context:\n\n1. **Cleaning Costs**:  \n   - The landlord can deduct reasonable costs to clean the rental unit to its original condition at move-in. This includes removing stains, mildew, flea infestations, or other tenant-caused messes.  \n   - **Exclusions**: Cleaning costs for **normal wear and tear** (e.g., faded walls, minor scuffs) or **pre-existing conditions** (e.g., dirt present at move-in) are not deductible. Cumulative wear and tear (e.g., built-up wax on floors) also cannot be charged.\n\n2. **Damage Repairs**:  \n   - The landlord may deduct costs to repair **damage caused by the tenant or their guests**, excluding **normal wear and tear**. Examples include broken fixtures, cracked tiles, or water damage from tenant neglect.  \n   - **Exclusions**: Damage that existed before the tenant moved in or resulted from ordinary wear (e.g., faded paint) cannot be deducted.\n\n3. **Replacement of Items**:  \n   - The landlord may deduct costs to replace **carpets, drapes, or other items** if they are beyond their \"useful life\" due to tenant damage. For example, if a carpet is frayed or stained beyond repair, the landlord can charge for replacement.  \n   - **Exclusions**: Items damaged by normal wear (e.g., minor stains) or pre-existing conditions are not deductible.\n\n4. **Final Inspection Deductions**:  \n   - The landlord may deduct for defects identified during a final inspection **after the tenant moves out**, including:  \n     - Defects the tenant failed to repair (as listed in an itemized statement).  \n     - New defects that arose after the initial inspection.  \n     - Defects hidden by the tenant\u2019s belongings during the initial inspection.  \n\n**Requirements**:  \n- The landlord must provide an **itemized statement** detailing deductions, including costs and reasons. For deductions over $125, receipts or invoices are required.  \n- Deductions must be **reasonable** and limited to the four permitted purposes (cleaning, repairs for tenant-caused damage, replacements beyond useful life, and rent owed in specific cases).  \n\n**Key Restrictions**:  \n- Landlords **cannot** deduct for **normal wear and tear**, **pre-existing conditions**, or **cumulative wear**.  \n- Tenants may avoid deductions by repairing listed issues before moving out.  \n\nThis framework ensures security deposits are used only for tenant-caused damage or cleaning beyond normal wear, as mandated by California law.",
+    "context_rag_answer": "A landlord in California can deduct from a security deposit for the following types of damage or cleaning:  \n\n1. **Cleaning costs** to restore the rental unit to its condition at the time the tenant moved in. This includes addressing issues like flea infestations, oven cleaning, removing decals, mildew in bathrooms, defrosting refrigerators, or washing kitchen floors. However, the landlord cannot charge for cleaning conditions that existed at move-in or cumulative wear and tear [1].  \n\n2. **Damage caused by the tenant or their guests**, excluding normal wear and tear. For example, repairs for damage beyond typical usage [1].  \n\n3. **Restoring or replacing furniture/personal items** if explicitly included in the rental agreement and the damage is not due to normal wear and tear [3].  \n\nLandlords cannot deduct for pre-existing defects, normal wear and tear, or cleaning costs resulting from the tenant\u2019s belongings (unless the defect was not discovered due to those belongings) [1]. All deductions must be reasonable and supported by an itemized statement [2]."
+  },
+  {
+    "question_id": "Q4",
+    "kind": "ambiguous",
+    "question": "Is my rental unit covered under rent control?",
+    "expected_source": null,
+    "retrieved_sources": [
+      "ca_tenants_guide.txt",
+      "ca_tenants_guide.txt",
+      "ca_tenants_guide.txt"
+    ],
+    "no_rag_answer": "Whether your rental unit is covered under rent control depends on your location and local laws. Rent control laws vary by city, state, or country and often apply to specific types of units (e.g., older buildings, apartments built before a certain date, or properties under public housing authority). To determine coverage, check your local housing authority\u2019s website, contact a tenant rights organization, or consult a legal expert in your area. Some regions may refer to rent control as \"rent stabilization\" or have different terminology. Always verify with local resources for accurate information.",
+    "basic_rag_answer": "Whether your rental unit is covered under rent control depends on the local laws of the community where the property is located. The context mentions that **\"stabilization (or control) ordinances\"** are laws in **some communities** that limit or prohibit rent increases or restrict evictions. However, these laws are **not universal** and vary by jurisdiction. \n\nTo determine if your unit is covered:  \n1. **Check local regulations**: Contact your city or county housing authority or review local ordinances.  \n2. **Research specific areas**: Some cities (e.g., San Francisco, New York, or others) have rent control laws, while others do not.  \n3. **Consult a legal expert**: A tenant rights organization or housing advocate can provide guidance tailored to your location.  \n\nThe context does not specify your location, so you\u2019ll need to investigate local laws to confirm coverage.",
+    "context_rag_answer": "I cannot answer this question from the provided documents."
+  },
+  {
+    "question_id": "Q5",
+    "kind": "not_in_documents",
+    "question": "What is the current 30-year fixed mortgage interest rate?",
+    "expected_source": null,
+    "retrieved_sources": [
+      "hud_fair_housing.txt",
+      "hud_fair_housing.txt",
+      "ca_tenants_guide.txt"
+    ],
+    "no_rag_answer": "As of October 2023, the current 30-year fixed mortgage interest rate in the U.S. was approximately **5.5% to 6.5%**, depending on lender, borrower creditworthiness, and market conditions. Rates can fluctuate daily, so for the most accurate and up-to-date information, check with a mortgage lender or financial service provider.",
+    "basic_rag_answer": "The context provided does not include information about current mortgage interest rates, including the 30-year fixed mortgage rate. The text focuses on public housing regulations, utility reimbursements, rent adjustments, and legal provisions related to tenant-landlord relationships in California. For mortgage rate information, you would need to consult financial institutions, mortgage lenders, or real-time financial data sources.",
+    "context_rag_answer": "I cannot answer this question from the provided documents."
+  },
+  {
+    "question_id": "Q6",
+    "kind": "unrelated",
+    "question": "What is the capital of France?",
+    "expected_source": null,
+    "retrieved_sources": [
+      "hud_fair_housing.txt",
+      "hud_fair_housing.txt",
+      "hud_fair_housing.txt"
+    ],
+    "no_rag_answer": "The capital of France is Paris.",
+    "basic_rag_answer": "The capital of France is **Paris**. \n\nThe provided context includes legal references related to housing regulations in the United States, which are unrelated to the question about the capital of France.",
+    "context_rag_answer": "I cannot answer this question from the provided documents."
+  }
+]

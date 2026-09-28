@@ -1,0 +1,119 @@
+HW4 RUN LOG  (SID4 8110, PORT_BASE 8010, run on 2026-09-27)
+
+===  python init_db.py  (MySQL database s8110_rel) ===
+Tables created: listings, users, sessions
+Seeded test user: landlord@example.com / rentals123
+
+
+===  curl -i -X POST /api/login  (server-side session, opaque cookie) ===
+HTTP/1.1 200 OK
+date: Sun, 27 Sep 2026 20:43:14 GMT
+server: uvicorn
+content-length: 93
+content-type: application/json
+set-cookie: session_token=500a9e39cea34b97a3044ab95edebfe0; HttpOnly; Max-Age=7200; Path=/; SameSite=lax
+
+{"message":"Logged in","user":{"id":1,"name":"Test Landlord","email":"landlord@example.com"}}
+
+
+===  python seed_hw04.py  (SEED = 8110) ===
+Seeding 5000 listings...
+Seeded 5000 listings.
+Seeding 200 related rows (listing_events)...
+Seeded 200 listing_events.
+
+Final counts: 5001 listings, 200 listing_events
+(5001 = 5000 seeded + 1 record created earlier during Postman testing)
+
+
+=== naive vs fixed sanity check, page_size=10 ===
+GET /api/listings-naive?page=1&page_size=10  ->  "sql_query_count":11
+GET /api/listings-fixed?page=1&page_size=10  ->  "sql_query_count":1
+
+
+=== python measure_n1.py  (180 requests: 3 page sizes x 2 versions x 30) ===
+Raw results (180 rows) saved to reports/hw04/raw/n1_measurement_results.json and .csv
+(per-request lines are in the raw files)
+
+=== SUMMARY ===
+Page  Version SQL/req   p50 (ms)    p95 (ms)    p99 (ms)
+10    naive   11        4.2         5.0         6.5
+10    fixed   1         1.9         2.0         2.9
+50    naive   51        8.4         13.3        18.9
+50    fixed   1         2.0         2.3         2.3
+200   naive   201       29.3        30.1        30.6
+200   fixed   1         3.7         4.3         12.6
+
+
+=== EXPLAIN on listing_events.listing_id (foreign-key column) ===
+Before CREATE INDEX:
+type=ref  possible_keys=listing_id  key=listing_id  rows=1
+(MySQL had already created an index for the foreign key, so this was not a useful before/after.)
+After CREATE INDEX idx_listing_events_listing_id:
+type=ref  possible_keys=idx_listing_events_listing_id  key=idx_listing_events_listing_id  rows=1
+DROP INDEX failed: ERROR 1553 - index is needed in a foreign key constraint.
+
+
+=== [time] python rag.py  (5 documents, chunk_size=500, chunk_overlap=50) ===
+Full console output (retrieved chunks with source and score, configurations A/B/C for Q1-Q6, top_k sweep):
+see reports/hw04/raw/rag_console_output.txt
+
+Key lines:
+Loaded 5 documents: ['ca_security_deposits.txt', 'ca_tenants_guide.txt', 'hud_fair_housing.txt', 'sanjose_resources.txt', 'sanjose_tpo.txt']
+Produced 492 chunks.
+Raw results saved to reports/hw04/raw/rag_comparison_results.json and rag_topk_sweep_results.json
+
+
+=== [time] python verify_hw04.py ===
+(venv) (base) svtlys@Alyssas-MacBook-Air data260-8110 % python verify_hw04.py
+[PASS] file exists and non-empty: code/db.py
+[PASS] file exists and non-empty: code/models.py
+[PASS] file exists and non-empty: code/init_db.py
+[PASS] file exists and non-empty: code/api_routes.py
+[PASS] file exists and non-empty: code/seed_hw04.py
+[PASS] file exists and non-empty: code/query_counter.py
+[PASS] file exists and non-empty: code/measure_n1.py
+[PASS] file exists and non-empty: code/rag.py
+[PASS] file exists and non-empty: code/web_application_react/src/App.jsx
+[PASS] file exists and non-empty: code/web_application_react/src/components/Login.jsx
+[PASS] file exists and non-empty: code/web_application_react/src/components/Home.jsx
+[PASS] file exists and non-empty: code/web_application_react/src/components/CreateRecord.jsx
+[PASS] file exists and non-empty: code/web_application_react/src/components/UpdateRecord.jsx
+[PASS] file exists and non-empty: code/web_application_react/src/components/DeleteRecord.jsx
+[PASS] file exists and non-empty: reports/hw04/RUN_LOG.txt
+[PASS] file exists and non-empty: reports/hw04/METRICS.md
+[PASS] file exists and non-empty: reports/hw04/AI_USE.md
+[PASS] file exists and non-empty: reports/hw04/raw/n1_measurement_results.json
+[PASS] file exists and non-empty: reports/hw04/raw/n1_measurement_results.csv
+[PASS] file exists and non-empty: reports/hw04/raw/rag_comparison_results.json
+[PASS] file exists and non-empty: reports/hw04/raw/rag_topk_sweep_results.json
+[PASS] file exists and non-empty: reports/hw04/raw/rag_evaluation_table.csv
+[PASS] file exists and non-empty: reports/hw04/raw/rag_console_output.txt
+[PASS] connection variable is named db_session_basede26
+[PASS] database name is s8110_rel
+[PASS] RAG corpus has at least 5 documents - found 5
+[PASS] FastAPI responds on port 8010 - HTTP 401
+[PASS] listings endpoint rejects unauthenticated requests - HTTP 401
+[PASS] login with valid credentials succeeds - HTTP 200
+[PASS] session cookie is HttpOnly
+[PASS] session cookie is an opaque token (no user data) - token length 32
+[PASS] session cookie authenticates /api/me - HTTP 200
+[PASS] seeded data present (at least 5000 listings) - 5001 listings
+[PASS] naive list endpoint returns data
+[PASS] fixed list endpoint returns data
+[PASS] naive and fixed return the same listing ids
+[PASS] naive issues page_size+1 queries, fixed issues 1 - naive=11 fixed=1
+[PASS] logged-out session cannot be reused - HTTP 401
+[PASS] N+1 raw data has 180 measured requests - found 180
+[PASS] N+1 raw data has 30 requests per page size and version
+[PASS] recorded query counts are page_size+1 (naive) and 1 (fixed)
+[PASS] RAG results cover six questions
+[PASS] every question has an answer for all three configurations
+[PASS] context-engineered RAG refused Q5 and Q6 (assignment-mandated refusal wording)
+[PASS] top_k sweep covers k = 1, 3, 5
+[PASS] Ollama reachable with qwen3:8b pulled
+
+46/46 checks passed.
+Commit hash recorded: 8d068c290b38911b6ee97b114ad7a5ea21bce5ea
+Results written to /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw04/verification.json
+(venv) (base) svtlys@Alyssas-MacBook-Air data260-8110 % 

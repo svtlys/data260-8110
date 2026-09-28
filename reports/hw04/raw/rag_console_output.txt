@@ -1,0 +1,269 @@
+(base) svtlys@Alyssas-MacBook-Air code % cd ~/Documents/sjsu/fall2026/data260/data260-8110
+source venv/bin/activate
+cd code
+python rag.py
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 14472.32it/s]
+Loading corpus...
+Loaded 5 documents: ['ca_security_deposits.txt', 'ca_tenants_guide.txt', 'hud_fair_housing.txt', 'sanjose_resources.txt', 'sanjose_tpo.txt']
+
+Chunking (chunk_size=500, chunk_overlap=50) and indexing...
+Produced 492 chunks.
+
+======================================================================
+PART A: Three-configuration comparison across 6 questions
+======================================================================
+
+
+### Q1 (single_chunk): What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?
+
+--- Retrieved top-3 chunks for: "What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?" ---
+  [1] source=sanjose_tpo.txt chunk_id=485 score=0.7598
+      preview: Housing Ordinances | City of San Jose Source: https://www.sanjoseca.gov/your-government/departments-offices/housing/housing-rental-rights  The San Jose Housing 
+  [2] source=sanjose_tpo.txt chunk_id=490 score=0.6815
+      preview: San Francisco-Oakland All Urban Consumer Price Index (CPI), with a minimum increase of 3% and a maximum increase of 7%. If the rent on a mobilehome space was no
+  [3] source=sanjose_resources.txt chunk_id=484 score=0.6530
+      preview: Resources for Tenants | City of San Jose Source: https://www.sanjoseca.gov/your-government/departments-offices/housing/tenants  The Rent Stabilization Program s
+
+--- (A) No RAG ---
+[turn 1] input_tokens=31 output_tokens=1524 total_tokens=1555
+The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is **7% per year**, but it is calculated based on the **Consumer Price Index (CPI)** for the previous year. Specifically, the allowable increase is the **lesser of 7% or the CPI increase**. This means if the CPI increase is lower than 7%, the rent can only be increased by the CPI amount. 
+
+**Answer:** The maximum allowable rent increase is **7% per year**, adjusted based on the Consumer Price Index (CPI) for the previous year.
+
+--- (B) Basic RAG (top-3 raw chunks) ---
+[turn 1] input_tokens=1391 output_tokens=347 total_tokens=1738
+The maximum allowable rent increase under San Jose's Apartment Rent Ordinance (ARO) is **one 5% increase in a 12-month period**. This applies to rent-stabilized apartment buildings with three or more units constructed before September 7, 1979. Exceptions exist for specific circumstances, such as service reductions or voluntary vacates, but the standard cap remains 5% annually.
+
+--- (C) Context-engineered RAG ---
+[turn 1] input_tokens=1495 output_tokens=233 total_tokens=1728
+The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1].
+
+
+### Q2 (two_chunks): Under the Ellis Act process, how much notice must most tenant households receive, and what is the relocation assistance for a 2-bedroom unit?
+
+--- Retrieved top-3 chunks for: 'Under the Ellis Act process, how much notice must most tenant households receive, and what is the relocation assistance for a 2-bedroom unit?' ---
+  [1] source=sanjose_tpo.txt chunk_id=489 score=0.6875
+      preview: Copies of each form must be sent to the City within 10 days of service to tenant households. Step 5: At the time of delivery of the Notice of Intent to Withdraw
+  [2] source=sanjose_tpo.txt chunk_id=487 score=0.6430
+      preview: an eviction notice, landlords must submit a notice of termination to the Housing Department's Rent Stabilization Program.  JUST CAUSE REASONS DUE TO TENANT ACTI
+  [3] source=sanjose_tpo.txt chunk_id=488 score=0.6426
+      preview: RESPONSIBILITIES - Review the Rental Guide for Tenants & Landlords to understand rights as a renter in the City. - If you receive a notice of termination, be su
+
+--- (A) No RAG ---
+[turn 1] input_tokens=43 output_tokens=1645 total_tokens=1688
+Under the Ellis Act process, most tenant households must receive **90 days' notice** before eviction. Relocation assistance for a 2-bedroom unit is typically **150% of the unit's monthly rent**, calculated for the duration of the tenant's lease or as specified by local regulations. This assistance is intended to help tenants cover moving costs and temporary housing expenses. 
+
+**Answer:**  
+- **Notice:** 90 days  
+- **Relocation Assistance:** 150% of the 2-bedroom unit's monthly rent (amount varies based on rent and local laws).
+
+--- (B) Basic RAG (top-3 raw chunks) ---
+[turn 1] input_tokens=1601 output_tokens=493 total_tokens=2094
+Under the Ellis Act process, most tenant households must receive **120 days' notice**. For a 2-bedroom unit, the **relocation assistance** is **$14,494** (combining the base assistance of $10,353 and qualified assistance of $4,141). 
+
+**Answer:**  
+- **Notice:** 120 days  
+- **Relocation Assistance (2-bedroom):** $14,494
+
+--- (C) Context-engineered RAG ---
+[turn 1] input_tokens=1706 output_tokens=544 total_tokens=2250
+Under the Ellis Act process, most tenant households must receive a **120-Day Notice** [1]. For a 2-bedroom unit, the relocation assistance is **$10,353** [1].
+
+
+### Q3 (cross_document_similar): What kinds of damage or cleaning can a landlord deduct from a security deposit in California?
+
+--- Retrieved top-3 chunks for: 'What kinds of damage or cleaning can a landlord deduct from a security deposit in California?' ---
+  [1] source=ca_tenants_guide.txt chunk_id=114 score=0.7950
+      preview: allowed to make deductions for defects that occur after the initial inspection, as well as for defects that could not be discovered because of the presence of t
+  [2] source=ca_tenants_guide.txt chunk_id=111 score=0.7554
+      preview: up) the 48-hour notice requirement. Itemized statement The landlord or the landlord’s agent may perform the inspection if the tenant is not present, unless the 
+  [3] source=ca_security_deposits.txt chunk_id=0 score=0.7306
+      preview: Guide to security deposits in California | California Courts | Self Help Guide Source: https://selfhelp.courts.ca.gov/guide-security-deposits-california  Securi
+
+--- (A) No RAG ---
+[turn 1] input_tokens=32 output_tokens=754 total_tokens=786
+In California, a landlord can deduct from a security deposit for the following reasons:  
+1. **Damage beyond normal wear and tear**: This includes broken fixtures, leaks, stains, or other damage caused by the tenant (e.g., cracked tiles, broken windows).  
+2. **Cleaning costs**: If the property requires more than routine cleaning due to excessive dirt, grime, or stains (e.g., a carpet stained with food or a bathroom with mold).  
+3. **Other specific expenses**: Such as pest control for infestations caused by the tenant, or repairs needed due to the tenant's actions (e.g., a broken lock requiring replacement).  
+
+**Important rules**:  
+- The landlord must provide an **itemized list** of deductions within **21 days** of the tenant vacating.  
+- Deductions cannot cover **normal wear and tear** (e.g., faded paint or slightly worn carpet).  
+- The security deposit cannot be used for **unpaid rent, utility bills, or other charges**.  
+- If the tenant disputes deductions, they may request a **written explanation** and potentially pursue legal action.  
+
+Landlords must also keep the deposit in a **separate account** and return the remaining balance promptly.
+
+--- (B) Basic RAG (top-3 raw chunks) ---
+[turn 1] input_tokens=1545 output_tokens=1143 total_tokens=2688
+In California, a landlord may deduct from a security deposit for the following types of damage or cleaning, as outlined in the context:
+
+1. **Cleaning Costs**:  
+   - The landlord can deduct reasonable costs to clean the rental unit to its original condition at move-in. This includes removing stains, mildew, flea infestations, or other tenant-caused messes.  
+   - **Exclusions**: Cleaning costs for **normal wear and tear** (e.g., faded walls, minor scuffs) or **pre-existing conditions** (e.g., dirt present at move-in) are not deductible. Cumulative wear and tear (e.g., built-up wax on floors) also cannot be charged.
+
+2. **Damage Repairs**:  
+   - The landlord may deduct costs to repair **damage caused by the tenant or their guests**, excluding **normal wear and tear**. Examples include broken fixtures, cracked tiles, or water damage from tenant neglect.  
+   - **Exclusions**: Damage that existed before the tenant moved in or resulted from ordinary wear (e.g., faded paint) cannot be deducted.
+
+3. **Replacement of Items**:  
+   - The landlord may deduct costs to replace **carpets, drapes, or other items** if they are beyond their "useful life" due to tenant damage. For example, if a carpet is frayed or stained beyond repair, the landlord can charge for replacement.  
+   - **Exclusions**: Items damaged by normal wear (e.g., minor stains) or pre-existing conditions are not deductible.
+
+4. **Final Inspection Deductions**:  
+   - The landlord may deduct for defects identified during a final inspection **after the tenant moves out**, including:  
+     - Defects the tenant failed to repair (as listed in an itemized statement).  
+     - New defects that arose after the initial inspection.  
+     - Defects hidden by the tenant’s belongings during the initial inspection.  
+
+**Requirements**:  
+- The landlord must provide an **itemized statement** detailing deductions, including costs and reasons. For deductions over $125, receipts or invoices are required.  
+- Deductions must be **reasonable** and limited to the four permitted purposes (cleaning, repairs for tenant-caused damage, replacements beyond useful life, and rent owed in specific cases).  
+
+**Key Restrictions**:  
+- Landlords **cannot** deduct for **normal wear and tear**, **pre-existing conditions**, or **cumulative wear**.  
+- Tenants may avoid deductions by repairing listed issues before moving out.  
+
+This framework ensures security deposits are used only for tenant-caused damage or cleaning beyond normal wear, as mandated by California law.
+
+--- (C) Context-engineered RAG ---
+[turn 1] input_tokens=1648 output_tokens=583 total_tokens=2231
+A landlord in California can deduct from a security deposit for the following types of damage or cleaning:  
+
+1. **Cleaning costs** to restore the rental unit to its condition at the time the tenant moved in. This includes addressing issues like flea infestations, oven cleaning, removing decals, mildew in bathrooms, defrosting refrigerators, or washing kitchen floors. However, the landlord cannot charge for cleaning conditions that existed at move-in or cumulative wear and tear [1].  
+
+2. **Damage caused by the tenant or their guests**, excluding normal wear and tear. For example, repairs for damage beyond typical usage [1].  
+
+3. **Restoring or replacing furniture/personal items** if explicitly included in the rental agreement and the damage is not due to normal wear and tear [3].  
+
+Landlords cannot deduct for pre-existing defects, normal wear and tear, or cleaning costs resulting from the tenant’s belongings (unless the defect was not discovered due to those belongings) [1]. All deductions must be reasonable and supported by an itemized statement [2].
+
+
+### Q4 (ambiguous): Is my rental unit covered under rent control?
+
+--- Retrieved top-3 chunks for: 'Is my rental unit covered under rent control?' ---
+  [1] source=ca_tenants_guide.txt chunk_id=58 score=0.6007
+      preview: you use. You must also repair all damage, other than normal wear and tear, that you cause, or that is caused by anyone for whom you are responsible, such as you
+  [2] source=ca_tenants_guide.txt chunk_id=73 score=0.5540
+      preview: websites like AirBnB and VRBO. Many local laws also prohibit rental units from being rented in this way and carry with them heavy fines for violating the law. R
+  [3] source=ca_tenants_guide.txt chunk_id=174 score=0.5452
+      preview: stabilization (or control) ordinances—laws in some communities that limit or prohibit rent increases, or that limit the circumstances in which a tenant can be e
+
+--- (A) No RAG ---
+[turn 1] input_tokens=24 output_tokens=649 total_tokens=673
+Whether your rental unit is covered under rent control depends on your location and local laws. Rent control laws vary by city, state, or country and often apply to specific types of units (e.g., older buildings, apartments built before a certain date, or properties under public housing authority). To determine coverage, check your local housing authority’s website, contact a tenant rights organization, or consult a legal expert in your area. Some regions may refer to rent control as "rent stabilization" or have different terminology. Always verify with local resources for accurate information.
+
+--- (B) Basic RAG (top-3 raw chunks) ---
+[turn 1] input_tokens=1529 output_tokens=411 total_tokens=1940
+Whether your rental unit is covered under rent control depends on the local laws of the community where the property is located. The context mentions that **"stabilization (or control) ordinances"** are laws in **some communities** that limit or prohibit rent increases or restrict evictions. However, these laws are **not universal** and vary by jurisdiction. 
+
+To determine if your unit is covered:  
+1. **Check local regulations**: Contact your city or county housing authority or review local ordinances.  
+2. **Research specific areas**: Some cities (e.g., San Francisco, New York, or others) have rent control laws, while others do not.  
+3. **Consult a legal expert**: A tenant rights organization or housing advocate can provide guidance tailored to your location.  
+
+The context does not specify your location, so you’ll need to investigate local laws to confirm coverage.
+
+--- (C) Context-engineered RAG ---
+[turn 1] input_tokens=1631 output_tokens=246 total_tokens=1877
+I cannot answer this question from the provided documents.
+
+
+### Q5 (not_in_documents): What is the current 30-year fixed mortgage interest rate?
+
+--- Retrieved top-3 chunks for: 'What is the current 30-year fixed mortgage interest rate?' ---
+  [1] source=hud_fair_housing.txt chunk_id=422 score=0.3613
+      preview: HUD approval before becoming effective by the PHA. PHAs are required to revise their schedule of allowances before the end of the year if there is a change in t
+  [2] source=hud_fair_housing.txt chunk_id=229 score=0.3069
+      preview: (24 CFR § 960.253)...................................................................................................................137 Switching from Flat Ren
+  [3] source=ca_tenants_guide.txt chunk_id=203 score=0.2881
+      preview: index is not available, the California Consumer Price Index for All Urban Consumers for all items, as determined by the Department of Industrial Relations, shal
+
+--- (A) No RAG ---
+[turn 1] input_tokens=28 output_tokens=614 total_tokens=642
+As of October 2023, the current 30-year fixed mortgage interest rate in the U.S. was approximately **5.5% to 6.5%**, depending on lender, borrower creditworthiness, and market conditions. Rates can fluctuate daily, so for the most accurate and up-to-date information, check with a mortgage lender or financial service provider.
+
+--- (B) Basic RAG (top-3 raw chunks) ---
+[turn 1] input_tokens=1769 output_tokens=305 total_tokens=2074
+The context provided does not include information about current mortgage interest rates, including the 30-year fixed mortgage rate. The text focuses on public housing regulations, utility reimbursements, rent adjustments, and legal provisions related to tenant-landlord relationships in California. For mortgage rate information, you would need to consult financial institutions, mortgage lenders, or real-time financial data sources.
+
+--- (C) Context-engineered RAG ---
+[turn 1] input_tokens=619 output_tokens=284 total_tokens=903
+I cannot answer this question from the provided documents.
+
+
+### Q6 (unrelated): What is the capital of France?
+
+--- Retrieved top-3 chunks for: 'What is the capital of France?' ---
+  [1] source=hud_fair_housing.txt chunk_id=478 score=0.1022
+      preview: CFR § 903.7 (j)(ii) Endnotes: Page 222 Public Housing Occupancy Guidebook xl 24 CFR § 945.203 (c)(i)(ii)(iii) xli 24 CFR § 945.303 (f) xlii 24 CFR § 945.203 (6)
+  [2] source=hud_fair_housing.txt chunk_id=481 score=0.0947
+      preview: (b)(2)(D) cxxvi 24 CFR § 5.630 (2)(iii)(B) cxxvii 24 CFR § 960.257 (4)(b) cxxviii 24 CFR § 960.257 (4)(c) cxxix 24 CFR § 960.259 (a)(2) cxxx 24 CFR § 960.259 (a
+  [3] source=hud_fair_housing.txt chunk_id=482 score=0.0910
+      preview: (a)(1)(v) clvi 24 CFR § 966.4 (a)(1)(v) clvii 24 CFR § 966.4 (a)(1)(v) clviii 24 CFR § 966.4 (3)(b)(1)(ii) clix 24 CFR § 966.4 (3)(b)(2) clx 24 CFR § 966.4 (3)(
+
+--- (A) No RAG ---
+[turn 1] input_tokens=22 output_tokens=144 total_tokens=166
+The capital of France is Paris.
+
+--- (B) Basic RAG (top-3 raw chunks) ---
+[turn 1] input_tokens=1854 output_tokens=238 total_tokens=2092
+The capital of France is **Paris**. 
+
+The provided context includes legal references related to housing regulations in the United States, which are unrelated to the question about the capital of France.
+
+--- (C) Context-engineered RAG ---
+[turn 1] input_tokens=98 output_tokens=115 total_tokens=213
+I cannot answer this question from the provided documents.
+
+
+======================================================================
+PART B: top_k sweep on Q1 (single-chunk question)
+======================================================================
+
+--- k=1 ---
+
+--- Retrieved top-1 chunks for: "What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?" ---
+  [1] source=sanjose_tpo.txt chunk_id=485 score=0.7598
+      preview: Housing Ordinances | City of San Jose Source: https://www.sanjoseca.gov/your-government/departments-offices/housing/housing-rental-rights  The San Jose Housing 
+[turn 1] input_tokens=623 output_tokens=195 total_tokens=818
+
+Answer at k=1:
+The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1].
+
+--- k=3 ---
+
+--- Retrieved top-3 chunks for: "What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?" ---
+  [1] source=sanjose_tpo.txt chunk_id=485 score=0.7598
+      preview: Housing Ordinances | City of San Jose Source: https://www.sanjoseca.gov/your-government/departments-offices/housing/housing-rental-rights  The San Jose Housing 
+  [2] source=sanjose_tpo.txt chunk_id=490 score=0.6815
+      preview: San Francisco-Oakland All Urban Consumer Price Index (CPI), with a minimum increase of 3% and a maximum increase of 7%. If the rent on a mobilehome space was no
+  [3] source=sanjose_resources.txt chunk_id=484 score=0.6530
+      preview: Resources for Tenants | City of San Jose Source: https://www.sanjoseca.gov/your-government/departments-offices/housing/tenants  The Rent Stabilization Program s
+[turn 1] input_tokens=1495 output_tokens=233 total_tokens=1728
+
+Answer at k=3:
+The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1].
+
+--- k=5 ---
+
+--- Retrieved top-5 chunks for: "What is the maximum allowable rent increase under San Jose's Apartment Rent Ordinance?" ---
+  [1] source=sanjose_tpo.txt chunk_id=485 score=0.7598
+      preview: Housing Ordinances | City of San Jose Source: https://www.sanjoseca.gov/your-government/departments-offices/housing/housing-rental-rights  The San Jose Housing 
+  [2] source=sanjose_tpo.txt chunk_id=490 score=0.6815
+      preview: San Francisco-Oakland All Urban Consumer Price Index (CPI), with a minimum increase of 3% and a maximum increase of 7%. If the rent on a mobilehome space was no
+  [3] source=sanjose_resources.txt chunk_id=484 score=0.6530
+      preview: Resources for Tenants | City of San Jose Source: https://www.sanjoseca.gov/your-government/departments-offices/housing/tenants  The Rent Stabilization Program s
+  [4] source=sanjose_tpo.txt chunk_id=491 score=0.6484
+      preview: from terms for other rental applicants  PROPERTIES COVERED - All rental properties - Single-family homes exempt when landlord lives in home  MECHANISMS OF ENFOR
+  [5] source=ca_tenants_guide.txt chunk_id=64 score=0.6471
+      preview: often can rent be raised? This depends on whether your rental unit is subject to local or state rent stabilization laws and the terms of your rental agreement. 
+[turn 1] input_tokens=2141 output_tokens=258 total_tokens=2399
+
+Answer at k=5:
+The maximum allowable rent increase under San Jose's Apartment Rent Ordinance is one 5% increase in a 12-month period [1].
+
+
+Raw results saved to /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw04/raw/rag_comparison_results.json and rag_topk_sweep_results.json
