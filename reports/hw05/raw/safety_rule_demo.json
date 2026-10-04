@@ -1,0 +1,51 @@
+[
+  {
+    "case": "allowed",
+    "inputs": {
+      "query": "Main",
+      "limit": 3
+    },
+    "envelope": {
+      "ok": true,
+      "data": {
+        "count": 3,
+        "results": [
+          {
+            "id": 3,
+            "address": "1440 Main St, San Jose, CA",
+            "listing_code": null,
+            "available_units": 1,
+            "landlord_id": 1
+          },
+          {
+            "id": 12,
+            "address": "9043 Main St, San Jose, CA",
+            "listing_code": null,
+            "available_units": 1,
+            "landlord_id": 1
+          },
+          {
+            "id": 16,
+            "address": "2134 Main St, San Jose, CA",
+            "listing_code": null,
+            "available_units": 1,
+            "landlord_id": 1
+          }
+        ]
+      },
+      "error": null
+    }
+  },
+  {
+    "case": "blocked",
+    "inputs": {
+      "query": "%",
+      "limit": 3
+    },
+    "envelope": {
+      "ok": false,
+      "data": null,
+      "error": "blocked by safety rule: a search term with a wildcard needs at least 3 other characters, so the whole listing table cannot be dumped"
+    }
+  }
+]

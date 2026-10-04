@@ -1,0 +1,52 @@
+[
+  {
+    "scenario": "A: success on the first attempt",
+    "attempts": 1,
+    "elapsed_ms": 2.0,
+    "envelope": {
+      "ok": true,
+      "data": {
+        "id": 2,
+        "address": "7490 First St, San Jose, CA",
+        "listing_code": null,
+        "available_units": 1,
+        "landlord": {
+          "id": 1,
+          "name": "Felix Realty Group",
+          "email": "felix@example.com"
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "scenario": "B: first attempt fails, succeeds after one retry",
+    "attempts": 2,
+    "elapsed_ms": 210.2,
+    "envelope": {
+      "ok": true,
+      "data": {
+        "id": 2,
+        "address": "7490 First St, San Jose, CA",
+        "listing_code": null,
+        "available_units": 1,
+        "landlord": {
+          "id": 1,
+          "name": "Felix Realty Group",
+          "email": "felix@example.com"
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "scenario": "C: every attempt fails (retries exhausted)",
+    "attempts": 4,
+    "elapsed_ms": 1412.5,
+    "envelope": {
+      "ok": false,
+      "data": null,
+      "error": "storage unavailable: retries exhausted after 4 attempt(s): TransientError: scripted failure on attempt 4"
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "scenario": "1. single search, normal completion",
+    "run_id": "aa370bdf6bba",
+    "steps": 2,
+    "stop_reason": "final_answer",
+    "tool_calls": 1,
+    "seconds": 75.9,
+    "final_answer": "There are 50 listings with 'Main' in their address."
+  },
+  {
+    "scenario": "2. two tools chained, normal completion",
+    "run_id": "21c360a84aa4",
+    "steps": 3,
+    "stop_reason": "final_answer",
+    "tool_calls": 2,
+    "seconds": 34.9,
+    "final_answer": "Listing 7 is managed by Felix Realty Group. This landlord has a total of 24 listings."
+  },
+  {
+    "scenario": "3. rejected tool call, model recovers",
+    "run_id": "d411e389e6be",
+    "steps": 2,
+    "stop_reason": "final_answer",
+    "tool_calls": 1,
+    "seconds": 17.3,
+    "final_answer": "The listing with ID 99999999 could not be found. Please verify the listing number and try again."
+  },
+  {
+    "scenario": "4. safety rule blocks the call",
+    "run_id": "1534e60143da",
+    "steps": 1,
+    "stop_reason": "safety_block",
+    "tool_calls": 1,
+    "seconds": 11.1,
+    "final_answer": "blocked by safety rule: a search term with a wildcard needs at least 3 other characters, so the whole listing table cannot be dumped"
+  },
+  {
+    "scenario": "5. needs more tool calls than max_steps (3)",
+    "run_id": "9a99c1a99723",
+    "steps": 3,
+    "stop_reason": "max_steps",
+    "tool_calls": 3,
+    "seconds": 122.0,
+    "final_answer": null
+  }
+]

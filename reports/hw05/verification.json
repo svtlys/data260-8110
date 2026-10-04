@@ -1,0 +1,151 @@
+{
+  "homework": "HW5",
+  "sid4": "8110",
+  "commit_hash": "eaeff08e4d550f26ec354deb42384bc32299b4a7",
+  "model_config": {
+    "llm": "qwen3:8b",
+    "temperature": 0.0,
+    "mcp_sdk_version": "1.30.0",
+    "port_base": 8010,
+    "prefix": "s8110",
+    "domain_id": 6
+  },
+  "seed": 8110,
+  "verify_seed": 268110,
+  "timestamp": "2026-10-04T23:32:14.369404+00:00",
+  "total_checks": 26,
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "code and React files present",
+      "passed": true,
+      "detail": "21 files present"
+    },
+    {
+      "check": "report and raw-data files present",
+      "passed": true,
+      "detail": "12 files present"
+    },
+    {
+      "check": "Redux Toolkit client is set up",
+      "passed": true,
+      "detail": "Redux Toolkit, react-redux, axios installed; 4 thunks exported"
+    },
+    {
+      "check": "MCP server modules never print to stdout",
+      "passed": true,
+      "detail": "no print() calls in the MCP server modules"
+    },
+    {
+      "check": "database schema has the related entity, unique fields and foreign key",
+      "passed": true,
+      "detail": "landlords and listings have the required columns, unique fields and foreign key"
+    },
+    {
+      "check": "FastAPI responds on port 8010",
+      "passed": true,
+      "detail": "HTTP 401"
+    },
+    {
+      "check": "unauthenticated request is rejected (401)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "login succeeds with an HttpOnly opaque session cookie",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "landlord list is paginated",
+      "passed": true,
+      "detail": "1 landlord(s) on the page"
+    },
+    {
+      "check": "listing list returns the new schema fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "invalid landlord email is rejected (422)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "relationship query for an unknown landlord returns 404",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "deleting a landlord that still has listings is blocked (409)",
+      "passed": true,
+      "detail": "landlord 1 with 24 listing(s) was protected"
+    },
+    {
+      "check": "meals MCP server starts and lists its four tools",
+      "passed": true,
+      "detail": "meals server started and lists 4 tools"
+    },
+    {
+      "check": "meals MCP server answers a tool call",
+      "passed": true,
+      "detail": "search_meals_by_name returned a result (needs internet)"
+    },
+    {
+      "check": "domain MCP server starts and lists exactly three tools",
+      "passed": true,
+      "detail": "domain server started and lists exactly 3 tools"
+    },
+    {
+      "check": "domain MCP tool call succeeds with the envelope",
+      "passed": true,
+      "detail": "search_listings returned ok=true with data"
+    },
+    {
+      "check": "domain MCP rejected calls use the envelope",
+      "passed": true,
+      "detail": "3 invalid calls returned {ok: false, data: null, error: <text>}"
+    },
+    {
+      "check": "saved MCP outputs match the expected valid/invalid pattern",
+      "passed": true,
+      "detail": "saved domain outputs: 3 valid ok=true, 3 invalid ok=false"
+    },
+    {
+      "check": "fault-injection raw data has 150 calls, 50 per rate",
+      "passed": true,
+      "detail": "150 calls, 50 at each of 0%, 20%, 50%"
+    },
+    {
+      "check": "recorded outcome fingerprint matches the raw rows",
+      "passed": true,
+      "detail": "fingerprint bad290070bacde86 matches the summary"
+    },
+    {
+      "check": "VERIFY_SEED reproduces the same failure sequence",
+      "passed": true,
+      "detail": "seed 268110 gives identical sequences"
+    },
+    {
+      "check": "offline test suite passes",
+      "passed": true,
+      "detail": "16/16 offline tests passed"
+    },
+    {
+      "check": "safety rule blocks a bulk wildcard search",
+      "passed": true,
+      "detail": "wildcard search blocked without running the tool; normal search allowed"
+    },
+    {
+      "check": "agent log covers 4+ scenarios with valid stop reasons",
+      "passed": true,
+      "detail": "6 runs logged, 6 scenarios, 5 in the summary"
+    },
+    {
+      "check": "local Ollama model is available",
+      "passed": true,
+      "detail": "qwen3:8b available"
+    }
+  ]
+}

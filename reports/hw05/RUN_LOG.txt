@@ -1,0 +1,285 @@
+=== demo run Sun Oct  4 14:50:52 PDT 2026 ===
+
+=== Scenario A: success on the first attempt ===
+attempts: 1   elapsed: 2 ms
+{
+  "ok": true,
+  "data": {
+    "id": 2,
+    "address": "7490 First St, San Jose, CA",
+    "listing_code": null,
+    "available_units": 1,
+    "landlord": {
+      "id": 1,
+      "name": "Felix Realty Group",
+      "email": "felix@example.com"
+    }
+  },
+  "error": null
+}
+
+=== Scenario B: first attempt fails, succeeds after one retry ===
+2026-10-04 14:50:53,191 INFO resilience: attempt 1 failed (TransientError: scripted failure on attempt 1); retry 1 in 0.20s
+attempts: 2   elapsed: 210 ms
+{
+  "ok": true,
+  "data": {
+    "id": 2,
+    "address": "7490 First St, San Jose, CA",
+    "listing_code": null,
+    "available_units": 1,
+    "landlord": {
+      "id": 1,
+      "name": "Felix Realty Group",
+      "email": "felix@example.com"
+    }
+  },
+  "error": null
+}
+
+=== Scenario C: every attempt fails (retries exhausted) ===
+2026-10-04 14:50:53,401 INFO resilience: attempt 1 failed (TransientError: scripted failure on attempt 1); retry 1 in 0.20s
+2026-10-04 14:50:53,604 INFO resilience: attempt 2 failed (TransientError: scripted failure on attempt 2); retry 2 in 0.40s
+2026-10-04 14:50:54,007 INFO resilience: attempt 3 failed (TransientError: scripted failure on attempt 3); retry 3 in 0.80s
+2026-10-04 14:50:54,812 WARNING resilience: giving up: retries exhausted after 4 attempt(s): TransientError: scripted failure on attempt 4
+2026-10-04 14:50:54,813 WARNING domain_tools: tool call rejected: storage unavailable: retries exhausted after 4 attempt(s): TransientError: scripted failure on attempt 4
+attempts: 4   elapsed: 1412 ms
+{
+  "ok": false,
+  "data": null,
+  "error": "storage unavailable: retries exhausted after 4 attempt(s): TransientError: scripted failure on attempt 4"
+}
+
+Saved /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw05/raw/retry_demo.json
+=== inject run Sun Oct  4 14:50:54 PDT 2026 ===
+running 50 calls at 0% injected failures ...
+running 50 calls at 20% injected failures ...
+2026-10-04 14:50:55,079 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #1)); retry 1 in 0.20s
+2026-10-04 14:50:55,291 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #5)); retry 1 in 0.20s
+2026-10-04 14:50:55,516 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #13)); retry 1 in 0.20s
+2026-10-04 14:50:55,727 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #15)); retry 1 in 0.20s
+2026-10-04 14:50:55,952 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #23)); retry 1 in 0.20s
+2026-10-04 14:50:56,167 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #26)); retry 1 in 0.20s
+2026-10-04 14:50:56,397 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #43)); retry 1 in 0.20s
+2026-10-04 14:50:56,617 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #47)); retry 1 in 0.20s
+2026-10-04 14:50:56,822 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 20%, attempt #48)); retry 2 in 0.40s
+2026-10-04 14:50:57,246 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 20%, attempt #54)); retry 1 in 0.20s
+running 50 calls at 50% injected failures ...
+2026-10-04 14:50:57,471 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #1)); retry 1 in 0.20s
+2026-10-04 14:50:57,677 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #2)); retry 2 in 0.40s
+2026-10-04 14:50:58,081 INFO resilience: attempt 3 failed (TransientError: injected failure (rate 50%, attempt #3)); retry 3 in 0.80s
+2026-10-04 14:50:58,891 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #5)); retry 1 in 0.20s
+2026-10-04 14:50:59,108 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #9)); retry 1 in 0.20s
+2026-10-04 14:50:59,322 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #13)); retry 1 in 0.20s
+2026-10-04 14:50:59,532 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #15)); retry 1 in 0.20s
+2026-10-04 14:50:59,755 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #21)); retry 1 in 0.20s
+2026-10-04 14:50:59,961 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #23)); retry 1 in 0.20s
+2026-10-04 14:51:00,173 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #26)); retry 1 in 0.20s
+2026-10-04 14:51:00,378 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #27)); retry 2 in 0.40s
+2026-10-04 14:51:00,795 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #31)); retry 1 in 0.20s
+2026-10-04 14:51:01,021 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #36)); retry 1 in 0.20s
+2026-10-04 14:51:01,236 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #39)); retry 1 in 0.20s
+2026-10-04 14:51:01,437 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #40)); retry 2 in 0.40s
+2026-10-04 14:51:01,849 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #43)); retry 1 in 0.20s
+2026-10-04 14:51:02,059 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #45)); retry 1 in 0.20s
+2026-10-04 14:51:02,265 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #46)); retry 2 in 0.40s
+2026-10-04 14:51:02,670 INFO resilience: attempt 3 failed (TransientError: injected failure (rate 50%, attempt #47)); retry 3 in 0.80s
+2026-10-04 14:51:03,475 WARNING resilience: giving up: retries exhausted after 4 attempt(s): TransientError: injected failure (rate 50%, attempt #48)
+2026-10-04 14:51:03,476 WARNING domain_tools: tool call rejected: storage unavailable: retries exhausted after 4 attempt(s): TransientError: injected failure (rate 50%, attempt #48)
+2026-10-04 14:51:03,484 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #51)); retry 1 in 0.20s
+2026-10-04 14:51:03,690 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #52)); retry 2 in 0.40s
+2026-10-04 14:51:04,101 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #54)); retry 1 in 0.20s
+2026-10-04 14:51:04,312 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #56)); retry 1 in 0.20s
+2026-10-04 14:51:04,523 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #58)); retry 1 in 0.20s
+2026-10-04 14:51:04,734 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #60)); retry 1 in 0.20s
+2026-10-04 14:51:04,950 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #63)); retry 1 in 0.20s
+2026-10-04 14:51:05,161 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #65)); retry 1 in 0.20s
+2026-10-04 14:51:05,364 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #66)); retry 2 in 0.40s
+2026-10-04 14:51:05,769 INFO resilience: attempt 3 failed (TransientError: injected failure (rate 50%, attempt #67)); retry 3 in 0.80s
+2026-10-04 14:51:06,584 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #70)); retry 1 in 0.20s
+2026-10-04 14:51:06,790 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #72)); retry 1 in 0.20s
+2026-10-04 14:51:06,994 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #73)); retry 2 in 0.40s
+2026-10-04 14:51:07,408 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #76)); retry 1 in 0.20s
+2026-10-04 14:51:07,613 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #77)); retry 2 in 0.40s
+2026-10-04 14:51:08,023 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #79)); retry 1 in 0.20s
+2026-10-04 14:51:08,234 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #81)); retry 1 in 0.20s
+2026-10-04 14:51:08,434 INFO resilience: attempt 2 failed (TransientError: injected failure (rate 50%, attempt #82)); retry 2 in 0.40s
+2026-10-04 14:51:08,845 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #84)); retry 1 in 0.20s
+2026-10-04 14:51:09,051 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #86)); retry 1 in 0.20s
+2026-10-04 14:51:09,264 INFO resilience: attempt 1 failed (TransientError: injected failure (rate 50%, attempt #89)); retry 1 in 0.20s
+
+Injected failure rate | Success rate | Mean latency (ms) | p99 latency (ms) | Mean attempts
+                  0% |        100% |              0.74 |             1.65 |          1.00
+                 20% |        100% |             47.83 |           418.46 |          1.20
+                 50% |         98% |            240.02 |          1420.13 |          1.80
+
+Outcome fingerprint (same on every run with seed 268110): bad290070bacde86
+Saved 150 raw rows and summary to /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw05/raw
+=== tests run Sun Oct  4 15:08:06 PDT 2026 ===
+/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/code/run_tests.py': [Errno 2] No such file or directory
+=== tests run Sun Oct  4 15:08:30 PDT 2026 ===
+/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/code/run_tests.py': [Errno 2] No such file or directory
+=== tests run Sun Oct  4 15:09:03 PDT 2026 ===
+PASS  test_unknown_tool_is_rejected
+        [fake tools] an unknown tool name returns ok=false and lists the real tools
+PASS  test_inputs_must_be_an_object
+        [fake tools] inputs that are not a JSON object are rejected, not crashed on
+PASS  test_unexpected_and_reserved_inputs_are_rejected
+        [fake tools] unknown argument names and the reserved 'db' argument are rejected
+PASS  test_missing_required_input_is_rejected
+        [fake tools] a missing required argument is rejected with its name
+PASS  test_tool_crash_becomes_a_clean_error
+        [fake tools] a tool that raises does not crash execute_tool
+PASS  test_malformed_tool_result_becomes_a_clean_error
+        [fake tools] a tool that returns something other than an envelope is rejected
+PASS  test_valid_call_returns_the_envelope_as_a_json_string
+        [fake tools] a valid call returns a JSON string {ok: true, data, error: null}
+PASS  test_search_listings_valid
+        [real tools] search_listings finds matching addresses, case-insensitively
+PASS  test_search_listings_blank_query_rejected
+        [real tools] search_listings rejects a blank query (Part 3 rejected call 1)
+PASS  test_get_listing_detail_valid
+        [real tools] get_listing_detail returns the listing and its landlord
+PASS  test_get_listing_detail_not_found_rejected
+        [real tools] get_listing_detail reports an unknown id (Part 3 rejected call 2)
+PASS  test_aggregate_landlord_stats_valid
+        [real tools] aggregate_landlord_stats counts listings and sums units
+PASS  test_aggregate_landlord_stats_zero_id_rejected
+        [real tools] aggregate_landlord_stats rejects id 0 (Part 3 rejected call 3)
+PASS  test_transient_storage_failure_is_retried
+        [real tools] one injected storage failure is retried and the call still succeeds
+
+14/14 tests passed
+PASS  test_unknown_tool_is_rejected
+        [fake tools] an unknown tool name returns ok=false and lists the real tools
+PASS  test_inputs_must_be_an_object
+        [fake tools] inputs that are not a JSON object are rejected, not crashed on
+PASS  test_unexpected_and_reserved_inputs_are_rejected
+        [fake tools] unknown argument names and the reserved 'db' argument are rejected
+PASS  test_missing_required_input_is_rejected
+        [fake tools] a missing required argument is rejected with its name
+PASS  test_tool_crash_becomes_a_clean_error
+        [fake tools] a tool that raises does not crash execute_tool
+PASS  test_malformed_tool_result_becomes_a_clean_error
+        [fake tools] a tool that returns something other than an envelope is rejected
+PASS  test_valid_call_returns_the_envelope_as_a_json_string
+        [fake tools] a valid call returns a JSON string {ok: true, data, error: null}
+PASS  test_search_listings_valid
+        [real tools] search_listings finds matching addresses, case-insensitively
+PASS  test_search_listings_blank_query_rejected
+        [real tools] search_listings rejects a blank query (Part 3 rejected call 1)
+PASS  test_get_listing_detail_valid
+        [real tools] get_listing_detail returns the listing and its landlord
+PASS  test_get_listing_detail_not_found_rejected
+        [real tools] get_listing_detail reports an unknown id (Part 3 rejected call 2)
+PASS  test_aggregate_landlord_stats_valid
+        [real tools] aggregate_landlord_stats counts listings and sums units
+PASS  test_aggregate_landlord_stats_zero_id_rejected
+        [real tools] aggregate_landlord_stats rejects id 0 (Part 3 rejected call 3)
+PASS  test_transient_storage_failure_is_retried
+        [real tools] one injected storage failure is retried and the call still succeeds
+PASS  test_safety_rule_blocks_wildcard_search
+        [safety] a wildcard-only search is blocked before the tool runs; a normal search is allowed
+PASS  test_agent_stops_at_max_steps
+        [agent] run_agent with a MockModel that never finishes stops at max_steps
+
+16/16 tests passed
+=== safety demo Sun Oct  4 15:45:44 PDT 2026 ===
+
+=== ALLOWED call: search_listings {"query": "Main", "limit": 3} ===
+{
+  "ok": true,
+  "data": {
+    "count": 3,
+    "results": [
+      {
+        "id": 3,
+        "address": "1440 Main St, San Jose, CA",
+        "listing_code": null,
+        "available_units": 1,
+        "landlord_id": 1
+      },
+      {
+        "id": 12,
+        "address": "9043 Main St, San Jose, CA",
+        "listing_code": null,
+        "available_units": 1,
+        "landlord_id": 1
+      },
+      {
+        "id": 16,
+        "address": "2134 Main St, San Jose, CA",
+        "listing_code": null,
+        "available_units": 1,
+        "landlord_id": 1
+      }
+    ]
+  },
+  "error": null
+}
+
+=== BLOCKED call: search_listings {"query": "%", "limit": 3} ===
+2026-10-04 15:45:44,247 WARNING tool_executor: execute_tool rejected: blocked by safety rule: a search term with a wildcard needs at least 3 other characters, so the whole listing table cannot be dumped
+{
+  "ok": false,
+  "data": null,
+  "error": "blocked by safety rule: a search term with a wildcard needs at least 3 other characters, so the whole listing table cannot be dumped"
+}
+
+Saved /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw05/raw/safety_rule_demo.json
+=== agent scenarios Sun Oct  4 15:49:41 PDT 2026 ===
+
+>>> 1. single search, normal completion (max_steps=6)
+[turn 1] input_tokens=250 output_tokens=756 total_tokens=1006
+[turn 1] input_tokens=2497 output_tokens=179 total_tokens=2676
+    steps=2  stop_reason=final_answer  tool_calls=1  (75.9 s)
+
+>>> 2. two tools chained, normal completion (max_steps=6)
+[turn 1] input_tokens=249 output_tokens=284 total_tokens=533
+[turn 1] input_tokens=369 output_tokens=170 total_tokens=539
+[turn 1] input_tokens=474 output_tokens=136 total_tokens=610
+    steps=3  stop_reason=final_answer  tool_calls=2  (34.9 s)
+
+>>> 3. rejected tool call, model recovers (max_steps=6)
+[turn 1] input_tokens=244 output_tokens=128 total_tokens=372
+2026-10-04 15:51:40,053 WARNING domain_tools: tool call rejected: listing 99999999 not found
+[turn 1] input_tokens=320 output_tokens=165 total_tokens=485
+    steps=2  stop_reason=final_answer  tool_calls=1  (17.3 s)
+
+>>> 4. safety rule blocks the call (max_steps=6)
+[turn 1] input_tokens=250 output_tokens=193 total_tokens=443
+2026-10-04 15:52:01,019 WARNING tool_executor: execute_tool rejected: blocked by safety rule: a search term with a wildcard needs at least 3 other characters, so the whole listing table cannot be dumped
+    steps=1  stop_reason=safety_block  tool_calls=1  (11.1 s)
+
+>>> 5. max_steps ceiling reached (max_steps=3)
+[turn 1] input_tokens=252 output_tokens=1933 total_tokens=2185
+2026-10-04 15:53:57,980 WARNING domain_tools: tool call rejected: listing 1 not found
+[turn 1] input_tokens=314 output_tokens=384 total_tokens=698
+    steps=2  stop_reason=final_answer  tool_calls=1  (142.8 s)
+
+| Scenario | Steps | Stop reason | Tool calls |
+|---|---|---|---|
+| 1. single search, normal completion | 2 | final_answer | 1 |
+| 2. two tools chained, normal completion | 3 | final_answer | 2 |
+| 3. rejected tool call, model recovers | 2 | final_answer | 1 |
+| 4. safety rule blocks the call | 1 | safety_block | 1 |
+| 5. max_steps ceiling reached | 2 | final_answer | 1 |
+
+Saved /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw05/raw/agent_scenarios_summary.json and agent_runs.jsonl
+=== agent scenario 5 rerun Sun Oct  4 16:04:41 PDT 2026 ===
+
+>>> 5. needs more tool calls than max_steps (3) (max_steps=3)
+[turn 1] input_tokens=264 output_tokens=1224 total_tokens=1488
+[turn 1] input_tokens=383 output_tokens=456 total_tokens=839
+[turn 1] input_tokens=504 output_tokens=340 total_tokens=844
+    steps=3  stop_reason=max_steps  tool_calls=3  (122.0 s)
+
+| Scenario | Steps | Stop reason | Tool calls |
+|---|---|---|---|
+| 1. single search, normal completion | 2 | final_answer | 1 |
+| 2. two tools chained, normal completion | 3 | final_answer | 2 |
+| 3. rejected tool call, model recovers | 2 | final_answer | 1 |
+| 4. safety rule blocks the call | 1 | safety_block | 1 |
+| 5. needs more tool calls than max_steps (3) | 3 | max_steps | 3 |
+
+Saved /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw05/raw/agent_scenarios_summary.json and agent_runs.jsonl

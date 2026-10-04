@@ -1,0 +1,37 @@
+{
+  "verify_seed": 268110,
+  "policy": {
+    "max_retries": 3,
+    "base_delay": 0.2,
+    "max_delay": 2.0,
+    "deadline": 5.0
+  },
+  "generated_at": "2026-10-04T21:51:09.480095+00:00",
+  "outcome_fingerprint": "bad290070bacde86",
+  "summary": [
+    {
+      "failure_rate": 0.0,
+      "calls": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 0.74,
+      "p99_latency_ms": 1.65,
+      "mean_attempts": 1.0
+    },
+    {
+      "failure_rate": 0.2,
+      "calls": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 47.83,
+      "p99_latency_ms": 418.46,
+      "mean_attempts": 1.2
+    },
+    {
+      "failure_rate": 0.5,
+      "calls": 50,
+      "success_rate": 0.98,
+      "mean_latency_ms": 240.02,
+      "p99_latency_ms": 1420.13,
+      "mean_attempts": 1.8
+    }
+  ]
+}
