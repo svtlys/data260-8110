@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { deleteListing } from "../store/listingsSlice";
 
-const API_BASE = "http://localhost:8010";
+const API_BASE = "http://localhost:8010/api";
 
 function DeleteRecord({ isLoggedIn }) {
   const [searchParams] = useSearchParams();
@@ -10,6 +12,8 @@ function DeleteRecord({ isLoggedIn }) {
   const [record, setRecord] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,7 +24,7 @@ function DeleteRecord({ isLoggedIn }) {
 
     async function fetchRecord() {
       try {
-        const response = await fetch(`${API_BASE}/api/listings/${recordId}`, {
+        const response = await fetch(`${API_BASE}/listings/${recordId}`, {
           credentials: "include",
         });
         if (!response.ok) {
@@ -41,21 +45,12 @@ function DeleteRecord({ isLoggedIn }) {
 
   const handleDelete = async () => {
     setError(null);
-    try {
-      const response = await fetch(`${API_BASE}/api/listings/${recordId}`, {
-        method: "DELETE",
-        credentials: "include",
-      });
+    const result = await dispatch(deleteListing(recordId));
 
-      if (!response.ok) {
-        throw new Error(`Server responded with ${response.status}`);
-      }
-
-      // Removed from MySQL -- redirect to home to see the updated list
+    if (deleteListing.fulfilled.match(result)) {
       navigate("/");
-    } catch (err) {
-      console.error("Failed to delete listing:", err);
-      setError("Failed to delete listing. Please try again.");
+    } else {
+      setError(result.payload || "Failed to delete listing.");
     }
   };
 
@@ -87,14 +82,14 @@ function DeleteRecord({ isLoggedIn }) {
     <div className="container mt-5" style={{ maxWidth: "480px" }}>
       <div className="card shadow-sm">
         <div className="card-body text-center">
-          <h2 className="mb-4">Delete Listing #{recordId}</h2>
+          <h2 className="mb-4 text-dark">Delete Listing #{recordId}</h2>
 
           {error && <div className="alert alert-danger">{error}</div>}
 
           {record && (
             <p className="mb-4">
               Are you sure you want to delete <strong>{record.address}</strong>
-              {" "}(listed by {record.landlordName})?
+              {record.listing_code ? ` (${record.listing_code})` : ""}?
             </p>
           )}
 

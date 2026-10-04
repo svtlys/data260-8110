@@ -1,16 +1,22 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { updateListing } from "../store/listingsSlice";
 
-const API_BASE = "http://localhost:8010";
+const API_BASE = "http://localhost:8010/api";
 
 function UpdateRecord({ isLoggedIn }) {
   const [searchParams] = useSearchParams();
   const recordId = searchParams.get("id");
 
   const [address, setAddress] = useState("");
-  const [landlordName, setLandlordName] = useState("");
+  const [landlordId, setLandlordId] = useState("");
+  const [listingCode, setListingCode] = useState("");
+  const [availableUnits, setAvailableUnits] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,7 +27,7 @@ function UpdateRecord({ isLoggedIn }) {
 
     async function fetchRecord() {
       try {
-        const response = await fetch(`${API_BASE}/api/listings/${recordId}`, {
+        const response = await fetch(`${API_BASE}/listings/${recordId}`, {
           credentials: "include",
         });
         if (!response.ok) {
@@ -29,7 +35,9 @@ function UpdateRecord({ isLoggedIn }) {
         }
         const data = await response.json();
         setAddress(data.address);
-        setLandlordName(data.landlordName);
+        setLandlordId(data.landlord_id ?? "");
+        setListingCode(data.listing_code ?? "");
+        setAvailableUnits(data.available_units);
       } catch (err) {
         console.error("Failed to load record:", err);
         setError("Failed to load record.");
@@ -45,23 +53,20 @@ function UpdateRecord({ isLoggedIn }) {
     event.preventDefault();
     setError(null);
 
-    try {
-      const response = await fetch(`${API_BASE}/api/listings/${recordId}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ address, landlordName }),
-      });
+    const payload = {
+      id: recordId,
+      address,
+      landlord_id: landlordId ? parseInt(landlordId, 10) : null,
+      listing_code: listingCode || null,
+      available_units: availableUnits,
+    };
 
-      if (!response.ok) {
-        throw new Error(`Server responded with ${response.status}`);
-      }
+    const result = await dispatch(updateListing(payload));
 
-    
+    if (updateListing.fulfilled.match(result)) {
       navigate("/");
-    } catch (err) {
-      console.error("Failed to update listing:", err);
-      setError("Failed to update listing. Please try again.");
+    } else {
+      setError(result.payload || "Failed to update listing.");
     }
   };
 
@@ -93,7 +98,7 @@ function UpdateRecord({ isLoggedIn }) {
     <div className="container mt-5" style={{ maxWidth: "480px" }}>
       <div className="card shadow-sm">
         <div className="card-body">
-          <h2 className="mb-4">Update Listing #{recordId}</h2>
+          <h2 className="mb-4 text-dark">Update Listing #{recordId}</h2>
 
           {error && <div className="alert alert-danger">{error}</div>}
 
@@ -112,13 +117,36 @@ function UpdateRecord({ isLoggedIn }) {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="landlordName" className="form-label">Landlord / Property Manager Name</label>
+              <label htmlFor="landlordId" className="form-label">Landlord ID (optional)</label>
+              <input
+                type="number"
+                className="form-control"
+                id="landlordId"
+                value={landlordId}
+                onChange={(e) => setLandlordId(e.target.value)}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="listingCode" className="form-label">Listing Code (optional, format XX-NNNN)</label>
               <input
                 type="text"
                 className="form-control"
-                id="landlordName"
-                value={landlordName}
-                onChange={(e) => setLandlordName(e.target.value)}
+                id="listingCode"
+                value={listingCode}
+                onChange={(e) => setListingCode(e.target.value)}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="availableUnits" className="form-label">Available Units</label>
+              <input
+                type="number"
+                className="form-control"
+                id="availableUnits"
+                value={availableUnits}
+                onChange={(e) => setAvailableUnits(parseInt(e.target.value, 10) || 0)}
+                min="0"
                 required
               />
             </div>

@@ -1,41 +1,21 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-
-const API_BASE = "http://localhost:8010";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchListings, deleteListing } from "../store/listingsSlice";
 
 function Home({ isLoggedIn }) {
-  const [listings, setListings] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const dispatch = useDispatch();
+  const { items: listings, status, error } = useSelector((state) => state.listings);
 
   useEffect(() => {
-    if (!isLoggedIn) {
-      setLoading(false);
-      return;
+    if (isLoggedIn) {
+      dispatch(fetchListings());
     }
+  }, [isLoggedIn, dispatch]);
 
-    async function fetchListings() {
-      setLoading(true);
-      setError(null);
-      try {
-        const response = await fetch(`${API_BASE}/api/listings`, {
-          credentials: "include",
-        });
-        if (!response.ok) {
-          throw new Error(`Server responded with ${response.status}`);
-        }
-        const data = await response.json();
-        setListings(data);
-      } catch (err) {
-        console.error("Failed to load listings:", err);
-        setError("Failed to load listings. Please try again.");
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchListings();
-  }, [isLoggedIn]);
+  const handleDelete = (id) => {
+    dispatch(deleteListing(id));
+  };
 
   if (!isLoggedIn) {
     return (
@@ -53,20 +33,21 @@ function Home({ isLoggedIn }) {
         <Link to="/create" className="btn btn-primary">Add Record</Link>
       </div>
 
-      {loading && <div className="alert alert-info">Loading listings...</div>}
-      {error && <div className="alert alert-danger">{error}</div>}
+      {status === "loading" && <div className="alert alert-info">Loading listings...</div>}
+      {status === "failed" && <div className="alert alert-danger">{error}</div>}
 
-      {!loading && !error && listings.length === 0 && (
+      {status === "succeeded" && listings.length === 0 && (
         <div className="alert alert-secondary">No listings yet — add one!</div>
       )}
 
-      {!loading && !error && listings.length > 0 && (
+      {status === "succeeded" && listings.length > 0 && (
         <table className="table table-striped">
           <thead>
             <tr>
               <th>ID</th>
               <th>Address</th>
-              <th>Landlord</th>
+              <th>Listing Code</th>
+              <th>Available Units</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -75,7 +56,8 @@ function Home({ isLoggedIn }) {
               <tr key={listing.id}>
                 <td>{listing.id}</td>
                 <td>{listing.address}</td>
-                <td>{listing.landlordName}</td>
+                <td>{listing.listing_code || "—"}</td>
+                <td>{listing.available_units}</td>
                 <td>
                   <Link
                     to={`/update?id=${listing.id}`}
@@ -83,12 +65,12 @@ function Home({ isLoggedIn }) {
                   >
                     Update
                   </Link>
-                  <Link
-                    to={`/delete?id=${listing.id}`}
+                  <button
+                    onClick={() => handleDelete(listing.id)}
                     className="btn btn-sm btn-outline-danger"
                   >
                     Delete
-                  </Link>
+                  </button>
                 </td>
               </tr>
             ))}

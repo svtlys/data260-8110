@@ -1,0 +1,295 @@
+{
+  "note": "Scripted replay of the MCP Inspector test inputs (not Inspector's own export). random_meal returns a different meal on each run.",
+  "generated_at": "2026-10-04T20:54:37.207347+00:00",
+  "servers": [
+    {
+      "server": "meals_server.py",
+      "tools_listed": [
+        "search_meals_by_name",
+        "meals_by_ingredient",
+        "meal_details",
+        "random_meal"
+      ],
+      "calls": [
+        {
+          "tool": "search_meals_by_name",
+          "kind": "valid",
+          "input": {
+            "query": "Arrabiata",
+            "limit": 5
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52771\",\n  \"name\": \"Spicy Arrabiata Penne\",\n  \"area\": \"Italian\",\n  \"category\": \"Vegetarian\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "meals_by_ingredient",
+          "kind": "valid",
+          "input": {
+            "ingredient": "chicken",
+            "limit": 12
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52940\",\n  \"name\": \"Brown Stew Chicken\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"53161\",\n  \"name\": \"Chicken & chorizo rice pot\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/fk80jp1763280767.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52846\",\n  \"name\": \"Chicken & mushroom Hotpot\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52796\",\n  \"name\": \"Chicken Alfredo Primavera\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52934\",\n  \"name\": \"Chicken Basquaise\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52956\",\n  \"name\": \"Chicken Congee\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/1529446352.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52795\",\n  \"name\": \"Chicken Handi\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52831\",\n  \"name\": \"Chicken Karaage\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"53358\",\n  \"name\": \"Chicken Mandi\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/er4d081765186828.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"53186\",\n  \"name\": \"Chicken with saffron, raisins & pine nuts\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/4mhr3u1763481087.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"53220\",\n  \"name\": \"kabse\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/utqnjv1763598650.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              },
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52813\",\n  \"name\": \"Kentucky Fried Chicken\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/40r49m1763197022.jpg\"\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "meal_details",
+          "kind": "valid",
+          "input": {
+            "id": "52772"
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"52772\",\n  \"name\": \"Teriyaki Chicken Casserole\",\n  \"category\": \"Chicken\",\n  \"area\": \"Japanese\",\n  \"instructions\": \"Preheat oven to 350\u00b0 F. Spray a 9x13-inch baking pan with non-stick spray.\\r\\nCombine soy sauce, \u00bd cup water, brown sugar, ginger and garlic in a small saucepan and cover. Bring to a boil over medium heat. Remove lid and cook for one minute once boiling.\\r\\nMeanwhile, stir together the corn starch and 2 tablespoons of water in a separate dish until smooth. Once sauce is boiling, add mixture to the saucepan and stir to combine. Cook until the sauce starts to thicken then remove from heat.\\r\\nPlace the chicken breasts in the prepared pan. Pour one cup of the sauce over top of chicken. Place chicken in oven and bake 35 minutes or until cooked through. Remove from oven and shred chicken in the dish using two forks.\\r\\n*Meanwhile, steam or cook the vegetables according to package directions.\\r\\nAdd the cooked vegetables and rice to the casserole dish with the chicken. Add most of the remaining sauce, reserving a bit to drizzle over the top when serving. Gently toss everything together in the casserole dish until combined. Return to oven and cook 15 minutes. Remove from oven and let stand 5 minutes before serving. Drizzle each serving with remaining sauce. Enjoy!\",\n  \"image\": \"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg\",\n  \"source\": null,\n  \"youtube\": \"https://www.youtube.com/watch?v=4aZr5hZXP_s\",\n  \"ingredients\": [\n    {\n      \"name\": \"soy sauce\",\n      \"measure\": \"3/4 cup\"\n    },\n    {\n      \"name\": \"water\",\n      \"measure\": \"1/2 cup\"\n    },\n    {\n      \"name\": \"brown sugar\",\n      \"measure\": \"1/4 cup\"\n    },\n    {\n      \"name\": \"ground ginger\",\n      \"measure\": \"1/2 teaspoon\"\n    },\n    {\n      \"name\": \"minced garlic\",\n      \"measure\": \"1/2 teaspoon\"\n    },\n    {\n      \"name\": \"cornstarch\",\n      \"measure\": \"4 Tablespoons\"\n    },\n    {\n      \"name\": \"chicken breasts\",\n      \"measure\": \"2\"\n    },\n    {\n      \"name\": \"stir-fry vegetables\",\n      \"measure\": \"1 (12 oz.)\"\n    },\n    {\n      \"name\": \"brown rice\",\n      \"measure\": \"3 cups\"\n    }\n  ]\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "random_meal",
+          "kind": "valid",
+          "input": {},
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"id\": \"53085\",\n  \"name\": \"15-minute chicken & halloumi burgers\",\n  \"category\": \"Chicken\",\n  \"area\": \"United States\",\n  \"instructions\": \"STEP 1\\r\\n\\r\\nPut the chicken breasts between two pieces of baking parchment and use a rolling pin to gently bash them until they are approximately 1cm thick. Cut each chicken breast into two even pieces.\\r\\n\\r\\nSTEP 2\\r\\n\\r\\nIf you're using a frying pan, heat two frying pans over medium-high heat, with one of them containing oil. Fry the chicken in the oiled pan for 3-4 mins on each side until they are cooked through. Season the chicken, reduce the heat, drizzle in the chilli sauce and half of the lemon juice, and cook for an additional 1-2 mins until the sauce is reduced. Remove the chicken from the heat.\\r\\n\\r\\nSTEP 3\\r\\n\\r\\nIf you're using an air-fryer, preheat it to 180C for 4 mins. Add the chicken to the air-fryer and cook for 12 mins. Drizzle over the chilli sauce and half the lemon juice and cook for an additional 1-2 mins until the chicken is cooked through and the sauce is reduced. Remove the chicken and keep it warm.\\r\\nSTEP 4\\r\\n\\r\\nWhile the chicken is cooking, toast the buns in the dry frying pan for 30 seconds. Transfer them to a plate. If you're using an air fryer, put the buns in the air fryer for 1-2 mins until they are warm. Increase the air fryer temperature to 200C. Add the halloumi to the air fryer basket and cook for 10 mins, turning halfway through, until it's golden. Toss the cabbage with the mayo and the remaining lemon juice.\\r\\n\\r\\nSTEP 5\\r\\n\\r\\nSpoon the hummus (or dip of your choice) into the toasted buns, then top with the rocket, chilli chicken, halloumi, and peppers. Drizzle with a little more chilli sauce, spoon over the cabbage, season with black pepper, and top with the bun lids. Serve with any extra cabbage on the side or a green salad.\",\n  \"image\": \"https://www.themealdb.com/images/media/meals/vdwloy1713225718.jpg\",\n  \"source\": \"https://www.bbcgoodfood.com/recipes/15-minute-chicken-halloumi-burgers\",\n  \"youtube\": \"https://www.youtube.com/watch?v=k9Ez0bUbXKc\",\n  \"ingredients\": [\n    {\n      \"name\": \"Chicken Breasts\",\n      \"measure\": \"2\"\n    },\n    {\n      \"name\": \"Oil\",\n      \"measure\": \"1 tbsp\"\n    },\n    {\n      \"name\": \"Hotsauce\",\n      \"measure\": \"4 tbsp\"\n    },\n    {\n      \"name\": \"Lemon Juice\",\n      \"measure\": \"\u00bd\"\n    },\n    {\n      \"name\": \"Buns\",\n      \"measure\": \"2\"\n    },\n    {\n      \"name\": \"Cheese\",\n      \"measure\": \"250g\"\n    },\n    {\n      \"name\": \"Cabbage\",\n      \"measure\": \"\u00bc\"\n    },\n    {\n      \"name\": \"Mayonnaise\",\n      \"measure\": \"2 tbsp\"\n    },\n    {\n      \"name\": \"Sour Cream\",\n      \"measure\": \"4 tbsp\"\n    },\n    {\n      \"name\": \"Lettuce\",\n      \"measure\": \"4 leaves\"\n    },\n    {\n      \"name\": \"Red Pepper\",\n      \"measure\": \"2\"\n    }\n  ]\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ]
+    },
+    {
+      "server": "domain_mcp_server.py",
+      "tools_listed": [
+        "search_listings",
+        "get_listing_detail",
+        "aggregate_landlord_stats"
+      ],
+      "calls": [
+        {
+          "tool": "search_listings",
+          "kind": "valid",
+          "input": {
+            "query": "Main",
+            "limit": 5
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"count\": 5,\n    \"results\": [\n      {\n        \"id\": 3,\n        \"address\": \"1440 Main St, San Jose, CA\",\n        \"listing_code\": null,\n        \"available_units\": 1,\n        \"landlord_id\": 1\n      },\n      {\n        \"id\": 12,\n        \"address\": \"9043 Main St, San Jose, CA\",\n        \"listing_code\": null,\n        \"available_units\": 1,\n        \"landlord_id\": 1\n      },\n      {\n        \"id\": 16,\n        \"address\": \"2134 Main St, San Jose, CA\",\n        \"listing_code\": null,\n        \"available_units\": 1,\n        \"landlord_id\": 1\n      },\n      {\n        \"id\": 19,\n        \"address\": \"4106 Main St, San Jose, CA\",\n        \"listing_code\": null,\n        \"available_units\": 1,\n        \"landlord_id\": 1\n      },\n      {\n        \"id\": 22,\n        \"address\": \"8075 Main St, San Jose, CA\",\n        \"listing_code\": null,\n        \"available_units\": 1,\n        \"landlord_id\": 1\n      }\n    ]\n  },\n  \"error\": null\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "search_listings",
+          "kind": "invalid",
+          "input": {
+            "query": " ",
+            "limit": 5
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"query must be a non-empty string\"\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "get_listing_detail",
+          "kind": "valid",
+          "input": {
+            "listing_id": 7
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"id\": 7,\n    \"address\": \"197 Chablis Cir, San Jose, CA\",\n    \"listing_code\": null,\n    \"available_units\": 1,\n    \"landlord\": {\n      \"id\": 1,\n      \"name\": \"Felix Realty Group\",\n      \"email\": \"felix@example.com\"\n    }\n  },\n  \"error\": null\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "get_listing_detail",
+          "kind": "invalid",
+          "input": {
+            "listing_id": 99999999
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"listing 99999999 not found\"\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "aggregate_landlord_stats",
+          "kind": "valid",
+          "input": {
+            "landlord_id": 1
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"landlord_id\": 1,\n    \"landlord_name\": \"Felix Realty Group\",\n    \"listing_count\": 24,\n    \"total_available_units\": 26,\n    \"average_available_units\": 1.08\n  },\n  \"error\": null\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "tool": "aggregate_landlord_stats",
+          "kind": "invalid",
+          "input": {
+            "landlord_id": 0
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"landlord_id must be >= 1\"\n}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ]
+    }
+  ]
+}

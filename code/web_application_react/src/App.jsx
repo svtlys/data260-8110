@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import CreateRecord from "./components/CreateRecord";
 import UpdateRecord from "./components/UpdateRecord";
 import DeleteRecord from "./components/DeleteRecord";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const API_BASE = "http://localhost:8010";
 
@@ -95,13 +97,15 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <AppRoutes
-        isLoggedIn={isLoggedIn}
-        setIsLoggedIn={setIsLoggedIn}
-        onLogout={handleLogout}
-      />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <AppRoutes
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn}
+          onLogout={handleLogout}
+        />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
