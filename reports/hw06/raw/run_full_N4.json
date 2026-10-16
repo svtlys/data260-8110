@@ -1,0 +1,646 @@
+{
+  "summary": {
+    "run_id": "full_N4",
+    "policy": "full",
+    "short_term_n": 4,
+    "mean_prompt_tokens": 407.2,
+    "mean_completion_tokens": 39.8,
+    "mean_latency_ms": 3584.2,
+    "mean_probe_score": 5,
+    "mean_component_tokens": {
+      "primer": 57.2,
+      "longterm": 205.3,
+      "episodic": 19.3,
+      "window": 114.9,
+      "user": 10.7
+    },
+    "maintenance_calls": 10,
+    "maintenance_prompt_tokens": 3735,
+    "maintenance_completion_tokens": 1171,
+    "maintenance_latency_ms": 88352.0,
+    "conv_input_tokens": 15951,
+    "conv_output_tokens": 2365,
+    "wall_seconds": 220
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "Hi! I'm searching for a rental in Willow Glen, San Jose.",
+      "reply": "Hi there! I'd be happy to help you find a rental in Willow Glen, San Jose. Could you tell me more about your needs, like budget, number of bedrooms, or preferred amenities?",
+      "prompt_tokens": 88,
+      "completion_tokens": 41,
+      "components": {
+        "primer": 71,
+        "longterm": 0,
+        "episodic": 0,
+        "window": 0,
+        "user": 17
+      },
+      "latency_ms": 6103.5,
+      "window_msgs": 0,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 2,
+      "user": "My budget is $2,400 a month at most.",
+      "reply": "That's a good budget! Let me check what's available in Willow Glen within that range. Would you like to specify the number of bedrooms or any particular preferences?",
+      "prompt_tokens": 152,
+      "completion_tokens": 34,
+      "components": {
+        "primer": 70,
+        "longterm": 0,
+        "episodic": 0,
+        "window": 71,
+        "user": 11
+      },
+      "latency_ms": 2567.8,
+      "window_msgs": 2,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 3,
+      "user": "I have two cats named Miso and Pickles.",
+      "reply": "Great to know! I'll make sure to look for rentals that are pet-friendly. Do you have any specific preferences for the type of property or location within Willow Glen?",
+      "prompt_tokens": 206,
+      "completion_tokens": 35,
+      "components": {
+        "primer": 67,
+        "longterm": 0,
+        "episodic": 0,
+        "window": 127,
+        "user": 12
+      },
+      "latency_ms": 2597.1,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 4,
+      "user": "What should I check in a lease when I have pets?",
+      "reply": "When reviewing a lease with pets, check for pet-friendly clauses, any restrictions on the type or number of pets, and whether there's a pet deposit or fee. Also, confirm if the landlord allows pets without a landlord's approval.",
+      "prompt_tokens": 232,
+      "completion_tokens": 48,
+      "components": {
+        "primer": 64,
+        "longterm": 0,
+        "episodic": 39,
+        "window": 115,
+        "user": 14
+      },
+      "latency_ms": 3879.1,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 5,
+      "user": "I need to move in by December 1.",
+      "reply": "You\u2019ll need to find a rental that\u2019s available by December 1. Let me know if you\u2019d like help searching for options within your budget and pet-friendly criteria.",
+      "prompt_tokens": 245,
+      "completion_tokens": 35,
+      "components": {
+        "primer": 63,
+        "longterm": 0,
+        "episodic": 38,
+        "window": 135,
+        "user": 9
+      },
+      "latency_ms": 3097.2,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 6,
+      "user": "I refuse to live in a place with carpet because of my cats.",
+      "reply": "Make sure the rental has hard flooring like tile or hardwood to keep your cats safe and clean. Let me know if you need help finding such listings.",
+      "prompt_tokens": 242,
+      "completion_tokens": 31,
+      "components": {
+        "primer": 63,
+        "longterm": 0,
+        "episodic": 33,
+        "window": 130,
+        "user": 16
+      },
+      "latency_ms": 2858.1,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 12398.5
+    },
+    {
+      "turn": 7,
+      "user": "How early should I start touring places?",
+      "reply": "You should start touring places at least 4-6 weeks before your December 1 move-in date to allow time for applications and lease signings. Let me know if you need help finding available listings.",
+      "prompt_tokens": 377,
+      "completion_tokens": 41,
+      "components": {
+        "primer": 58,
+        "longterm": 187,
+        "episodic": 20,
+        "window": 102,
+        "user": 10
+      },
+      "latency_ms": 4456.0,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 8,
+      "user": "Is in-unit laundry worth paying extra for?",
+      "reply": "In-unit laundry is often worth the extra cost because it provides convenience and reduces trips to a shared laundry room. Let me know if you need help comparing options.",
+      "prompt_tokens": 386,
+      "completion_tokens": 33,
+      "components": {
+        "primer": 58,
+        "longterm": 185,
+        "episodic": 21,
+        "window": 112,
+        "user": 11
+      },
+      "latency_ms": 2813.2,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 9,
+      "user": "What documents do landlords usually ask for?",
+      "reply": "Landlords typically ask for a rental application, proof of income, credit report, and references. They may also request a security deposit and lease agreement. Let me know if you need help preparing these.",
+      "prompt_tokens": 396,
+      "completion_tokens": 41,
+      "components": {
+        "primer": 56,
+        "longterm": 180,
+        "episodic": 39,
+        "window": 110,
+        "user": 11
+      },
+      "latency_ms": 3506.4,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 10,
+      "user": "How do I tell if a listing is a scam?",
+      "reply": "Be cautious of listings with no contact information, unusually low rent, or requests for money upfront. Always verify the property and landlord through local directories or real estate platforms. Let me know if you need help checking a specific listing.",
+      "prompt_tokens": 361,
+      "completion_tokens": 46,
+      "components": {
+        "primer": 56,
+        "longterm": 181,
+        "episodic": 0,
+        "window": 115,
+        "user": 9
+      },
+      "latency_ms": 3605.4,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 11,
+      "user": "What does 'utilities included' usually cover?",
+      "reply": "\"Utilities included\" usually covers electricity, water, and gas. It may also include internet and trash collection, depending on the landlord. Always check the lease for specifics.",
+      "prompt_tokens": 374,
+      "completion_tokens": 35,
+      "components": {
+        "primer": 55,
+        "longterm": 177,
+        "episodic": 0,
+        "window": 131,
+        "user": 11
+      },
+      "latency_ms": 2933.2,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 12,
+      "user": "How much is a typical security deposit?",
+      "reply": "A typical security deposit ranges from one to two months' rent, but this can vary by location and landlord. Always check the lease agreement for exact terms.",
+      "prompt_tokens": 392,
+      "completion_tokens": 32,
+      "components": {
+        "primer": 56,
+        "longterm": 179,
+        "episodic": 20,
+        "window": 127,
+        "user": 10
+      },
+      "latency_ms": 2918.2,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 17089.0
+    },
+    {
+      "turn": 13,
+      "user": "Should I ask about parking before touring?",
+      "reply": "Yes, you should ask about parking before touring to ensure it meets your needs. Confirm if there is a designated spot, parking fees, or any restrictions. This helps avoid last-minute surprises.",
+      "prompt_tokens": 418,
+      "completion_tokens": 39,
+      "components": {
+        "primer": 55,
+        "longterm": 250,
+        "episodic": 0,
+        "window": 103,
+        "user": 10
+      },
+      "latency_ms": 4517.7,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 14,
+      "user": "What are good questions to ask about noise?",
+      "reply": "Ask about quiet hours, common area noise levels, and if neighbors are generally quiet. Also, inquire if the unit is on a noisy street or near busy roads.",
+      "prompt_tokens": 422,
+      "completion_tokens": 34,
+      "components": {
+        "primer": 55,
+        "longterm": 250,
+        "episodic": 0,
+        "window": 106,
+        "user": 11
+      },
+      "latency_ms": 2846.0,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 15,
+      "user": "How do I compare a studio against a one-bedroom?",
+      "reply": "Compare square footage, number of bedrooms, and layout to see what fits your space and budget. Check if the studio has a private area for sleeping and the one-bedroom offers more privacy and space. Consider your long-term needs and how each fits your lifestyle.",
+      "prompt_tokens": 450,
+      "completion_tokens": 52,
+      "components": {
+        "primer": 56,
+        "longterm": 252,
+        "episodic": 24,
+        "window": 106,
+        "user": 12
+      },
+      "latency_ms": 4118.8,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 16,
+      "user": "Is renter's insurance really necessary?",
+      "reply": "Renter's insurance is not required by law, but it can protect your belongings and provide liability coverage. It's recommended, especially if you have valuable items or want peace of mind. Check with your landlord to see if they require it.",
+      "prompt_tokens": 463,
+      "completion_tokens": 49,
+      "components": {
+        "primer": 55,
+        "longterm": 250,
+        "episodic": 24,
+        "window": 124,
+        "user": 10
+      },
+      "latency_ms": 3980.4,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 17,
+      "user": "What is a fair way to negotiate rent?",
+      "reply": "Negotiate based on market rates, property condition, and lease terms. Highlight any unique benefits you offer, like a longer lease or good credit. Be polite and prepared with comparable listings to support your request.",
+      "prompt_tokens": 504,
+      "completion_tokens": 43,
+      "components": {
+        "primer": 56,
+        "longterm": 252,
+        "episodic": 42,
+        "window": 145,
+        "user": 9
+      },
+      "latency_ms": 3872.5,
+      "window_msgs": 4,
+      "facts_recalled": 3,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 18,
+      "user": "How long are standard lease terms?",
+      "reply": "Standard lease terms are typically 12 months, though some landlords offer 6-month or 18-month leases. Always confirm the exact term in the lease agreement.",
+      "prompt_tokens": 477,
+      "completion_tokens": 35,
+      "components": {
+        "primer": 55,
+        "longterm": 249,
+        "episodic": 34,
+        "window": 131,
+        "user": 8
+      },
+      "latency_ms": 3127.3,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 21236.2
+    },
+    {
+      "turn": 19,
+      "user": "What should I photograph at move-in?",
+      "reply": "Photograph all walls, floors, ceilings, and fixtures for damage documentation. Include any existing stains, scratches, or wear. Also, capture the condition of appliances, light fixtures, and windows.",
+      "prompt_tokens": 515,
+      "completion_tokens": 40,
+      "components": {
+        "primer": 55,
+        "longterm": 312,
+        "episodic": 32,
+        "window": 108,
+        "user": 9
+      },
+      "latency_ms": 4524.7,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 20,
+      "user": "Can a landlord raise rent mid-lease?",
+      "reply": "In most cases, a landlord cannot raise rent mid-lease without providing proper notice and following local laws. Check your lease agreement and local regulations for specifics.",
+      "prompt_tokens": 501,
+      "completion_tokens": 32,
+      "components": {
+        "primer": 55,
+        "longterm": 312,
+        "episodic": 23,
+        "window": 103,
+        "user": 9
+      },
+      "latency_ms": 2792.4,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 21,
+      "user": "What's the difference between a sublease and a lease assignment?",
+      "reply": "A sublease involves renting the unit to another person for part or all of the lease term, while a lease assignment transfers the entire lease to another person, making them the new tenant.",
+      "prompt_tokens": 515,
+      "completion_tokens": 38,
+      "components": {
+        "primer": 54,
+        "longterm": 308,
+        "episodic": 32,
+        "window": 107,
+        "user": 15
+      },
+      "latency_ms": 3298.2,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 22,
+      "user": "How do application fees work?",
+      "reply": "Application fees are charges by landlords or property managers to process your rental application. They are typically non-refundable and cover background checks, credit reports, and other screening processes. Fees vary by property and location.",
+      "prompt_tokens": 477,
+      "completion_tokens": 43,
+      "components": {
+        "primer": 54,
+        "longterm": 306,
+        "episodic": 0,
+        "window": 110,
+        "user": 7
+      },
+      "latency_ms": 3508.3,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 23,
+      "user": "Should south-facing windows worry me in summer?",
+      "reply": "South-facing windows can increase indoor temperatures in summer, so consider shade solutions like blinds, curtains, or awnings to manage heat.",
+      "prompt_tokens": 488,
+      "completion_tokens": 27,
+      "components": {
+        "primer": 53,
+        "longterm": 301,
+        "episodic": 0,
+        "window": 123,
+        "user": 11
+      },
+      "latency_ms": 2483.0,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 24,
+      "user": "How do I handle a roommate on the lease?",
+      "reply": "If you're adding a roommate to the lease, ensure they meet the landlord's criteria and agree on responsibilities. Include their details in the lease agreement and confirm they understand their obligations. Always get the landlord's approval before adding anyone to the lease.",
+      "prompt_tokens": 498,
+      "completion_tokens": 50,
+      "components": {
+        "primer": 53,
+        "longterm": 303,
+        "episodic": 24,
+        "window": 109,
+        "user": 9
+      },
+      "latency_ms": 3849.4,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 18515.9
+    },
+    {
+      "turn": 25,
+      "user": "What are signs of mold to look for on a tour?",
+      "reply": "Look for dark, musty spots, water stains, peeling paint, or a damp smell. Check around windows, pipes, and under sinks for visible mold growth. Always ask about past mold issues and request a mold inspection if needed.",
+      "prompt_tokens": 467,
+      "completion_tokens": 49,
+      "components": {
+        "primer": 53,
+        "longterm": 285,
+        "episodic": 0,
+        "window": 119,
+        "user": 11
+      },
+      "latency_ms": 4844.8,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 26,
+      "user": "How can I check a landlord's reputation?",
+      "reply": "Check online reviews on platforms like Yelp, Google, and Zillow. Ask neighbors or previous tenants for feedback. Verify the landlord\u2019s contact information and responsiveness through the rental listing or property management.",
+      "prompt_tokens": 538,
+      "completion_tokens": 39,
+      "components": {
+        "primer": 54,
+        "longterm": 290,
+        "episodic": 46,
+        "window": 138,
+        "user": 10
+      },
+      "latency_ms": 3644.2,
+      "window_msgs": 4,
+      "facts_recalled": 3,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 27,
+      "user": "What is a reasonable commute to aim for?",
+      "reply": "A reasonable commute is typically under 30 minutes, but this depends on your job location and transportation options. Consider public transit access, traffic patterns, and whether the commute fits your schedule. Aim for a balance between cost, time, and convenience.",
+      "prompt_tokens": 512,
+      "completion_tokens": 51,
+      "components": {
+        "primer": 55,
+        "longterm": 292,
+        "episodic": 28,
+        "window": 127,
+        "user": 10
+      },
+      "latency_ms": 4149.4,
+      "window_msgs": 4,
+      "facts_recalled": 2,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 28,
+      "user": "How do I read the fine print on a listing?",
+      "reply": "Look for details on pet policies, security deposits, lease terms, and any additional fees. Check for clauses about rent increases, subletting, and property conditions. Ensure you understand what utilities are included and any restrictions on modifications or guests.",
+      "prompt_tokens": 478,
+      "completion_tokens": 49,
+      "components": {
+        "primer": 53,
+        "longterm": 282,
+        "episodic": 0,
+        "window": 133,
+        "user": 10
+      },
+      "latency_ms": 3944.3,
+      "window_msgs": 4,
+      "facts_recalled": 0,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 29,
+      "user": "What should I do the week before moving?",
+      "reply": "Organize your moving supplies, clean the new place, and confirm all utilities are set up. Double-check the lease agreement and ensure you have all necessary documents ready. Set up your mail and internet services.",
+      "prompt_tokens": 538,
+      "completion_tokens": 42,
+      "components": {
+        "primer": 54,
+        "longterm": 287,
+        "episodic": 42,
+        "window": 146,
+        "user": 9
+      },
+      "latency_ms": 3807.2,
+      "window_msgs": 4,
+      "facts_recalled": 3,
+      "maintenance_ms": 0
+    },
+    {
+      "turn": 30,
+      "user": "Thanks, that's a lot to think about.",
+      "reply": "You're welcome! It's a lot, but with careful planning, everything will fall into place. Good luck with your move! \ud83d\udc3e",
+      "prompt_tokens": 504,
+      "completion_tokens": 30,
+      "components": {
+        "primer": 54,
+        "longterm": 288,
+        "episodic": 19,
+        "window": 134,
+        "user": 9
+      },
+      "latency_ms": 2883.6,
+      "window_msgs": 4,
+      "facts_recalled": 1,
+      "maintenance_ms": 19112.4
+    }
+  ],
+  "probes": [
+    {
+      "id": "P1_budget",
+      "question": "What is my maximum monthly rent budget?",
+      "criteria": "States the $2,400 per month limit.",
+      "reply": "Your maximum monthly rent budget is $2,400.",
+      "groups_hit": 1,
+      "groups_needed": 1,
+      "score": 5,
+      "prompt_tokens": 511,
+      "latency_ms": 3888.9,
+      "facts_recalled": [
+        "My budget is $2,400 a month at most.",
+        "I need to move in by December 1.",
+        "I'm searching for a rental in Willow Glen, San Jose."
+      ]
+    },
+    {
+      "id": "P2_pets",
+      "question": "What are the names of my cats?",
+      "criteria": "Names both cats: Miso and Pickles.",
+      "reply": "Your cats are named Miso and Pickles.",
+      "groups_hit": 2,
+      "groups_needed": 2,
+      "score": 5,
+      "prompt_tokens": 498,
+      "latency_ms": 1774.8,
+      "facts_recalled": [
+        "I have two cats named Miso and Pickles.",
+        "I refuse to live in a place with carpet because of my cats."
+      ]
+    },
+    {
+      "id": "P3_move_in",
+      "question": "By what date do I need to move in?",
+      "criteria": "States December 1.",
+      "reply": "You need to move in by December 1. Make sure to finalize your lease and prepare everything in advance to ensure a smooth transition. \ud83c\udfe1",
+      "groups_hit": 1,
+      "groups_needed": 1,
+      "score": 5,
+      "prompt_tokens": 513,
+      "latency_ms": 2979.1,
+      "facts_recalled": [
+        "I need to move in by December 1.",
+        "I'm searching for a rental in Willow Glen, San Jose.",
+        "I refuse to live in a place with carpet because of my cats."
+      ]
+    },
+    {
+      "id": "P4_neighborhood",
+      "question": "Which neighborhood am I searching in?",
+      "criteria": "States Willow Glen (San Jose).",
+      "reply": "You're searching in Willow Glen, San Jose.",
+      "groups_hit": 1,
+      "groups_needed": 1,
+      "score": 5,
+      "prompt_tokens": 495,
+      "latency_ms": 1615.9,
+      "facts_recalled": [
+        "I'm searching for a rental in Willow Glen, San Jose.",
+        "I need to move in by December 1."
+      ]
+    },
+    {
+      "id": "P5_dealbreaker",
+      "question": "What flooring will I not accept in my apartment, and why?",
+      "criteria": "Says carpet, and that it is because of the cats.",
+      "reply": "You will not accept carpeting because of your cats, as it can trap hair and make cleaning difficult. You prefer hard flooring for easier maintenance and pet-friendly cleanliness.",
+      "groups_hit": 2,
+      "groups_needed": 2,
+      "score": 5,
+      "prompt_tokens": 502,
+      "latency_ms": 3201.2,
+      "facts_recalled": [
+        "I refuse to live in a place with carpet because of my cats.",
+        "I need to move in by December 1."
+      ]
+    }
+  ]
+}
