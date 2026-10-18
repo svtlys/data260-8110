@@ -1,0 +1,8 @@
+run_id,policy,short_term_n,mean_prompt_tokens,mean_completion_tokens,mean_latency_ms,mean_probe_score,maintenance_calls,conv_input_tokens,conv_output_tokens,cost_10k_usd,score_P1_budget,score_P2_pets,score_P3_move_in,score_P4_neighborhood,score_P5_dealbreaker
+fifo_N4,fifo,4,197.5,41.1,3397.6,1,0,5924,1232,120.84,1,1,1,1,1
+fifo_N12,fifo,12,380.9,37.5,4071.2,1,0,11427,1126,170.57,1,1,1,1,1
+fifo_N30,fifo,30,694.8,37.9,5973.9,1,0,20843,1136,265.23,1,1,1,1,1
+summary_N4,summary,4,375.8,42.4,4700.9,4.6,10,14947,2321,265.52,5,5,5,5,3
+full_N4,full,4,407.2,39.8,3584.2,5,10,15951,2365,277.76,5,5,5,5,5
+full_N12,full,12,605.2,43.8,5224.3,5,10,21802,2316,333.82,5,5,5,5,5
+full_N30,full,30,956.1,41.6,7132.3,5,10,32463,2391,444.18,5,5,5,5,5

@@ -1,0 +1,145 @@
+{
+  "task": "Write a Python function parse_rent(text) that converts rent strings such as '$2,400/mo' or '2400 per month' into an integer number of dollars per month, and raises ValueError for anything it cannot parse. Reply with one Python code block containing the function and its tests.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "code": "import re\nimport pytest\n\ndef parse_rent(text: str) -> int:\n    \"\"\"\n    Convert a rent string into an integer number of dollars per month.\n    \n    Args:\n        text: A string representing rent, e.g., '$2,400/mo' or '2400 per month'.\n        \n    Returns:\n        int: The rent amount in dollars per month.\n        \n    Raises:\n        ValueError: If the text cannot be parsed into a valid rent amount.\n    \"\"\"\n    # Remove any non-numeric characters except for commas and currency symbols\n    cleaned_text = re.sub(r'[^\\d\\,\\$\\s]', '', text)\n    \n    # Split the text into parts based on spaces and commas\n    parts = re.split(r'[\\s,]+', cleaned_text)\n    \n    # Extract the numeric part and the unit (e.g., 'mo')\n    numeric_part = ''.join(part for part in parts if part.isdigit())\n    unit_part = ''.join(part for part in parts if re.match(r'[a-zA-Z]+', part))\n    \n    # Check if the unit is 'mo' (month) and if the numeric part is valid\n    if 'mo' in unit_part.lower() and numeric_part:\n        try:\n            return int(numeric_part.replace(',', ''))\n        except ValueError:\n            raise ValueError(\"Invalid numeric value in rent string.\")\n    else:\n        raise ValueError(\"Invalid rent format. Expected a numeric value followed by 'mo' or 'month'.\")\n\n# Test cases\ndef test_parse_rent_valid():\n    assert parse_rent('$2,400/mo') == 2400\n    assert parse_rent('2400 per month') == 2400\n    assert parse_rent('3,500 mo') == 3500\n    assert parse_rent('5000/month') == 5000\n\ndef test_parse_rent_invalid():\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo')\n    with pytest.raises(ValueError):\n        parse_rent('2400 per year')\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo$')\n    with pytest.raises(ValueError):\n        parse_rent('2400')\n",
+      "checks": [
+        {
+          "rule": "C1 type hints on all parameters and return values",
+          "passed": true,
+          "detail": "1 function(s) checked"
+        },
+        {
+          "rule": "C2 docstring on every non-test function",
+          "passed": true,
+          "detail": "all present"
+        },
+        {
+          "rule": "C3 snake_case names, functions <= 30 lines",
+          "passed": false,
+          "detail": "bad names: []; too long: ['parse_rent(31 lines)']"
+        },
+        {
+          "rule": "C4 no print() in non-test functions",
+          "passed": true,
+          "detail": "none found"
+        },
+        {
+          "rule": "X1 at least three test_ functions with assertions",
+          "passed": false,
+          "detail": "2 found: ['test_parse_rent_valid', 'test_parse_rent_invalid']"
+        },
+        {
+          "rule": "N1 no hard-coded secrets",
+          "passed": true,
+          "detail": "none found"
+        },
+        {
+          "rule": "N2 no eval/exec and no bare except",
+          "passed": true,
+          "detail": "none found"
+        }
+      ],
+      "all_rules_passed": false,
+      "tests": {
+        "ran": false,
+        "detail": "static checks failed"
+      }
+    },
+    {
+      "attempt": 2,
+      "code": "import re\nimport pytest\n\ndef parse_rent(text: str) -> int:\n    \"\"\"\n    Convert a rent string into an integer number of dollars per month.\n    \n    Args:\n        text: A string representing rent, e.g., '$2,400/mo' or '2400 per month'.\n        \n    Returns:\n        int: The rent amount in dollars per month.\n        \n    Raises:\n        ValueError: If the text cannot be parsed into a valid rent amount.\n    \"\"\"\n    # Remove non-numeric characters except for commas, currency symbols, and spaces\n    cleaned_text = re.sub(r'[^\\d\\,\\$\\s]', '', text)\n    \n    # Split the text into parts based on spaces and commas\n    parts = re.split(r'[\\s,]+', cleaned_text)\n    \n    # Extract numeric and unit parts\n    numeric_part = ''.join(part for part in parts if part.isdigit())\n    unit_part = ''.join(part for part in parts if re.match(r'[a-zA-Z]+', part))\n    \n    # Check if the unit is 'mo' or 'month' and if the numeric part is valid\n    if any(unit.lower() in unit_part.lower() for unit in ['mo', 'month']) and numeric_part:\n        try:\n            return int(numeric_part.replace(',', ''))\n        except ValueError:\n            raise ValueError(\"Invalid numeric value in rent string.\")\n    else:\n        raise ValueError(\"Invalid rent format. Expected a numeric value followed by 'mo' or 'month'.\")\n\n# Test cases\ndef test_parse_rent_valid():\n    assert parse_rent('$2,400/mo') == 2400\n    assert parse_rent('2400 per month') == 2400\n    assert parse_rent('3,500 mo') == 3500\n    assert parse_rent('5000/month') == 5000\n\ndef test_parse_rent_invalid():\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo')\n    with pytest.raises(ValueError):\n        parse_rent('2400 per year')\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo$')\n\ndef test_parse_rent_edge_case():\n    with pytest.raises(ValueError):\n        parse_rent('2400')\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo 123')\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo $')\n",
+      "checks": [
+        {
+          "rule": "C1 type hints on all parameters and return values",
+          "passed": true,
+          "detail": "1 function(s) checked"
+        },
+        {
+          "rule": "C2 docstring on every non-test function",
+          "passed": true,
+          "detail": "all present"
+        },
+        {
+          "rule": "C3 snake_case names, functions <= 30 lines",
+          "passed": false,
+          "detail": "bad names: []; too long: ['parse_rent(31 lines)']"
+        },
+        {
+          "rule": "C4 no print() in non-test functions",
+          "passed": true,
+          "detail": "none found"
+        },
+        {
+          "rule": "X1 at least three test_ functions with assertions",
+          "passed": true,
+          "detail": "3 found: ['test_parse_rent_valid', 'test_parse_rent_invalid', 'test_parse_rent_edge_case']"
+        },
+        {
+          "rule": "N1 no hard-coded secrets",
+          "passed": true,
+          "detail": "none found"
+        },
+        {
+          "rule": "N2 no eval/exec and no bare except",
+          "passed": true,
+          "detail": "none found"
+        }
+      ],
+      "all_rules_passed": false,
+      "tests": {
+        "ran": false,
+        "detail": "static checks failed"
+      }
+    },
+    {
+      "attempt": 3,
+      "code": "import re\nimport pytest\n\ndef parse_rent(text: str) -> int:\n    \"\"\"\n    Convert a rent string into an integer number of dollars per month.\n    \n    Args:\n        text: A string representing rent, e.g., '$2,400/mo' or '2400 per month'.\n        \n    Returns:\n        int: The rent amount in dollars per month.\n        \n    Raises:\n        ValueError: If the text cannot be parsed into a valid rent amount.\n    \"\"\"\n    cleaned_text = re.sub(r'[^\\d\\,\\$\\s]', '', text)\n    parts = re.split(r'[\\s,]+', cleaned_text)\n    numeric_part = ''.join(part for part in parts if part.isdigit())\n    unit_part = ''.join(part for part in parts if re.match(r'[a-zA-Z]+', part))\n    \n    if any(unit.lower() in unit_part.lower() for unit in ['mo', 'month']) and numeric_part:\n        try:\n            return int(numeric_part.replace(',', ''))\n        except ValueError:\n            raise ValueError(\"Invalid numeric value in rent string.\")\n    else:\n        raise ValueError(\"Invalid rent format. Expected a numeric value followed by 'mo' or 'month'.\")\n\ndef test_parse_rent_valid():\n    assert parse_rent('$2,400/mo') == 2400\n    assert parse_rent('2400 per month') == 2400\n    assert parse_rent('3,500 mo') == 3500\n    assert parse_rent('5000/month') == 5000\n\ndef test_parse_rent_invalid():\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo')\n    with pytest.raises(ValueError):\n        parse_rent('2400 per year')\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo$')\n\ndef test_parse_rent_edge_case():\n    with pytest.raises(ValueError):\n        parse_rent('2400')\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo 123')\n    with pytest.raises(ValueError):\n        parse_rent('2400 mo $')\n",
+      "checks": [
+        {
+          "rule": "C1 type hints on all parameters and return values",
+          "passed": true,
+          "detail": "1 function(s) checked"
+        },
+        {
+          "rule": "C2 docstring on every non-test function",
+          "passed": true,
+          "detail": "all present"
+        },
+        {
+          "rule": "C3 snake_case names, functions <= 30 lines",
+          "passed": true,
+          "detail": "ok"
+        },
+        {
+          "rule": "C4 no print() in non-test functions",
+          "passed": true,
+          "detail": "none found"
+        },
+        {
+          "rule": "X1 at least three test_ functions with assertions",
+          "passed": true,
+          "detail": "3 found: ['test_parse_rent_valid', 'test_parse_rent_invalid', 'test_parse_rent_edge_case']"
+        },
+        {
+          "rule": "N1 no hard-coded secrets",
+          "passed": true,
+          "detail": "none found"
+        },
+        {
+          "rule": "N2 no eval/exec and no bare except",
+          "passed": true,
+          "detail": "none found"
+        }
+      ],
+      "all_rules_passed": true,
+      "tests": {
+        "ran": true,
+        "passed": false,
+        "detail": "          return int(numeric_part.replace(',', ''))\n            except ValueError:\n                raise ValueError(\"Invalid numeric value in rent string.\")\n        else:\n>           raise ValueError(\"Invalid rent format. Expected a numeric value followed by 'mo' or 'month'.\")\nE           ValueError: Invalid rent format. Expected a numeric value followed by 'mo' or 'month'.\n\ntest_generated.py:28: ValueError\n=========================== short test summary info ============================\nFAILED test_generated.py::test_parse_rent_valid - ValueError: Invalid rent fo...\n1 failed, 2 passed in 0.05s"
+      }
+    }
+  ],
+  "passed": true
+}

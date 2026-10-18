@@ -1,0 +1,20 @@
+[PASS] code, AGENT.md and MEMORY.md files present - 18 files present
+[PASS] report, raw-data and memory files present - 9 files present
+[PASS] token log has per-call token and latency data - 286 logged calls, 7 run files
+[PASS] eviction/compression comparison data present - eviction_compression_comparison.csv
+[PASS] memory_probes.yaml has 5 probes - 5 probes
+[PASS] AGENT.md has 5+ instructions in 3+ categories - 13 instructions in 6 categories
+[PASS] AGENT.md and MEMORY.md are in the system prompt - 4232 characters
+[PASS] 55-line original triggers consolidation; result is under 40 lines - 55 -> 38 lines; trigger fired: 49 non-empty, non-comment lines (limit 40)
+[PASS] offline test suites pass - test_memory.py and test_file_memory.py pass
+[PASS] FastAPI responds on PORT_BASE and MongoDB is reachable - port 8010, db s8110_doc
+[PASS] MongoDB collections exist and listing_docs has a validator - s8110_doc: episodes, listing_docs, messages, summaries; validator present
+[PASS] document CRUD works; invalid data gives 422; non-JSON gives 415 - create 201, read 200, update 200, invalid 422, non-JSON 415, delete then 404
+[PASS] CORS headers are returned - CORS header present
+[PASS] local Ollama model is available - qwen3:8b available
+[PASS] POST /api/chat returns a reply with token counts - reply of 34 chars; 82 prompt / 10 completion tokens
+[PASS] memory and aggregate endpoints respond - GET /api/memory and GET /api/aggregate return 200
+
+16/16 checks passed.
+Commit hash recorded: 05ba779a9baff57e7fbcbf1e745091c76afb9c02
+Results written to /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw06/verification.json

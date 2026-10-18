@@ -1,0 +1,47 @@
+# HW6 Part 3 - memory probes. Written BEFORE running any experiment.
+# After the 30th user message of the scripted conversation, each question is asked
+# WITHOUT being saved to memory (persist=false). The facts were told to the assistant
+# in messages 1-6 only, i.e. 24+ turns before the probes.
+#
+# Rubric (1-5), applied automatically by keyword match and checkable by hand in the raw JSON:
+#   5 = every required fact is stated correctly
+#   4 = most required facts correct (>= 75%)
+#   3 = about half of the required facts correct
+#   2 = vague, hedged, or only a fraction of the facts
+#   1 = says it does not know, or gives a wrong/invented answer
+# Auto score = 1 + round(4 * fraction_of_required_groups_matched).
+# Each entry in must_include is a GROUP; the group is matched if ANY alternative appears
+# (case-insensitive) in the reply. All groups must match for a 5.
+
+probes:
+  - id: P1_budget
+    question: "What is my maximum monthly rent budget?"
+    criteria: "States the $2,400 per month limit."
+    must_include:
+      - ["2,400", "2400", "2.4k"]
+
+  - id: P2_pets
+    question: "What are the names of my cats?"
+    criteria: "Names both cats: Miso and Pickles."
+    must_include:
+      - ["miso"]
+      - ["pickles"]
+
+  - id: P3_move_in
+    question: "By what date do I need to move in?"
+    criteria: "States December 1."
+    must_include:
+      - ["december 1", "dec 1", "dec. 1", "12/1", "1st of december", "december 1st"]
+
+  - id: P4_neighborhood
+    question: "Which neighborhood am I searching in?"
+    criteria: "States Willow Glen (San Jose)."
+    must_include:
+      - ["willow glen"]
+
+  - id: P5_dealbreaker
+    question: "What flooring will I not accept in my apartment, and why?"
+    criteria: "Says carpet, and that it is because of the cats."
+    must_include:
+      - ["carpet"]
+      - ["cat", "cats"]

@@ -284,3 +284,5 @@ ts,run_id,user_id,session_id,kind,policy,short_term_n,turn,prompt_tokens,complet
 2026-10-16T15:56:16,summary_N4,exp-summary_N4,sess-summary_N4,probe,summary,4,,409,11,56,260,0,84,8,977.6
 2026-10-16T15:56:17,summary_N4,exp-summary_N4,sess-summary_N4,probe,summary,4,,406,11,56,258,0,83,9,1063.6
 2026-10-16T15:56:19,summary_N4,exp-summary_N4,sess-summary_N4,probe,summary,4,,412,26,56,259,0,83,14,1943.1
+2026-10-17T18:22:25,,verify_hw06,sess-20261017-182213-4b00,probe,full,12,,82,10,69,0,0,0,13,4430.9
+2026-10-17T19:04:27,,verify_hw06,sess-20261017-190416-ecda,probe,full,12,,82,10,69,0,0,0,13,4218.8

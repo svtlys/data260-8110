@@ -1,0 +1,101 @@
+{
+  "homework": "HW6",
+  "sid4": "8110",
+  "commit_hash": "05ba779a9baff57e7fbcbf1e745091c76afb9c02",
+  "model_config": {
+    "llm": "qwen3:8b",
+    "reasoning": false,
+    "port_base": 8010,
+    "prefix": "s8110",
+    "domain_id": 6,
+    "database": "s8110_doc"
+  },
+  "seed": 8110,
+  "verify_seed": 268110,
+  "timestamp": "2026-10-18T02:04:27.616161+00:00",
+  "total_checks": 16,
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "code, AGENT.md and MEMORY.md files present",
+      "passed": true,
+      "detail": "18 files present"
+    },
+    {
+      "check": "report, raw-data and memory files present",
+      "passed": true,
+      "detail": "9 files present"
+    },
+    {
+      "check": "token log has per-call token and latency data",
+      "passed": true,
+      "detail": "286 logged calls, 7 run files"
+    },
+    {
+      "check": "eviction/compression comparison data present",
+      "passed": true,
+      "detail": "eviction_compression_comparison.csv"
+    },
+    {
+      "check": "memory_probes.yaml has 5 probes",
+      "passed": true,
+      "detail": "5 probes"
+    },
+    {
+      "check": "AGENT.md has 5+ instructions in 3+ categories",
+      "passed": true,
+      "detail": "13 instructions in 6 categories"
+    },
+    {
+      "check": "AGENT.md and MEMORY.md are in the system prompt",
+      "passed": true,
+      "detail": "4232 characters"
+    },
+    {
+      "check": "55-line original triggers consolidation; result is under 40 lines",
+      "passed": true,
+      "detail": "55 -> 38 lines; trigger fired: 49 non-empty, non-comment lines (limit 40)"
+    },
+    {
+      "check": "offline test suites pass",
+      "passed": true,
+      "detail": "test_memory.py and test_file_memory.py pass"
+    },
+    {
+      "check": "FastAPI responds on PORT_BASE and MongoDB is reachable",
+      "passed": true,
+      "detail": "port 8010, db s8110_doc"
+    },
+    {
+      "check": "MongoDB collections exist and listing_docs has a validator",
+      "passed": true,
+      "detail": "s8110_doc: episodes, listing_docs, messages, summaries; validator present"
+    },
+    {
+      "check": "document CRUD works; invalid data gives 422; non-JSON gives 415",
+      "passed": true,
+      "detail": "create 201, read 200, update 200, invalid 422, non-JSON 415, delete then 404"
+    },
+    {
+      "check": "CORS headers are returned",
+      "passed": true,
+      "detail": "CORS header present"
+    },
+    {
+      "check": "local Ollama model is available",
+      "passed": true,
+      "detail": "qwen3:8b available"
+    },
+    {
+      "check": "POST /api/chat returns a reply with token counts",
+      "passed": true,
+      "detail": "reply of 34 chars; 82 prompt / 10 completion tokens"
+    },
+    {
+      "check": "memory and aggregate endpoints respond",
+      "passed": true,
+      "detail": "GET /api/memory and GET /api/aggregate return 200"
+    }
+  ]
+}
