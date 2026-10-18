@@ -1,10 +1,10 @@
 [PASS] code, AGENT.md and MEMORY.md files present - 18 files present
 [PASS] report, raw-data and memory files present - 9 files present
-[PASS] token log has per-call token and latency data - 286 logged calls, 7 run files
+[PASS] token log has per-call token and latency data - 287 logged calls, 7 run files
 [PASS] eviction/compression comparison data present - eviction_compression_comparison.csv
 [PASS] memory_probes.yaml has 5 probes - 5 probes
 [PASS] AGENT.md has 5+ instructions in 3+ categories - 13 instructions in 6 categories
-[PASS] AGENT.md and MEMORY.md are in the system prompt - 4232 characters
+[PASS] AGENT.md and MEMORY.md are in the system prompt - 2143 characters
 [PASS] 55-line original triggers consolidation; result is under 40 lines - 55 -> 38 lines; trigger fired: 49 non-empty, non-comment lines (limit 40)
 [PASS] offline test suites pass - test_memory.py and test_file_memory.py pass
 [PASS] FastAPI responds on PORT_BASE and MongoDB is reachable - port 8010, db s8110_doc
@@ -16,5 +16,5 @@
 [PASS] memory and aggregate endpoints respond - GET /api/memory and GET /api/aggregate return 200
 
 16/16 checks passed.
-Commit hash recorded: 05ba779a9baff57e7fbcbf1e745091c76afb9c02
+Commit hash recorded: 6ed5cb57ae96798eb2eff9b8a37e41e3c3583221
 Results written to /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw06/verification.json
