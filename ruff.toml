@@ -1,0 +1,7 @@
+# Ruff configuration for DATA260 (HW7). Lints the shared code/ folder.
+line-length = 120
+extend-exclude = ["venv", "node_modules", "web_application_react"]
+
+[lint]
+select = ["E", "F"]   # pycodestyle errors and pyflakes (unused imports/variables, undefined names)
+ignore = ["E501"]      # long lines are tolerated; correctness issues are what block a commit

@@ -2,9 +2,9 @@ from starlette.middleware.sessions import SessionMiddleware
 from auth import router as auth_router
 from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import RedirectResponse
 from api_routes import router as api_router
 from typing import Optional
+from jwt_auth import router as jwt_router
 
 app = FastAPI()
 
@@ -24,6 +24,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router)
+app.include_router(jwt_router)
 app.include_router(api_router)
 
 listings = [

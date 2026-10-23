@@ -39,7 +39,7 @@ class Listing(Base):
         onupdate=lambda: datetime.now(timezone.utc),
     )
 
-
+    # Kept from HW4 for backward compatibility with existing CRUD/React code
     landlord_name = Column(String(255), nullable=True)
 
     landlord = relationship("Landlord", back_populates="listings")
@@ -61,7 +61,9 @@ class User(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(255), nullable=False)
     email = Column(String(255), unique=True, nullable=False)
-    password_hash = Column(String(255), nullable=False)
+    username = Column(String(50), unique=True, nullable=False)    # HW7: login name
+    password_hash = Column(String(255), nullable=False)           # bcrypt hash only
+    role = Column(String(20), nullable=False, default="reader")   # HW7: reader/writer/moderator
 
     sessions = relationship("Session", back_populates="user")
 
