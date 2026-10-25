@@ -1,0 +1,134 @@
+{
+  "homework": "HW7",
+  "sid4": "8110",
+  "commit_hash": "7f55f9ce849c7fe4bce3020edd2a324413683ee7",
+  "model_config": {
+    "llm": "qwen3:8b",
+    "reasoning": false,
+    "temperature": 0.0,
+    "num_ctx": 8192,
+    "agent_loop_max_steps": 8,
+    "langgraph_max_steps": 14,
+    "reflexion_retries": 2,
+    "reflexion_budget": {
+      "tool_calls": 12,
+      "tokens": 8000
+    },
+    "port_base": 8010,
+    "prefix": "s8110",
+    "domain_id": 6
+  },
+  "seed": 8110,
+  "verify_seed": 268110,
+  "timestamp": "2026-10-25T19:56:45.598804+00:00",
+  "total_checks": 21,
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "code files present",
+      "passed": true,
+      "detail": "16 files present"
+    },
+    {
+      "check": "report, raw-data, scenario and fixture files present",
+      "passed": true,
+      "detail": "24 files present"
+    },
+    {
+      "check": "test_jwt_auth.py passes",
+      "passed": true,
+      "detail": "8 passed, 2 warnings in 4.67s"
+    },
+    {
+      "check": "test_agent_loop.py passes",
+      "passed": true,
+      "detail": "12 passed in 0.03s"
+    },
+    {
+      "check": "test_reflexion.py passes",
+      "passed": true,
+      "detail": "8 passed in 0.03s"
+    },
+    {
+      "check": "test_bike.py passes",
+      "passed": true,
+      "detail": "11 passed in 0.04s"
+    },
+    {
+      "check": "test_security.py passes",
+      "passed": true,
+      "detail": "8 passed in 0.04s"
+    },
+    {
+      "check": "test_file_tools.py passes",
+      "passed": true,
+      "detail": "11 passed in 0.04s"
+    },
+    {
+      "check": "Ruff passes on the HW7 files",
+      "passed": true,
+      "detail": "22 HW7 files pass ruff"
+    },
+    {
+      "check": "Part 2: every logged agent run has a named stop reason",
+      "passed": true,
+      "detail": "46 logged runs, every one with a named stop reason"
+    },
+    {
+      "check": "Part 2: 21 reliability attempts logged with before/after repair rates",
+      "passed": true,
+      "detail": "46 attempts; well-formed call rate 100.0% -> 100.0% after repair"
+    },
+    {
+      "check": "Part 3: reflections are scoped, evidenced and capped; 21 paired tasks",
+      "passed": true,
+      "detail": "3 scoped reflections, at most 2 per task run; 21 paired tasks; stops {'success': 20, 'budget_exhausted': 1, 'human_review': 0}"
+    },
+    {
+      "check": "Part 4: tool schemas saved",
+      "passed": true,
+      "detail": "csv_sql, policy_retriever and calculator schemas saved"
+    },
+    {
+      "check": "Part 4: scenario CSVs have 500+ rides",
+      "passed": true,
+      "detail": "both scenario files have 500+ rides"
+    },
+    {
+      "check": "Part 4: both scenario runs have an answer, independent check and a hash-matching snapshot",
+      "passed": true,
+      "detail": "membership: Buy Monthly Membership (agrees with check: True); payperuse: Buy Monthly Membership (agrees with check: True)"
+    },
+    {
+      "check": "Part 5: fixtures hold three attacks and a clean control",
+      "passed": true,
+      "detail": "3 attack pages and 1 clean control"
+    },
+    {
+      "check": "Part 5: all attack/setting cells have judged runs",
+      "passed": true,
+      "detail": "21 judged runs in 3 settings; 0 attack successes in the live runs"
+    },
+    {
+      "check": "Part 5: tool boundary and output guard hold against a persuaded model",
+      "passed": true,
+      "detail": "persuaded-model test: DELETE/DROP run unprotected, refused with the contract; raw ids withheld by the guard"
+    },
+    {
+      "check": "Part 6: 10-command safety gate decides correctly",
+      "passed": true,
+      "detail": "10/10 commands decided correctly, with and without auto_approve"
+    },
+    {
+      "check": "Part 6: file tools find the DEBUG file and refuse escapes and rm -rf",
+      "passed": true,
+      "detail": "glob -> search -> read finds b.py; escape and rm -rf refused"
+    },
+    {
+      "check": "local Ollama model is available",
+      "passed": true,
+      "detail": "qwen3:8b available"
+    }
+  ]
+}
