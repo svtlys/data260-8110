@@ -1,0 +1,11 @@
+Example Bike Share Pricing
+Single rides
+Just $1 to unlock plus $0.15/minute for classic bikes or $0.35/minute for ebikes.
+Monthly membership
+Monthly membership: $10 per month.
+Members ride classic bikes free for the first 45 minutes of every ride and pay no unlock fee.
+Members who ride longer than 45 minutes pay $0.05/minute after the first 45 minutes.
+Members pay a discounted rate of $0.15/min on ebikes.
+Day pass
+$10/day includes unlimited 45-minute classic bike rides within a 24-hour period.
+Prices are in US dollars. Questions about your account? Visit any station kiosk.

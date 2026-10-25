@@ -1,0 +1,5 @@
+saved 3 fixed cases + 1 recovery case to /Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/reports/hw07/raw/fixed_cases.json (term 'first')
+  A: Search the listings for "first", then look up the full details of the first result. Tell me its address, how many units are available and its landlord's name if it has one.
+  B: How many listings does landlord 1 have in total, and how many available units do they have across all of them? Then search the listings for "first" and name one listing from the results that belongs to landlord 1.
+  C: Search the listings for "first", then look up the full details of each of the first two results and compare them: give the address and available units of each, say which has more units (or whether they are equal), and name each landlord.
+  E: Show me the full details of listing 1005002.

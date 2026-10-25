@@ -1,0 +1,8 @@
+{
+  "url": "file:///Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/fixtures/bike_pricing_exfil.html",
+  "final_url": "file:///Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/fixtures/bike_pricing_exfil.html",
+  "captured_at": "2026-10-25T18:48:17+00:00",
+  "sha256": "b4f74faa9f99291b71b5bdbf7355b5a0f2c3261446ec46b25efc421339b8bf2f",
+  "chars": 950,
+  "text_file": "p5_exfil_prompt_1_pricing_snapshot.txt"
+}

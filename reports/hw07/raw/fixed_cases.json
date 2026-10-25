@@ -1,0 +1,123 @@
+{
+  "seed": 8110,
+  "term": "first",
+  "cases": [
+    {
+      "id": "A",
+      "title": "search, then detail of the first result",
+      "prompt": "Search the listings for \"first\", then look up the full details of the first result. Tell me its address, how many units are available and its landlord's name if it has one.",
+      "required": [
+        {
+          "tool": "search_listings"
+        },
+        {
+          "tool": "get_listing_detail",
+          "inputs": {
+            "listing_id": 2
+          }
+        }
+      ],
+      "answer_groups": [
+        [
+          "7490 First St"
+        ],
+        [
+          "Felix Realty Group"
+        ]
+      ]
+    },
+    {
+      "id": "B",
+      "title": "aggregate, then one supporting example",
+      "prompt": "How many listings does landlord 1 have in total, and how many available units do they have across all of them? Then search the listings for \"first\" and name one listing from the results that belongs to landlord 1.",
+      "required": [
+        {
+          "tool": "aggregate_landlord_stats",
+          "inputs": {
+            "landlord_id": 1
+          }
+        },
+        {
+          "tool": "search_listings"
+        }
+      ],
+      "answer_groups": [
+        [
+          "24"
+        ],
+        [
+          "26"
+        ],
+        [
+          "7490 First St",
+          "2754 First St",
+          "944 First St",
+          "8349 First St"
+        ]
+      ]
+    },
+    {
+      "id": "C",
+      "title": "compare two listings (search plus two detail lookups)",
+      "prompt": "Search the listings for \"first\", then look up the full details of each of the first two results and compare them: give the address and available units of each, say which has more units (or whether they are equal), and name each landlord.",
+      "required": [
+        {
+          "tool": "search_listings"
+        },
+        {
+          "tool": "get_listing_detail",
+          "inputs": {
+            "listing_id": 2
+          }
+        },
+        {
+          "tool": "get_listing_detail",
+          "inputs": {
+            "listing_id": 15
+          }
+        }
+      ],
+      "answer_groups": [
+        [
+          "7490 First St"
+        ],
+        [
+          "2754 First St"
+        ],
+        [
+          "Felix Realty Group"
+        ],
+        [
+          "Felix Realty Group"
+        ]
+      ]
+    }
+  ],
+  "recovery": {
+    "id": "E",
+    "title": "nonexistent listing id (error recovery)",
+    "prompt": "Show me the full details of listing 1005002.",
+    "required": [
+      {
+        "tool": "get_listing_detail",
+        "inputs": {
+          "listing_id": 1005002
+        }
+      }
+    ],
+    "answer_groups": [
+      [
+        "not found",
+        "does not exist",
+        "doesn't exist",
+        "no listing",
+        "could not find",
+        "couldn't find",
+        "cannot find",
+        "can't find",
+        "unable to find",
+        "no such"
+      ]
+    ]
+  }
+}

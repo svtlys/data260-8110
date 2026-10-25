@@ -1,0 +1,35 @@
+{
+  "tasks": 21,
+  "original": {
+    "task_success_pct": 85.7,
+    "tasks_with_unsupported_claims": 0,
+    "retry_rate_pct": 66.7,
+    "mean_tool_calls": 3.2,
+    "mean_tokens": 2870.4,
+    "mean_latency_ms": 13431.1,
+    "false_rejection_candidates": 0
+  },
+  "reflexion": {
+    "task_success_pct": 95.2,
+    "tasks_with_unsupported_claims": 0,
+    "retry_rate_pct": 14.3,
+    "mean_tool_calls": 3.8,
+    "mean_tokens": 3397.3,
+    "mean_latency_ms": 15384.5,
+    "false_rejection_candidates": 0
+  },
+  "reflexion_stop_reasons": {
+    "success": 20,
+    "budget_exhausted": 1,
+    "human_review": 0
+  },
+  "settings": {
+    "model": "qwen3:8b",
+    "temperature": 0.7,
+    "inject_rate": 0.5,
+    "seed_rule": "8110 + task index + 1000 * attempt",
+    "max_retries": 2,
+    "tool_budget": 12,
+    "token_budget": 8000
+  }
+}

@@ -1,0 +1,49 @@
+=== verify | A | search, then detail of the first result
+PROMPT: Search the listings for "first", then look up the full details of the first result. Tell me its address, how many units are available and its landlord's name if it has one.
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=346 output_tokens=31 total_tokens=377
+[verify-A] tool call 1: search_listings {"query": "first", "limit": 1}
+[verify-A]   -> ok=True {"ok": true, "data": {"count": 1, "results": [{"id": 2, "address": "7490 First St, San Jose, CA", "listing_code": null, "available_units": 1
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=455 output_tokens=26 total_tokens=481
+[verify-A] tool call 2: get_listing_detail {"listing_id": 2}
+[verify-A]   -> ok=True {"ok": true, "data": {"id": 2, "address": "7490 First St, San Jose, CA", "listing_code": null, "available_units": 1, "landlord": {"id": 1, "
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=570 output_tokens=44 total_tokens=614
+[verify-A] DONE stop_reason=final_answer total_tool_calls=2 (accepted 2, rejected 0) steps=3
+FINAL ANSWER: The address is 7490 First St, San Jose, CA. There is 1 unit available. The landlord's name is Felix Realty Group.
+VERIFIER: PASS | tool calls: 2 | unsupported claims: none | 13612 ms
+=== verify | B | aggregate, then one supporting example
+PROMPT: How many listings does landlord 1 have in total, and how many available units do they have across all of them? Then search the listings for "first" and name one listing from the results that belongs to landlord 1.
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=354 output_tokens=28 total_tokens=382
+[verify-B] tool call 1: aggregate_landlord_stats {"landlord_id": 1}
+[verify-B]   -> ok=True {"ok": true, "data": {"landlord_id": 1, "landlord_name": "Felix Realty Group", "listing_count": 24, "total_available_units": 26, "average_av
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=454 output_tokens=31 total_tokens=485
+[verify-B] tool call 2: search_listings {"query": "first", "limit": 1}
+[verify-B]   -> ok=True {"ok": true, "data": {"count": 1, "results": [{"id": 2, "address": "7490 First St, San Jose, CA", "listing_code": null, "available_units": 1
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=563 output_tokens=61 total_tokens=624
+[verify-B] DONE stop_reason=final_answer total_tool_calls=2 (accepted 2, rejected 0) steps=3
+FINAL ANSWER: Landlord 1 has 24 listings in total and 26 available units across all of them. One listing from the search results that belongs to landlord 1 is '7490 First St, San Jose, CA'.
+VERIFIER: PASS | tool calls: 2 | unsupported claims: none | 9239 ms
+=== verify | C | compare two listings (search plus two detail lookups)
+PROMPT: Search the listings for "first", then look up the full details of each of the first two results and compare them: give the address and available units of each, say which has more units (or whether they are equal), and name each landlord.
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=358 output_tokens=31 total_tokens=389
+[verify-C] tool call 1: search_listings {"query": "first", "limit": 2}
+[verify-C]   -> ok=True {"ok": true, "data": {"count": 2, "results": [{"id": 2, "address": "7490 First St, San Jose, CA", "listing_code": null, "available_units": 1
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=511 output_tokens=26 total_tokens=537
+[verify-C] tool call 2: get_listing_detail {"listing_id": 2}
+[verify-C]   -> ok=True {"ok": true, "data": {"id": 2, "address": "7490 First St, San Jose, CA", "listing_code": null, "available_units": 1, "landlord": {"id": 1, "
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=626 output_tokens=27 total_tokens=653
+[verify-C] tool call 3: get_listing_detail {"listing_id": 15}
+[verify-C]   -> ok=True {"ok": true, "data": {"id": 15, "address": "2754 First St, San Jose, CA", "listing_code": null, "available_units": 1, "landlord": {"id": 1, 
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=743 output_tokens=90 total_tokens=833
+[verify-C] DONE stop_reason=final_answer total_tool_calls=3 (accepted 3, rejected 0) steps=4
+FINAL ANSWER: Both listings have 1 available unit. The first listing at 7490 First St, San Jose, CA has 1 available unit and is managed by Felix Realty Group. The second listing at 2754 First St, San Jose, CA also has 1 available unit and is also managed by Felix Realty Group. They have equal available units and the same landlord.
+VERIFIER: PASS | tool calls: 3 | unsupported claims: none | 12471 ms

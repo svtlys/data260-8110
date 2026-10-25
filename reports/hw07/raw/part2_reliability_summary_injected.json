@@ -1,0 +1,31 @@
+{
+  "attempts": 21,
+  "call_slots": 51,
+  "well_formed_before_repair": 41,
+  "well_formed_after_repair": 47,
+  "rate_before_repair_pct": 80.4,
+  "rate_after_repair_pct": 92.2,
+  "failures_before_repair": {
+    "malformed_arguments": 4,
+    "unknown_tool": 2,
+    "text_instead_of_tool": 4,
+    "lost_multistep_chain": 2
+  },
+  "failures_after_repair": {
+    "malformed_arguments": 0,
+    "unknown_tool": 1,
+    "text_instead_of_tool": 3,
+    "lost_multistep_chain": 2
+  },
+  "verifier_passed": 19,
+  "mean_tool_calls": 2.71,
+  "settings": {
+    "model": "qwen3:8b",
+    "temperature": 0.7,
+    "seed_base": 8110,
+    "seed_rule": "seed = 8110 + attempt index",
+    "max_steps": 8,
+    "inject_rate": 0.3,
+    "injected_faults": 14
+  }
+}

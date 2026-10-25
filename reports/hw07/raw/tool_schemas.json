@@ -1,0 +1,100 @@
+{
+  "csv_sql": {
+    "description": "Run one read-only SELECT over the uploaded trips (table trips).",
+    "input_schema": {
+      "description": "Arguments for csv_sql.",
+      "properties": {
+        "sql": {
+          "description": "One read-only SELECT over the table named trips",
+          "title": "Sql",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sql"
+      ],
+      "title": "CsvSqlArgs",
+      "type": "object"
+    },
+    "output": {
+      "rows": "Array<object>",
+      "row_count": "number",
+      "source": "uploaded.csv"
+    }
+  },
+  "policy_retriever": {
+    "description": "Fetch the pricing page and return short quotable passages that match the query.",
+    "input_schema": {
+      "description": "Arguments for policy_retriever.",
+      "properties": {
+        "url": {
+          "description": "The pricing page URL",
+          "title": "Url",
+          "type": "string"
+        },
+        "query": {
+          "description": "What to look for, e.g. 'unlock fee per minute membership price'",
+          "title": "Query",
+          "type": "string"
+        },
+        "k": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "How many passages to return (1-10, default 5)",
+          "title": "K"
+        }
+      },
+      "required": [
+        "url",
+        "query"
+      ],
+      "title": "PolicyArgs",
+      "type": "object"
+    },
+    "output": {
+      "passages": "Array<{text: string, source: string, score: number}>"
+    }
+  },
+  "calculator": {
+    "description": "Safe arithmetic. Whitelist ^[0-9+\\-*/().\\s]+$, no eval.",
+    "input_schema": {
+      "description": "Arguments for calculator.",
+      "properties": {
+        "expression": {
+          "description": "Arithmetic using digits and + - * / ( ) . only",
+          "title": "Expression",
+          "type": "string"
+        },
+        "units": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional unit label to echo back, e.g. USD",
+          "title": "Units"
+        }
+      },
+      "required": [
+        "expression"
+      ],
+      "title": "CalcArgs",
+      "type": "object"
+    },
+    "output": {
+      "value": "number",
+      "units": "string?"
+    }
+  }
+}

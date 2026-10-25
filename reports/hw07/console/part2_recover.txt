@@ -1,0 +1,14 @@
+=== recovery | E | nonexistent listing id (error recovery)
+PROMPT: Show me the full details of listing 1005002.
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=324 output_tokens=32 total_tokens=356
+[recover-E] tool call 1: get_listing_detail {"listing_id": 1005002}
+tool call rejected: listing 1005002 not found
+[recover-E]   -> ok=False {"ok": false, "data": null, "error": "listing 1005002 not found"}
+HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+[turn 1] input_tokens=394 output_tokens=31 total_tokens=425
+[recover-E] DONE stop_reason=final_answer total_tool_calls=1 (accepted 1, rejected 0) steps=2
+FINAL ANSWER: The listing with ID 1005002 was not found in the database.
+VERIFIER: PASS | tool calls: 1 | unsupported claims: none | 5555 ms
+execute_tool(get_listing_detail, {"listing_id": 1005002}) ran without crashing
+agent stop_reason: final_answer (no exception raised)
