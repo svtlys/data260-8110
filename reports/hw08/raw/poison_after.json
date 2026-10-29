@@ -1,0 +1,10 @@
+{
+  "scenario": "poison",
+  "bounded_retries": true,
+  "max_retries": 3,
+  "failed_attempts": 3,
+  "dead_letter_messages": 1,
+  "good_expected": 2,
+  "good_processed": 2,
+  "dead_letter_attempts": 3
+}

@@ -1,0 +1,24 @@
+{
+  "scenario": "consumer_killed",
+  "commit_early": false,
+  "correlation_id": "crash-f00a108a",
+  "partition": 0,
+  "message_offset": 8,
+  "exit_code_run1": 137,
+  "committed_after_crash": 8,
+  "committed_after_restart": 9,
+  "draft_after_restart": 1,
+  "run1_log": [
+    "2026-10-28 21:28:57,770 [writer] writer starting: group=s8110_writer_crash-34c147 in=s8110_tasks out=s8110_drafts idempotent=True commit_early=False max_retries=3",
+    "2026-10-28 21:28:57,771 [writer] Consumer is ready and listening...",
+    "2026-10-28 21:28:57,904 [writer] RECEIVED  topic=s8110_tasks partition=0 offset=8 key=crash-f00a108a correlation_id=crash-f00a108a",
+    "2026-10-28 21:28:57,904 [writer] CRASH     writer dies mid-processing of correlation_id=crash-f00a108a (before sending the draft and before the commit)"
+  ],
+  "run2_log": [
+    "2026-10-28 21:28:58,042 [writer] writer starting: group=s8110_writer_crash-34c147 in=s8110_tasks out=s8110_drafts idempotent=True commit_early=False max_retries=3",
+    "2026-10-28 21:28:58,042 [writer] Consumer is ready and listening...",
+    "2026-10-28 21:29:03,916 [writer] RECEIVED  topic=s8110_tasks partition=0 offset=8 key=crash-f00a108a correlation_id=crash-f00a108a",
+    "2026-10-28 21:29:04,059 [writer] SENT      topic=s8110_drafts partition=0 offset=7 key=crash-f00a108a correlation_id=crash-f00a108a",
+    "2026-10-28 21:29:04,064 [writer] COMMITTED offset 9 (after successful processing)"
+  ]
+}

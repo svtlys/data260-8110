@@ -1,0 +1,467 @@
+s8110_inbox partition=0 offset=1  {"correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "question": "What should I check before signing a lease for a one-bedroom apartment in San Jose?"}
+s8110_tasks partition=1 offset=0  {"correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "plan": ["Verify the property's condition and inspect for damages.", "Confirm the lease terms, including rent, duration, and security deposit.", "Ensure all legal documents are in order and understand your rights as a tenant."], "planner_llm": "qwen3:8b", "question": "What should I check before signing a lease for a one-bedroom apartment in San Jose?"}
+s8110_drafts partition=0 offset=1  {"correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "draft": "Before signing a lease for a one-bedroom apartment in San Jose, verify the prope...", "plan": ["Verify the property's condition and inspect for damages.", "Confirm the lease terms, including rent, duration, and security deposit.", "Ensure all legal documents are in order and understand your rights as a tenant."], "question": "What should I check before signing a lease for a one-bedroom apartment in San Jose?", "writer_id": "writer", "writer_llm": "qwen3:8b"}
+s8110_final partition=0 offset=1  {"answer": "Before signing a lease for a one-bedroom apartment in San Jose, verify the prope...", "correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "reviewer_note": "draft passes length and cleanliness checks", "status": "approved"}
+s8110_inbox partition=0 offset=1  {"correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "question": "What should I check before signing a lease for a one-bedroom apartment in San Jose?"}
+s8110_tasks partition=1 offset=0  {"correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "plan": ["Verify the property's condition and inspect for damages.", "Confirm the lease terms, including rent, duration, and security deposit.", "Ensure all legal documents are in order and understand your rights as a tenant."], "planner_llm": "qwen3:8b", "question": "What should I check before signing a lease for a one-bedroom apartment in San Jose?"}
+s8110_drafts partition=0 offset=1  {"correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "draft": "Before signing a lease for a one-bedroom apartment in San Jose, verify the prope...", "plan": ["Verify the property's condition and inspect for damages.", "Confirm the lease terms, including rent, duration, and security deposit.", "Ensure all legal documents are in order and understand your rights as a tenant."], "question": "What should I check before signing a lease for a one-bedroom apartment in San Jose?", "writer_id": "writer", "writer_llm": "qwen3:8b"}
+s8110_final partition=0 offset=1  {"answer": "Before signing a lease for a one-bedroom apartment in San Jose, verify the prope...", "correlation_id": "6de0829e-791e-4a43-9e27-48a569d58fae", "reviewer_note": "draft passes length and cleanliness checks", "status": "approved"}
+python: can't open file '/Users/svtlys/Documents/sjsu/fall2026/data260/data260-8110/code/failure_tests.py': [Errno 2] No such file or directory
+2026-10-28 21:20:19,827 [tests] === duplicate : BEFORE fix ===
+2026-10-28 21:20:19,828 [writer-dup] Consumer is ready and listening...
+2026-10-28 21:20:19,838 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0), ('s8110_tasks', 1)]
+2026-10-28 21:20:19,843 [tests] REPLAY    send #1 of the SAME task correlation_id=dup-7e09f921 -> partition=0 offset=1
+2026-10-28 21:20:19,843 [tests] REPLAY    send #2 of the SAME task correlation_id=dup-7e09f921 -> partition=0 offset=2
+2026-10-28 21:20:19,949 [writer-dup] RECEIVED  topic=s8110_tasks partition=1 offset=0 key=6de0829e-791e-4a43-9e27-48a569d58fae correlation_id=6de0829e-791e-4a43-9e27-48a569d58fae
+2026-10-28 21:20:19,950 [writer-dup] RECEIVED  topic=s8110_tasks partition=0 offset=0 key=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7 correlation_id=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7
+2026-10-28 21:20:19,951 [writer-dup] RECEIVED  topic=s8110_tasks partition=0 offset=1 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:20:20,835 [writer-dup] SENT      topic=s8110_drafts partition=0 offset=2 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:20:20,838 [writer-dup] COMMITTED offset 2 (after successful processing)
+2026-10-28 21:20:20,838 [writer-dup] RECEIVED  topic=s8110_tasks partition=0 offset=2 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:20:20,840 [writer-dup] SENT      topic=s8110_drafts partition=0 offset=3 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:20:20,842 [writer-dup] COMMITTED offset 3 (after successful processing)
+2026-10-28 21:20:34,849 [kafka_io] ASSIGNED partitions [('s8110_drafts', 0)]
+2026-10-28 21:20:35,447 [tests] RESULT    {"scenario": "duplicate", "idempotent": false, "correlation_id": "dup-7e09f921", "sent": 2, "times_work_done": 2, "drafts_on_topic": 2}
+2026-10-28 21:20:35,448 [tests] === duplicate : AFTER fix ===
+2026-10-28 21:20:35,448 [writer-dup] Consumer is ready and listening...
+2026-10-28 21:20:35,455 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0), ('s8110_tasks', 1)]
+2026-10-28 21:20:35,457 [tests] REPLAY    send #1 of the SAME task correlation_id=dup-9b97e0b7 -> partition=1 offset=1
+2026-10-28 21:20:35,458 [tests] REPLAY    send #2 of the SAME task correlation_id=dup-9b97e0b7 -> partition=1 offset=2
+2026-10-28 21:20:35,558 [writer-dup] RECEIVED  topic=s8110_tasks partition=1 offset=0 key=6de0829e-791e-4a43-9e27-48a569d58fae correlation_id=6de0829e-791e-4a43-9e27-48a569d58fae
+2026-10-28 21:20:35,559 [writer-dup] RECEIVED  topic=s8110_tasks partition=1 offset=1 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:20:36,453 [writer-dup] SENT      topic=s8110_drafts partition=0 offset=4 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:20:36,456 [writer-dup] COMMITTED offset 2 (after successful processing)
+2026-10-28 21:20:36,456 [writer-dup] RECEIVED  topic=s8110_tasks partition=1 offset=2 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:20:36,456 [writer-dup] DUPLICATE correlation_id=dup-9b97e0b7 already completed -> skipped, no new side effect
+2026-10-28 21:20:36,458 [writer-dup] RECEIVED  topic=s8110_tasks partition=0 offset=0 key=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7 correlation_id=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7
+2026-10-28 21:20:36,460 [writer-dup] RECEIVED  topic=s8110_tasks partition=0 offset=1 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:20:36,462 [writer-dup] RECEIVED  topic=s8110_tasks partition=0 offset=2 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:20:50,463 [kafka_io] ASSIGNED partitions [('s8110_drafts', 0)]
+2026-10-28 21:20:59,098 [tests] RESULT    {"scenario": "duplicate", "idempotent": true, "correlation_id": "dup-9b97e0b7", "sent": 2, "times_work_done": 1, "drafts_on_topic": 1}
+2026-10-28 21:25:15,843 [tests] === poison : BEFORE fix ===
+2026-10-28 21:25:15,843 [writer-poison] Consumer is ready and listening...
+2026-10-28 21:25:15,854 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0), ('s8110_tasks', 1)]
+2026-10-28 21:25:15,859 [tests] SENT      1 poison message poison-9c5e7a28 followed by 2 good messages
+2026-10-28 21:25:15,964 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=0 key=6de0829e-791e-4a43-9e27-48a569d58fae correlation_id=6de0829e-791e-4a43-9e27-48a569d58fae
+2026-10-28 21:25:15,965 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=1 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:25:15,966 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=2 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:25:15,968 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=0 key=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7 correlation_id=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7
+2026-10-28 21:25:15,969 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=1 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:25:15,970 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=2 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:25:15,971 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=3 key=poison-9c5e7a28 correlation_id=poison-9c5e7a28
+2026-10-28 21:25:15,971 [writer-poison] RETRY    attempt 1/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:16,276 [writer-poison] RETRY    attempt 2/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:16,582 [writer-poison] RETRY    attempt 3/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:16,887 [writer-poison] RETRY    attempt 4/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:17,193 [writer-poison] RETRY    attempt 5/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:17,498 [writer-poison] RETRY    attempt 6/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:17,800 [writer-poison] RETRY    attempt 7/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:18,105 [writer-poison] RETRY    attempt 8/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:18,410 [writer-poison] RETRY    attempt 9/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:18,714 [writer-poison] RETRY    attempt 10/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:19,016 [writer-poison] RETRY    attempt 11/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:19,321 [writer-poison] RETRY    attempt 12/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:19,623 [writer-poison] RETRY    attempt 13/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:19,926 [writer-poison] RETRY    attempt 14/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:20,227 [writer-poison] RETRY    attempt 15/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:20,529 [writer-poison] RETRY    attempt 16/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:20,834 [writer-poison] RETRY    attempt 17/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:21,140 [writer-poison] RETRY    attempt 18/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:21,443 [writer-poison] RETRY    attempt 19/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:21,749 [writer-poison] RETRY    attempt 20/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:22,052 [writer-poison] RETRY    attempt 21/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:22,352 [writer-poison] RETRY    attempt 22/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:22,657 [writer-poison] RETRY    attempt 23/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:22,957 [writer-poison] RETRY    attempt 24/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:23,258 [writer-poison] RETRY    attempt 25/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:23,564 [writer-poison] RETRY    attempt 26/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:23,865 [writer-poison] RETRY    attempt 27/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:24,170 [writer-poison] RETRY    attempt 28/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:24,473 [writer-poison] RETRY    attempt 29/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:24,775 [writer-poison] RETRY    attempt 30/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:25,080 [writer-poison] RETRY    attempt 31/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:25,384 [writer-poison] RETRY    attempt 32/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:25,689 [writer-poison] RETRY    attempt 33/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:25,990 [writer-poison] RETRY    attempt 34/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:26,294 [writer-poison] RETRY    attempt 35/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:26,599 [writer-poison] RETRY    attempt 36/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:26,903 [writer-poison] RETRY    attempt 37/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:27,204 [writer-poison] RETRY    attempt 38/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:27,509 [writer-poison] RETRY    attempt 39/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:27,813 [writer-poison] RETRY    attempt 40/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:28,117 [writer-poison] RETRY    attempt 41/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:28,419 [writer-poison] RETRY    attempt 42/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:28,725 [writer-poison] RETRY    attempt 43/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:29,030 [writer-poison] RETRY    attempt 44/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:29,335 [writer-poison] RETRY    attempt 45/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:29,640 [writer-poison] RETRY    attempt 46/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:29,946 [writer-poison] RETRY    attempt 47/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:30,251 [writer-poison] RETRY    attempt 48/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:30,554 [writer-poison] RETRY    attempt 49/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:30,859 [writer-poison] RETRY    attempt 50/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:30,865 [kafka_io] ASSIGNED partitions [('s8110_drafts', 0)]
+2026-10-28 21:25:31,161 [writer-poison] RETRY    attempt 51/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:31,464 [writer-poison] RETRY    attempt 52/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:31,765 [writer-poison] RETRY    attempt 53/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:32,070 [writer-poison] RETRY    attempt 54/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:32,375 [writer-poison] RETRY    attempt 55/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:32,680 [writer-poison] RETRY    attempt 56/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:32,983 [writer-poison] RETRY    attempt 57/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:33,288 [writer-poison] RETRY    attempt 58/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:33,593 [writer-poison] RETRY    attempt 59/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:33,895 [writer-poison] RETRY    attempt 60/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:34,201 [writer-poison] RETRY    attempt 61/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:34,506 [writer-poison] RETRY    attempt 62/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:34,811 [writer-poison] RETRY    attempt 63/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:35,113 [writer-poison] RETRY    attempt 64/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:35,418 [writer-poison] RETRY    attempt 65/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:35,724 [writer-poison] RETRY    attempt 66/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:36,029 [writer-poison] RETRY    attempt 67/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:36,334 [writer-poison] RETRY    attempt 68/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:36,638 [writer-poison] RETRY    attempt 69/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:36,943 [writer-poison] RETRY    attempt 70/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:37,246 [writer-poison] RETRY    attempt 71/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:37,549 [writer-poison] RETRY    attempt 72/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:37,852 [writer-poison] RETRY    attempt 73/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:38,156 [writer-poison] RETRY    attempt 74/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:38,456 [writer-poison] RETRY    attempt 75/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:38,761 [writer-poison] RETRY    attempt 76/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:39,067 [writer-poison] RETRY    attempt 77/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:39,372 [writer-poison] RETRY    attempt 78/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:39,674 [writer-poison] RETRY    attempt 79/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:39,980 [writer-poison] RETRY    attempt 80/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:40,285 [writer-poison] RETRY    attempt 81/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:40,590 [writer-poison] RETRY    attempt 82/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:40,892 [writer-poison] RETRY    attempt 83/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:41,195 [writer-poison] RETRY    attempt 84/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:41,498 [writer-poison] RETRY    attempt 85/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:41,803 [writer-poison] RETRY    attempt 86/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:42,107 [writer-poison] RETRY    attempt 87/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:42,407 [writer-poison] RETRY    attempt 88/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:42,713 [writer-poison] RETRY    attempt 89/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:43,018 [writer-poison] RETRY    attempt 90/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:43,322 [writer-poison] RETRY    attempt 91/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:43,627 [writer-poison] RETRY    attempt 92/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:43,932 [writer-poison] RETRY    attempt 93/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:44,232 [writer-poison] RETRY    attempt 94/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:44,534 [writer-poison] RETRY    attempt 95/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:44,835 [writer-poison] RETRY    attempt 96/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:45,141 [writer-poison] RETRY    attempt 97/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:45,445 [writer-poison] RETRY    attempt 98/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:45,750 [writer-poison] RETRY    attempt 99/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:46,055 [writer-poison] RETRY    attempt 100/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:46,360 [writer-poison] RETRY    attempt 101/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:46,666 [writer-poison] RETRY    attempt 102/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:46,967 [writer-poison] RETRY    attempt 103/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:47,273 [writer-poison] RETRY    attempt 104/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:47,576 [writer-poison] RETRY    attempt 105/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:47,881 [writer-poison] RETRY    attempt 106/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:48,185 [writer-poison] RETRY    attempt 107/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:48,486 [writer-poison] RETRY    attempt 108/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:48,789 [writer-poison] RETRY    attempt 109/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:49,093 [writer-poison] RETRY    attempt 110/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:49,394 [writer-poison] RETRY    attempt 111/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:49,695 [writer-poison] RETRY    attempt 112/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:50,000 [writer-poison] RETRY    attempt 113/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:50,301 [writer-poison] RETRY    attempt 114/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:50,604 [writer-poison] RETRY    attempt 115/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:50,909 [writer-poison] RETRY    attempt 116/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:51,214 [writer-poison] RETRY    attempt 117/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:51,520 [writer-poison] RETRY    attempt 118/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:51,825 [writer-poison] RETRY    attempt 119/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:52,128 [writer-poison] RETRY    attempt 120/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:52,433 [writer-poison] RETRY    attempt 121/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:52,738 [writer-poison] RETRY    attempt 122/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:53,043 [writer-poison] RETRY    attempt 123/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:53,348 [writer-poison] RETRY    attempt 124/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:53,652 [writer-poison] RETRY    attempt 125/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:53,956 [writer-poison] RETRY    attempt 126/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:54,258 [writer-poison] RETRY    attempt 127/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:54,563 [writer-poison] RETRY    attempt 128/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:54,868 [writer-poison] RETRY    attempt 129/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:55,173 [writer-poison] RETRY    attempt 130/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:55,476 [writer-poison] RETRY    attempt 131/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:55,779 [writer-poison] RETRY    attempt 132/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:56,082 [writer-poison] RETRY    attempt 133/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:56,387 [writer-poison] RETRY    attempt 134/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:56,690 [writer-poison] RETRY    attempt 135/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:56,991 [writer-poison] RETRY    attempt 136/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:57,295 [writer-poison] RETRY    attempt 137/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:57,601 [writer-poison] RETRY    attempt 138/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:57,903 [writer-poison] RETRY    attempt 139/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:58,053 [kafka_io] ASSIGNED partitions [('s8110_dead_letter', 0)]
+2026-10-28 21:25:58,209 [writer-poison] RETRY    attempt 140/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:58,513 [writer-poison] RETRY    attempt 141/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:58,814 [writer-poison] RETRY    attempt 142/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:59,117 [writer-poison] RETRY    attempt 143/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:59,421 [writer-poison] RETRY    attempt 144/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:25:59,727 [writer-poison] RETRY    attempt 145/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:00,030 [writer-poison] RETRY    attempt 146/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:00,334 [writer-poison] RETRY    attempt 147/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:00,635 [writer-poison] RETRY    attempt 148/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:00,936 [writer-poison] RETRY    attempt 149/unbounded failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:01,240 [tests] RESULT    {"scenario": "poison", "bounded_retries": false, "max_retries": "unbounded", "failed_attempts": 149, "dead_letter_messages": 0, "good_expected": 2, "good_processed": 0, "dead_letter_attempts": null}
+2026-10-28 21:26:01,242 [tests] === poison : AFTER fix ===
+2026-10-28 21:26:01,244 [writer-poison] Consumer is ready and listening...
+2026-10-28 21:26:01,260 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0), ('s8110_tasks', 1)]
+2026-10-28 21:26:01,267 [tests] SENT      1 poison message poison-46b517f9 followed by 2 good messages
+2026-10-28 21:26:01,371 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=0 key=6de0829e-791e-4a43-9e27-48a569d58fae correlation_id=6de0829e-791e-4a43-9e27-48a569d58fae
+2026-10-28 21:26:01,373 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=1 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:26:01,375 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=2 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:26:01,377 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=3 key=poison-46b517f9 correlation_id=poison-46b517f9
+2026-10-28 21:26:01,377 [writer-poison] RETRY    attempt 1/3 failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:01,682 [writer-poison] RETRY    attempt 2/3 failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:01,987 [writer-poison] RETRY    attempt 3/3 failed: ValueError: task has no valid plan/question
+2026-10-28 21:26:03,255 [writer-poison] DEAD-LETTER correlation_id=poison-46b517f9 after 3 attempts -> s8110_dead_letter (ValueError: task has no valid plan/question)
+2026-10-28 21:26:03,258 [writer-poison] COMMITTED offset 4 (after successful processing)
+2026-10-28 21:26:03,258 [writer-poison] RECEIVED  topic=s8110_tasks partition=1 offset=4 key=good-1-6f5a46 correlation_id=good-1-6f5a46
+2026-10-28 21:26:04,260 [writer-poison] SENT      topic=s8110_drafts partition=0 offset=5 key=good-1-6f5a46 correlation_id=good-1-6f5a46
+2026-10-28 21:26:04,264 [writer-poison] COMMITTED offset 5 (after successful processing)
+2026-10-28 21:26:04,264 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=0 key=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7 correlation_id=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7
+2026-10-28 21:26:04,267 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=1 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:26:04,269 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=2 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:26:04,271 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=3 key=poison-9c5e7a28 correlation_id=poison-9c5e7a28
+2026-10-28 21:26:04,272 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=4 key=good-1-a9b292 correlation_id=good-1-a9b292
+2026-10-28 21:26:04,274 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=5 key=good-2-e0a62d correlation_id=good-2-e0a62d
+2026-10-28 21:26:04,276 [writer-poison] RECEIVED  topic=s8110_tasks partition=0 offset=6 key=good-2-e6e9b4 correlation_id=good-2-e6e9b4
+2026-10-28 21:26:04,278 [writer-poison] SENT      topic=s8110_drafts partition=0 offset=6 key=good-2-e6e9b4 correlation_id=good-2-e6e9b4
+2026-10-28 21:26:04,280 [writer-poison] COMMITTED offset 7 (after successful processing)
+2026-10-28 21:26:16,269 [kafka_io] ASSIGNED partitions [('s8110_drafts', 0)]
+2026-10-28 21:26:31,392 [kafka_io] ASSIGNED partitions [('s8110_dead_letter', 0)]
+2026-10-28 21:26:31,959 [tests] RESULT    {"scenario": "poison", "bounded_retries": true, "max_retries": 3, "failed_attempts": 3, "dead_letter_messages": 1, "good_expected": 2, "good_processed": 2, "dead_letter_attempts": 3}
+2026-10-28 21:28:27,274 [tests] === consumer_killed : BEFORE fix ===
+2026-10-28 21:28:27,280 [tests] SENT      task correlation_id=crash-6414fa52 partition=0 offset=7 (commit_early=True)
+2026-10-28 21:28:27,472 [tests] CRASHED   writer exit code=137 | committed offset after crash=8 (message offset=7)
+2026-10-28 21:28:42,477 [kafka_io] ASSIGNED partitions [('s8110_drafts', 0)]
+2026-10-28 21:28:57,700 [tests] RESULT    {"scenario": "consumer_killed", "commit_early": true, "correlation_id": "crash-6414fa52", "partition": 0, "message_offset": 7, "exit_code_run1": 137, "committed_after_crash": 8, "committed_after_restart": 8, "draft_after_restart": 0}
+2026-10-28 21:28:57,700 [tests] === consumer_killed : AFTER fix ===
+2026-10-28 21:28:57,707 [tests] SENT      task correlation_id=crash-f00a108a partition=0 offset=8 (commit_early=False)
+2026-10-28 21:28:57,973 [tests] CRASHED   writer exit code=137 | committed offset after crash=8 (message offset=8)
+2026-10-28 21:29:12,981 [kafka_io] ASSIGNED partitions [('s8110_drafts', 0)]
+2026-10-28 21:29:13,128 [tests] RESULT    {"scenario": "consumer_killed", "commit_early": false, "correlation_id": "crash-f00a108a", "partition": 0, "message_offset": 8, "exit_code_run1": 137, "committed_after_crash": 8, "committed_after_restart": 9, "draft_after_restart": 1}
+2026-10-28 21:32:25,265 [tests] === ordering : BEFORE fix ===
+2026-10-28 21:32:25,265 [writer-1] Consumer is ready and listening...
+2026-10-28 21:32:25,274 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0), ('s8110_tasks', 1)]
+2026-10-28 21:32:25,275 [writer-2] Consumer is ready and listening...
+2026-10-28 21:32:25,383 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=0 key=6de0829e-791e-4a43-9e27-48a569d58fae correlation_id=6de0829e-791e-4a43-9e27-48a569d58fae
+2026-10-28 21:32:25,385 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=1 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:32:25,386 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=2 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:32:25,386 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=3 key=poison-46b517f9 correlation_id=poison-46b517f9
+2026-10-28 21:32:25,387 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=4 key=good-1-6f5a46 correlation_id=good-1-6f5a46
+2026-10-28 21:32:25,388 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=0 key=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7 correlation_id=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7
+2026-10-28 21:32:25,389 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=1 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:32:25,390 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=2 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:32:25,391 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=3 key=poison-9c5e7a28 correlation_id=poison-9c5e7a28
+2026-10-28 21:32:25,392 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=4 key=good-1-a9b292 correlation_id=good-1-a9b292
+2026-10-28 21:32:25,392 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=5 key=good-2-e0a62d correlation_id=good-2-e0a62d
+2026-10-28 21:32:25,393 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=6 key=good-2-e6e9b4 correlation_id=good-2-e6e9b4
+2026-10-28 21:32:25,394 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=7 key=crash-6414fa52 correlation_id=crash-6414fa52
+2026-10-28 21:32:25,395 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=8 key=crash-f00a108a correlation_id=crash-f00a108a
+2026-10-28 21:32:27,284 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0)]
+2026-10-28 21:32:27,285 [kafka_io] ASSIGNED partitions [('s8110_tasks', 1)]
+2026-10-28 21:32:28,288 [tests] ASSIGNMENT {"writer-1": [["s8110_tasks", 0]], "writer-2": [["s8110_tasks", 1]]}
+2026-10-28 21:32:28,300 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=5 key=None correlation_id=order-f162b4-m01
+2026-10-28 21:32:28,304 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=9 key=None correlation_id=order-f162b4-m02
+2026-10-28 21:32:28,326 [tests] SENT      20 messages (VERIFY_SEED=268110) keyed=False
+2026-10-28 21:32:28,377 [writer-2] PROCESSED idx=01 entity=LST-1 seq=1 partition=1
+2026-10-28 21:32:28,541 [writer-1] PROCESSED idx=02 entity=LST-2 seq=1 partition=0
+2026-10-28 21:32:29,277 [writer-1] SENT      topic=s8110_drafts partition=0 offset=8 key=LST-2 correlation_id=order-f162b4-m02
+2026-10-28 21:32:29,278 [writer-1] COMMITTED offset 10 (after successful processing)
+2026-10-28 21:32:29,278 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=10 key=None correlation_id=order-f162b4-m03
+2026-10-28 21:32:29,292 [writer-2] SENT      topic=s8110_drafts partition=0 offset=9 key=LST-1 correlation_id=order-f162b4-m01
+2026-10-28 21:32:29,292 [writer-2] COMMITTED offset 6 (after successful processing)
+2026-10-28 21:32:29,292 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=6 key=None correlation_id=order-f162b4-m06
+2026-10-28 21:32:29,396 [writer-2] PROCESSED idx=06 entity=LST-2 seq=4 partition=1
+2026-10-28 21:32:29,400 [writer-2] SENT      topic=s8110_drafts partition=0 offset=10 key=LST-2 correlation_id=order-f162b4-m06
+2026-10-28 21:32:29,401 [writer-2] COMMITTED offset 7 (after successful processing)
+2026-10-28 21:32:29,401 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=7 key=None correlation_id=order-f162b4-m07
+2026-10-28 21:32:29,596 [writer-1] PROCESSED idx=03 entity=LST-2 seq=2 partition=0
+2026-10-28 21:32:29,599 [writer-1] SENT      topic=s8110_drafts partition=0 offset=11 key=LST-2 correlation_id=order-f162b4-m03
+2026-10-28 21:32:29,602 [writer-1] COMMITTED offset 11 (after successful processing)
+2026-10-28 21:32:29,602 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=11 key=None correlation_id=order-f162b4-m04
+2026-10-28 21:32:29,692 [writer-2] PROCESSED idx=07 entity=LST-5 seq=2 partition=1
+2026-10-28 21:32:29,695 [writer-2] SENT      topic=s8110_drafts partition=0 offset=12 key=LST-5 correlation_id=order-f162b4-m07
+2026-10-28 21:32:29,698 [writer-2] COMMITTED offset 8 (after successful processing)
+2026-10-28 21:32:29,698 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=8 key=None correlation_id=order-f162b4-m11
+2026-10-28 21:32:29,851 [writer-1] PROCESSED idx=04 entity=LST-5 seq=1 partition=0
+2026-10-28 21:32:29,854 [writer-1] SENT      topic=s8110_drafts partition=0 offset=13 key=LST-5 correlation_id=order-f162b4-m04
+2026-10-28 21:32:29,857 [writer-1] COMMITTED offset 12 (after successful processing)
+2026-10-28 21:32:29,857 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=12 key=None correlation_id=order-f162b4-m05
+2026-10-28 21:32:29,868 [writer-2] PROCESSED idx=11 entity=LST-4 seq=2 partition=1
+2026-10-28 21:32:29,871 [writer-2] SENT      topic=s8110_drafts partition=0 offset=14 key=LST-4 correlation_id=order-f162b4-m11
+2026-10-28 21:32:29,873 [writer-2] COMMITTED offset 9 (after successful processing)
+2026-10-28 21:32:29,873 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=9 key=None correlation_id=order-f162b4-m12
+2026-10-28 21:32:30,034 [writer-2] PROCESSED idx=12 entity=LST-4 seq=3 partition=1
+2026-10-28 21:32:30,037 [writer-2] SENT      topic=s8110_drafts partition=0 offset=15 key=LST-4 correlation_id=order-f162b4-m12
+2026-10-28 21:32:30,041 [writer-2] COMMITTED offset 10 (after successful processing)
+2026-10-28 21:32:30,041 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=10 key=None correlation_id=order-f162b4-m16
+2026-10-28 21:32:30,098 [writer-2] PROCESSED idx=16 entity=LST-1 seq=2 partition=1
+2026-10-28 21:32:30,102 [writer-2] SENT      topic=s8110_drafts partition=0 offset=16 key=LST-1 correlation_id=order-f162b4-m16
+2026-10-28 21:32:30,105 [writer-2] COMMITTED offset 11 (after successful processing)
+2026-10-28 21:32:30,105 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=11 key=None correlation_id=order-f162b4-m19
+2026-10-28 21:32:30,110 [writer-1] PROCESSED idx=05 entity=LST-2 seq=3 partition=0
+2026-10-28 21:32:30,113 [writer-1] SENT      topic=s8110_drafts partition=0 offset=17 key=LST-2 correlation_id=order-f162b4-m05
+2026-10-28 21:32:30,116 [writer-1] COMMITTED offset 13 (after successful processing)
+2026-10-28 21:32:30,116 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=13 key=None correlation_id=order-f162b4-m08
+2026-10-28 21:32:30,257 [writer-1] PROCESSED idx=08 entity=LST-5 seq=3 partition=0
+2026-10-28 21:32:30,261 [writer-1] SENT      topic=s8110_drafts partition=0 offset=18 key=LST-5 correlation_id=order-f162b4-m08
+2026-10-28 21:32:30,271 [writer-1] COMMITTED offset 14 (after successful processing)
+2026-10-28 21:32:30,271 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=14 key=None correlation_id=order-f162b4-m09
+2026-10-28 21:32:30,422 [writer-2] PROCESSED idx=19 entity=LST-1 seq=3 partition=1
+2026-10-28 21:32:30,426 [writer-2] SENT      topic=s8110_drafts partition=0 offset=19 key=LST-1 correlation_id=order-f162b4-m19
+2026-10-28 21:32:30,429 [writer-2] COMMITTED offset 12 (after successful processing)
+2026-10-28 21:32:30,429 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=12 key=None correlation_id=order-f162b4-m20
+2026-10-28 21:32:30,542 [writer-2] PROCESSED idx=20 entity=LST-2 seq=6 partition=1
+2026-10-28 21:32:30,546 [writer-2] SENT      topic=s8110_drafts partition=0 offset=20 key=LST-2 correlation_id=order-f162b4-m20
+2026-10-28 21:32:30,548 [writer-2] COMMITTED offset 13 (after successful processing)
+2026-10-28 21:32:30,579 [writer-1] PROCESSED idx=09 entity=LST-5 seq=4 partition=0
+2026-10-28 21:32:30,582 [writer-1] SENT      topic=s8110_drafts partition=0 offset=21 key=LST-5 correlation_id=order-f162b4-m09
+2026-10-28 21:32:30,584 [writer-1] COMMITTED offset 15 (after successful processing)
+2026-10-28 21:32:30,585 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=15 key=None correlation_id=order-f162b4-m10
+2026-10-28 21:32:30,772 [writer-1] PROCESSED idx=10 entity=LST-4 seq=1 partition=0
+2026-10-28 21:32:30,776 [writer-1] SENT      topic=s8110_drafts partition=0 offset=22 key=LST-4 correlation_id=order-f162b4-m10
+2026-10-28 21:32:30,778 [writer-1] COMMITTED offset 16 (after successful processing)
+2026-10-28 21:32:30,779 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=16 key=None correlation_id=order-f162b4-m13
+2026-10-28 21:32:31,032 [writer-1] PROCESSED idx=13 entity=LST-4 seq=4 partition=0
+2026-10-28 21:32:31,035 [writer-1] SENT      topic=s8110_drafts partition=0 offset=23 key=LST-4 correlation_id=order-f162b4-m13
+2026-10-28 21:32:31,038 [writer-1] COMMITTED offset 17 (after successful processing)
+2026-10-28 21:32:31,039 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=17 key=None correlation_id=order-f162b4-m14
+2026-10-28 21:32:31,123 [writer-1] PROCESSED idx=14 entity=LST-4 seq=5 partition=0
+2026-10-28 21:32:31,127 [writer-1] SENT      topic=s8110_drafts partition=0 offset=24 key=LST-4 correlation_id=order-f162b4-m14
+2026-10-28 21:32:31,130 [writer-1] COMMITTED offset 18 (after successful processing)
+2026-10-28 21:32:31,130 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=18 key=None correlation_id=order-f162b4-m15
+2026-10-28 21:32:31,185 [writer-1] PROCESSED idx=15 entity=LST-2 seq=5 partition=0
+2026-10-28 21:32:31,189 [writer-1] SENT      topic=s8110_drafts partition=0 offset=25 key=LST-2 correlation_id=order-f162b4-m15
+2026-10-28 21:32:31,192 [writer-1] COMMITTED offset 19 (after successful processing)
+2026-10-28 21:32:31,192 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=19 key=None correlation_id=order-f162b4-m17
+2026-10-28 21:32:31,384 [writer-1] PROCESSED idx=17 entity=LST-5 seq=5 partition=0
+2026-10-28 21:32:31,389 [writer-1] SENT      topic=s8110_drafts partition=0 offset=26 key=LST-5 correlation_id=order-f162b4-m17
+2026-10-28 21:32:31,392 [writer-1] COMMITTED offset 20 (after successful processing)
+2026-10-28 21:32:31,392 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=20 key=None correlation_id=order-f162b4-m18
+2026-10-28 21:32:31,658 [writer-1] PROCESSED idx=18 entity=LST-5 seq=6 partition=0
+2026-10-28 21:32:31,662 [writer-1] SENT      topic=s8110_drafts partition=0 offset=27 key=LST-5 correlation_id=order-f162b4-m18
+2026-10-28 21:32:31,665 [writer-1] COMMITTED offset 21 (after successful processing)
+2026-10-28 21:32:32,571 [tests] RESULT    {"scenario": "ordering", "keyed": false, "verify_seed": 268110, "processed": 20, "per_entity": {"LST-1": {"partitions": [1], "seq_in_processing_order": [1, 2, 3], "in_order": true}, "LST-2": {"partitions": [0, 1], "seq_in_processing_order": [1, 4, 2, 3, 6, 5], "in_order": false}, "LST-5": {"partitions": [0, 1], "seq_in_processing_order": [2, 1, 3, 4, 5, 6], "in_order": false}, "LST-4": {"partitions": [0, 1], "seq_in_processing_order": [2, 3, 1, 4, 5], "in_order": false}}, "all_entities_in_one_partition": false, "all_entities_in_order": false}
+2026-10-28 21:32:32,573 [tests] === ordering : AFTER fix ===
+2026-10-28 21:32:32,574 [writer-1] Consumer is ready and listening...
+2026-10-28 21:32:32,591 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0), ('s8110_tasks', 1)]
+2026-10-28 21:32:32,592 [writer-2] Consumer is ready and listening...
+2026-10-28 21:32:32,702 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=0 key=6de0829e-791e-4a43-9e27-48a569d58fae correlation_id=6de0829e-791e-4a43-9e27-48a569d58fae
+2026-10-28 21:32:32,705 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=1 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:32:32,707 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=2 key=dup-9b97e0b7 correlation_id=dup-9b97e0b7
+2026-10-28 21:32:32,709 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=3 key=poison-46b517f9 correlation_id=poison-46b517f9
+2026-10-28 21:32:32,710 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=4 key=good-1-6f5a46 correlation_id=good-1-6f5a46
+2026-10-28 21:32:32,712 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=5 key=None correlation_id=order-f162b4-m01
+2026-10-28 21:32:32,714 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=6 key=None correlation_id=order-f162b4-m06
+2026-10-28 21:32:32,715 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=7 key=None correlation_id=order-f162b4-m07
+2026-10-28 21:32:32,717 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=8 key=None correlation_id=order-f162b4-m11
+2026-10-28 21:32:32,719 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=9 key=None correlation_id=order-f162b4-m12
+2026-10-28 21:32:32,720 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=10 key=None correlation_id=order-f162b4-m16
+2026-10-28 21:32:32,722 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=11 key=None correlation_id=order-f162b4-m19
+2026-10-28 21:32:32,724 [writer-1] RECEIVED  topic=s8110_tasks partition=1 offset=12 key=None correlation_id=order-f162b4-m20
+2026-10-28 21:32:32,725 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=0 key=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7 correlation_id=52b83b6a-f8e6-4d1e-9e7f-0d858e4ff7c7
+2026-10-28 21:32:32,727 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=1 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:32:32,729 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=2 key=dup-7e09f921 correlation_id=dup-7e09f921
+2026-10-28 21:32:32,731 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=3 key=poison-9c5e7a28 correlation_id=poison-9c5e7a28
+2026-10-28 21:32:32,732 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=4 key=good-1-a9b292 correlation_id=good-1-a9b292
+2026-10-28 21:32:32,734 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=5 key=good-2-e0a62d correlation_id=good-2-e0a62d
+2026-10-28 21:32:32,735 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=6 key=good-2-e6e9b4 correlation_id=good-2-e6e9b4
+2026-10-28 21:32:32,737 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=7 key=crash-6414fa52 correlation_id=crash-6414fa52
+2026-10-28 21:32:32,738 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=8 key=crash-f00a108a correlation_id=crash-f00a108a
+2026-10-28 21:32:32,739 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=9 key=None correlation_id=order-f162b4-m02
+2026-10-28 21:32:32,740 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=10 key=None correlation_id=order-f162b4-m03
+2026-10-28 21:32:32,742 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=11 key=None correlation_id=order-f162b4-m04
+2026-10-28 21:32:32,743 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=12 key=None correlation_id=order-f162b4-m05
+2026-10-28 21:32:32,743 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=13 key=None correlation_id=order-f162b4-m08
+2026-10-28 21:32:32,744 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=14 key=None correlation_id=order-f162b4-m09
+2026-10-28 21:32:32,745 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=15 key=None correlation_id=order-f162b4-m10
+2026-10-28 21:32:32,751 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=16 key=None correlation_id=order-f162b4-m13
+2026-10-28 21:32:32,752 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=17 key=None correlation_id=order-f162b4-m14
+2026-10-28 21:32:32,752 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=18 key=None correlation_id=order-f162b4-m15
+2026-10-28 21:32:32,753 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=19 key=None correlation_id=order-f162b4-m17
+2026-10-28 21:32:32,754 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=20 key=None correlation_id=order-f162b4-m18
+2026-10-28 21:32:34,615 [kafka_io] ASSIGNED partitions [('s8110_tasks', 0)]
+2026-10-28 21:32:34,615 [kafka_io] ASSIGNED partitions [('s8110_tasks', 1)]
+2026-10-28 21:32:35,620 [tests] ASSIGNMENT {"writer-1": [["s8110_tasks", 0]], "writer-2": [["s8110_tasks", 1]]}
+2026-10-28 21:32:35,630 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=21 key=LST-1 correlation_id=order-7fe5b1-m01
+2026-10-28 21:32:35,634 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=13 key=LST-5 correlation_id=order-7fe5b1-m04
+2026-10-28 21:32:35,654 [tests] SENT      20 messages (VERIFY_SEED=268110) keyed=True
+2026-10-28 21:32:35,702 [writer-1] PROCESSED idx=01 entity=LST-1 seq=1 partition=0
+2026-10-28 21:32:35,883 [writer-2] PROCESSED idx=04 entity=LST-5 seq=1 partition=1
+2026-10-28 21:32:36,595 [writer-1] SENT      topic=s8110_drafts partition=0 offset=28 key=LST-1 correlation_id=order-7fe5b1-m01
+2026-10-28 21:32:36,597 [writer-1] COMMITTED offset 22 (after successful processing)
+2026-10-28 21:32:36,598 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=22 key=LST-2 correlation_id=order-7fe5b1-m02
+2026-10-28 21:32:36,606 [writer-2] SENT      topic=s8110_drafts partition=0 offset=29 key=LST-5 correlation_id=order-7fe5b1-m04
+2026-10-28 21:32:36,609 [writer-2] COMMITTED offset 14 (after successful processing)
+2026-10-28 21:32:36,609 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=14 key=LST-5 correlation_id=order-7fe5b1-m07
+2026-10-28 21:32:36,838 [writer-1] PROCESSED idx=02 entity=LST-2 seq=1 partition=0
+2026-10-28 21:32:36,842 [writer-1] SENT      topic=s8110_drafts partition=0 offset=30 key=LST-2 correlation_id=order-7fe5b1-m02
+2026-10-28 21:32:36,844 [writer-1] COMMITTED offset 23 (after successful processing)
+2026-10-28 21:32:36,844 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=23 key=LST-2 correlation_id=order-7fe5b1-m03
+2026-10-28 21:32:36,902 [writer-2] PROCESSED idx=07 entity=LST-5 seq=2 partition=1
+2026-10-28 21:32:36,905 [writer-2] SENT      topic=s8110_drafts partition=0 offset=31 key=LST-5 correlation_id=order-7fe5b1-m07
+2026-10-28 21:32:36,908 [writer-2] COMMITTED offset 15 (after successful processing)
+2026-10-28 21:32:36,908 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=15 key=LST-5 correlation_id=order-7fe5b1-m08
+2026-10-28 21:32:37,052 [writer-2] PROCESSED idx=08 entity=LST-5 seq=3 partition=1
+2026-10-28 21:32:37,056 [writer-2] SENT      topic=s8110_drafts partition=0 offset=32 key=LST-5 correlation_id=order-7fe5b1-m08
+2026-10-28 21:32:37,059 [writer-2] COMMITTED offset 16 (after successful processing)
+2026-10-28 21:32:37,060 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=16 key=LST-5 correlation_id=order-7fe5b1-m09
+2026-10-28 21:32:37,165 [writer-1] PROCESSED idx=03 entity=LST-2 seq=2 partition=0
+2026-10-28 21:32:37,167 [writer-1] SENT      topic=s8110_drafts partition=0 offset=33 key=LST-2 correlation_id=order-7fe5b1-m03
+2026-10-28 21:32:37,170 [writer-1] COMMITTED offset 24 (after successful processing)
+2026-10-28 21:32:37,170 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=24 key=LST-2 correlation_id=order-7fe5b1-m05
+2026-10-28 21:32:37,370 [writer-2] PROCESSED idx=09 entity=LST-5 seq=4 partition=1
+2026-10-28 21:32:37,374 [writer-2] SENT      topic=s8110_drafts partition=0 offset=34 key=LST-5 correlation_id=order-7fe5b1-m09
+2026-10-28 21:32:37,376 [writer-2] COMMITTED offset 17 (after successful processing)
+2026-10-28 21:32:37,376 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=17 key=LST-4 correlation_id=order-7fe5b1-m10
+2026-10-28 21:32:37,425 [writer-1] PROCESSED idx=05 entity=LST-2 seq=3 partition=0
+2026-10-28 21:32:37,428 [writer-1] SENT      topic=s8110_drafts partition=0 offset=35 key=LST-2 correlation_id=order-7fe5b1-m05
+2026-10-28 21:32:37,431 [writer-1] COMMITTED offset 25 (after successful processing)
+2026-10-28 21:32:37,432 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=25 key=LST-2 correlation_id=order-7fe5b1-m06
+2026-10-28 21:32:37,531 [writer-1] PROCESSED idx=06 entity=LST-2 seq=4 partition=0
+2026-10-28 21:32:37,535 [writer-1] SENT      topic=s8110_drafts partition=0 offset=36 key=LST-2 correlation_id=order-7fe5b1-m06
+2026-10-28 21:32:37,537 [writer-1] COMMITTED offset 26 (after successful processing)
+2026-10-28 21:32:37,538 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=26 key=LST-2 correlation_id=order-7fe5b1-m15
+2026-10-28 21:32:37,564 [writer-2] PROCESSED idx=10 entity=LST-4 seq=1 partition=1
+2026-10-28 21:32:37,567 [writer-2] SENT      topic=s8110_drafts partition=0 offset=37 key=LST-4 correlation_id=order-7fe5b1-m10
+2026-10-28 21:32:37,570 [writer-2] COMMITTED offset 18 (after successful processing)
+2026-10-28 21:32:37,570 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=18 key=LST-4 correlation_id=order-7fe5b1-m11
+2026-10-28 21:32:37,594 [writer-1] PROCESSED idx=15 entity=LST-2 seq=5 partition=0
+2026-10-28 21:32:37,597 [writer-1] SENT      topic=s8110_drafts partition=0 offset=38 key=LST-2 correlation_id=order-7fe5b1-m15
+2026-10-28 21:32:37,600 [writer-1] COMMITTED offset 27 (after successful processing)
+2026-10-28 21:32:37,600 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=27 key=LST-1 correlation_id=order-7fe5b1-m16
+2026-10-28 21:32:37,655 [writer-1] PROCESSED idx=16 entity=LST-1 seq=2 partition=0
+2026-10-28 21:32:37,659 [writer-1] SENT      topic=s8110_drafts partition=0 offset=39 key=LST-1 correlation_id=order-7fe5b1-m16
+2026-10-28 21:32:37,662 [writer-1] COMMITTED offset 28 (after successful processing)
+2026-10-28 21:32:37,662 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=28 key=LST-1 correlation_id=order-7fe5b1-m19
+2026-10-28 21:32:37,735 [writer-2] PROCESSED idx=11 entity=LST-4 seq=2 partition=1
+2026-10-28 21:32:37,739 [writer-2] SENT      topic=s8110_drafts partition=0 offset=40 key=LST-4 correlation_id=order-7fe5b1-m11
+2026-10-28 21:32:37,742 [writer-2] COMMITTED offset 19 (after successful processing)
+2026-10-28 21:32:37,742 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=19 key=LST-4 correlation_id=order-7fe5b1-m12
+2026-10-28 21:32:37,905 [writer-2] PROCESSED idx=12 entity=LST-4 seq=3 partition=1
+2026-10-28 21:32:37,909 [writer-2] SENT      topic=s8110_drafts partition=0 offset=41 key=LST-4 correlation_id=order-7fe5b1-m12
+2026-10-28 21:32:37,911 [writer-2] COMMITTED offset 20 (after successful processing)
+2026-10-28 21:32:37,912 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=20 key=LST-4 correlation_id=order-7fe5b1-m13
+2026-10-28 21:32:37,979 [writer-1] PROCESSED idx=19 entity=LST-1 seq=3 partition=0
+2026-10-28 21:32:37,982 [writer-1] SENT      topic=s8110_drafts partition=0 offset=42 key=LST-1 correlation_id=order-7fe5b1-m19
+2026-10-28 21:32:37,984 [writer-1] COMMITTED offset 29 (after successful processing)
+2026-10-28 21:32:37,984 [writer-1] RECEIVED  topic=s8110_tasks partition=0 offset=29 key=LST-2 correlation_id=order-7fe5b1-m20
+2026-10-28 21:32:38,098 [writer-1] PROCESSED idx=20 entity=LST-2 seq=6 partition=0
+2026-10-28 21:32:38,102 [writer-1] SENT      topic=s8110_drafts partition=0 offset=43 key=LST-2 correlation_id=order-7fe5b1-m20
+2026-10-28 21:32:38,105 [writer-1] COMMITTED offset 30 (after successful processing)
+2026-10-28 21:32:38,169 [writer-2] PROCESSED idx=13 entity=LST-4 seq=4 partition=1
+2026-10-28 21:32:38,172 [writer-2] SENT      topic=s8110_drafts partition=0 offset=44 key=LST-4 correlation_id=order-7fe5b1-m13
+2026-10-28 21:32:38,175 [writer-2] COMMITTED offset 21 (after successful processing)
+2026-10-28 21:32:38,175 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=21 key=LST-4 correlation_id=order-7fe5b1-m14
+2026-10-28 21:32:38,263 [writer-2] PROCESSED idx=14 entity=LST-4 seq=5 partition=1
+2026-10-28 21:32:38,267 [writer-2] SENT      topic=s8110_drafts partition=0 offset=45 key=LST-4 correlation_id=order-7fe5b1-m14
+2026-10-28 21:32:38,270 [writer-2] COMMITTED offset 22 (after successful processing)
+2026-10-28 21:32:38,270 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=22 key=LST-5 correlation_id=order-7fe5b1-m17
+2026-10-28 21:32:38,463 [writer-2] PROCESSED idx=17 entity=LST-5 seq=5 partition=1
+2026-10-28 21:32:38,467 [writer-2] SENT      topic=s8110_drafts partition=0 offset=46 key=LST-5 correlation_id=order-7fe5b1-m17
+2026-10-28 21:32:38,470 [writer-2] COMMITTED offset 23 (after successful processing)
+2026-10-28 21:32:38,470 [writer-2] RECEIVED  topic=s8110_tasks partition=1 offset=23 key=LST-5 correlation_id=order-7fe5b1-m18
+2026-10-28 21:32:38,736 [writer-2] PROCESSED idx=18 entity=LST-5 seq=6 partition=1
+2026-10-28 21:32:38,740 [writer-2] SENT      topic=s8110_drafts partition=0 offset=47 key=LST-5 correlation_id=order-7fe5b1-m18
+2026-10-28 21:32:38,743 [writer-2] COMMITTED offset 24 (after successful processing)
+2026-10-28 21:32:39,760 [tests] RESULT    {"scenario": "ordering", "keyed": true, "verify_seed": 268110, "processed": 20, "per_entity": {"LST-1": {"partitions": [0], "seq_in_processing_order": [1, 2, 3], "in_order": true}, "LST-5": {"partitions": [1], "seq_in_processing_order": [1, 2, 3, 4, 5, 6], "in_order": true}, "LST-2": {"partitions": [0], "seq_in_processing_order": [1, 2, 3, 4, 5, 6], "in_order": true}, "LST-4": {"partitions": [1], "seq_in_processing_order": [1, 2, 3, 4, 5], "in_order": true}}, "all_entities_in_one_partition": true, "all_entities_in_order": true}

@@ -1,0 +1,22 @@
+{
+  "scenario": "consumer_killed",
+  "commit_early": true,
+  "correlation_id": "crash-6414fa52",
+  "partition": 0,
+  "message_offset": 7,
+  "exit_code_run1": 137,
+  "committed_after_crash": 8,
+  "committed_after_restart": 8,
+  "draft_after_restart": 0,
+  "run1_log": [
+    "2026-10-28 21:28:27,319 [writer] writer starting: group=s8110_writer_crash-cf92be in=s8110_tasks out=s8110_drafts idempotent=True commit_early=True max_retries=3",
+    "2026-10-28 21:28:27,319 [writer] Consumer is ready and listening...",
+    "2026-10-28 21:28:27,452 [writer] RECEIVED  topic=s8110_tasks partition=0 offset=7 key=crash-6414fa52 correlation_id=crash-6414fa52",
+    "2026-10-28 21:28:27,453 [writer] COMMITTED offset 8 BEFORE processing (unsafe variant)",
+    "2026-10-28 21:28:27,453 [writer] CRASH     writer dies mid-processing of correlation_id=crash-6414fa52 (before sending the draft and before the commit)"
+  ],
+  "run2_log": [
+    "2026-10-28 21:28:27,523 [writer] writer starting: group=s8110_writer_crash-cf92be in=s8110_tasks out=s8110_drafts idempotent=True commit_early=True max_retries=3",
+    "2026-10-28 21:28:27,523 [writer] Consumer is ready and listening..."
+  ]
+}

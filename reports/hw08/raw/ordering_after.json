@@ -1,0 +1,218 @@
+{
+  "scenario": "ordering",
+  "keyed": true,
+  "verify_seed": 268110,
+  "processed": 20,
+  "assignment": {
+    "writer-1": [
+      [
+        "s8110_tasks",
+        0
+      ]
+    ],
+    "writer-2": [
+      [
+        "s8110_tasks",
+        1
+      ]
+    ]
+  },
+  "per_entity": {
+    "LST-1": {
+      "partitions": [
+        0
+      ],
+      "seq_in_processing_order": [
+        1,
+        2,
+        3
+      ],
+      "in_order": true
+    },
+    "LST-5": {
+      "partitions": [
+        1
+      ],
+      "seq_in_processing_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "in_order": true
+    },
+    "LST-2": {
+      "partitions": [
+        0
+      ],
+      "seq_in_processing_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "in_order": true
+    },
+    "LST-4": {
+      "partitions": [
+        1
+      ],
+      "seq_in_processing_order": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "in_order": true
+    }
+  },
+  "all_entities_in_one_partition": true,
+  "all_entities_in_order": true,
+  "sent": [
+    {
+      "idx": 1,
+      "entity": "LST-1",
+      "seq": 1,
+      "sent_partition": 0,
+      "sent_offset": 21
+    },
+    {
+      "idx": 2,
+      "entity": "LST-2",
+      "seq": 1,
+      "sent_partition": 0,
+      "sent_offset": 22
+    },
+    {
+      "idx": 3,
+      "entity": "LST-2",
+      "seq": 2,
+      "sent_partition": 0,
+      "sent_offset": 23
+    },
+    {
+      "idx": 4,
+      "entity": "LST-5",
+      "seq": 1,
+      "sent_partition": 1,
+      "sent_offset": 13
+    },
+    {
+      "idx": 5,
+      "entity": "LST-2",
+      "seq": 3,
+      "sent_partition": 0,
+      "sent_offset": 24
+    },
+    {
+      "idx": 6,
+      "entity": "LST-2",
+      "seq": 4,
+      "sent_partition": 0,
+      "sent_offset": 25
+    },
+    {
+      "idx": 7,
+      "entity": "LST-5",
+      "seq": 2,
+      "sent_partition": 1,
+      "sent_offset": 14
+    },
+    {
+      "idx": 8,
+      "entity": "LST-5",
+      "seq": 3,
+      "sent_partition": 1,
+      "sent_offset": 15
+    },
+    {
+      "idx": 9,
+      "entity": "LST-5",
+      "seq": 4,
+      "sent_partition": 1,
+      "sent_offset": 16
+    },
+    {
+      "idx": 10,
+      "entity": "LST-4",
+      "seq": 1,
+      "sent_partition": 1,
+      "sent_offset": 17
+    },
+    {
+      "idx": 11,
+      "entity": "LST-4",
+      "seq": 2,
+      "sent_partition": 1,
+      "sent_offset": 18
+    },
+    {
+      "idx": 12,
+      "entity": "LST-4",
+      "seq": 3,
+      "sent_partition": 1,
+      "sent_offset": 19
+    },
+    {
+      "idx": 13,
+      "entity": "LST-4",
+      "seq": 4,
+      "sent_partition": 1,
+      "sent_offset": 20
+    },
+    {
+      "idx": 14,
+      "entity": "LST-4",
+      "seq": 5,
+      "sent_partition": 1,
+      "sent_offset": 21
+    },
+    {
+      "idx": 15,
+      "entity": "LST-2",
+      "seq": 5,
+      "sent_partition": 0,
+      "sent_offset": 26
+    },
+    {
+      "idx": 16,
+      "entity": "LST-1",
+      "seq": 2,
+      "sent_partition": 0,
+      "sent_offset": 27
+    },
+    {
+      "idx": 17,
+      "entity": "LST-5",
+      "seq": 5,
+      "sent_partition": 1,
+      "sent_offset": 22
+    },
+    {
+      "idx": 18,
+      "entity": "LST-5",
+      "seq": 6,
+      "sent_partition": 1,
+      "sent_offset": 23
+    },
+    {
+      "idx": 19,
+      "entity": "LST-1",
+      "seq": 3,
+      "sent_partition": 0,
+      "sent_offset": 28
+    },
+    {
+      "idx": 20,
+      "entity": "LST-2",
+      "seq": 6,
+      "sent_partition": 0,
+      "sent_offset": 29
+    }
+  ]
+}

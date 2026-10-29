@@ -1,0 +1,8 @@
+{
+  "scenario": "duplicate",
+  "idempotent": false,
+  "correlation_id": "dup-7e09f921",
+  "sent": 2,
+  "times_work_done": 2,
+  "drafts_on_topic": 2
+}

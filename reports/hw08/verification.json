@@ -1,0 +1,75 @@
+{
+  "homework": 8,
+  "sid4": "8110",
+  "commit_hash": "5de4cad35fb4b530dc537c81c3afe229cd7dbfd8",
+  "model_config": {
+    "model": "qwen3:8b (Ollama)",
+    "verify_run_llm_mode": "stub",
+    "kafka": "apache/kafka:3.9.0 single broker",
+    "port_base": 8010,
+    "prefix": "s8110",
+    "domain_id": 6
+  },
+  "seed": 8110,
+  "verify_seed": 268110,
+  "timestamp": "2026-10-29T05:00:09+00:00",
+  "total_checks": 9,
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "topics exist with required partitions",
+      "passed": true,
+      "detail": "partitions {'s8110_inbox': 1, 's8110_tasks': 2, 's8110_drafts': 1, 's8110_final': 1}",
+      "seconds": 0.0
+    },
+    {
+      "name": "CREATE_LISTING then GET_LISTING round-trip through Kafka",
+      "passed": true,
+      "detail": "created 24adb04a-eec1-4a04-a97b-a1ee519fdb60 and read it back",
+      "seconds": 1.5
+    },
+    {
+      "name": "error responses keep correlation_id",
+      "passed": true,
+      "detail": "not-found, unknown operation and invalid data all fail cleanly with the original correlation_id",
+      "seconds": 1.5
+    },
+    {
+      "name": "three-agent pipeline inbox->final",
+      "passed": true,
+      "detail": "inbox->tasks->drafts->final, status=approved, correlation_id preserved=True",
+      "seconds": 15.2
+    },
+    {
+      "name": "duplicate delivery has no extra side effect (idempotency)",
+      "passed": true,
+      "detail": "sent 2x, work done 1x, drafts 1",
+      "seconds": 23.7
+    },
+    {
+      "name": "poison message: bounded retries then dead-letter, later messages flow",
+      "passed": true,
+      "detail": "attempts=3, dead-lettered=1, later messages processed=2/2",
+      "seconds": 30.8
+    },
+    {
+      "name": "keyed ordering: related messages in one partition, in order",
+      "passed": true,
+      "detail": "processed=20/20 one-partition-per-entity=True in-order=True",
+      "seconds": 7.2
+    },
+    {
+      "name": "writer killed mid-work: redelivered after restart, offset committed after success",
+      "passed": true,
+      "detail": "exit=137 committed_after_crash=52 draft_after_restart=1 committed_after_restart=53",
+      "seconds": 15.4
+    },
+    {
+      "name": "application code unchanged by this script",
+      "passed": true,
+      "detail": "sha256 of code/*.py identical before and after",
+      "seconds": 0.0
+    }
+  ]
+}
