@@ -1,0 +1,61 @@
+# HW9 Part 3.1 - labeled cache test set (40 cases). Written BEFORE any threshold sweep; do not relabel after seeing results.
+# seeds: the 10 queries that are already in the cache (answered once by the HW8 pipeline).
+# answer_key = which fact the correct answer is about: "<attribute>:<listing code>"; "none" = no cached answer is correct.
+# A cache hit is CORRECT only when the matched seed's answer_key equals the case's answer_key, otherwise it is a FALSE HIT.
+version: 1
+seeds:
+  - {id: seed01, query: "How many units are available at listing S8110-A01?", answer_key: "units:S8110-A01"}
+  - {id: seed02, query: "Who is the landlord for listing S8110-A02?", answer_key: "landlord:S8110-A02"}
+  - {id: seed03, query: "What is the address of listing S8110-A03?", answer_key: "address:S8110-A03"}
+  - {id: seed04, query: "Is listing S8110-A04 currently available?", answer_key: "available:S8110-A04"}
+  - {id: seed05, query: "How many units are available at listing S8110-A05?", answer_key: "units:S8110-A05"}
+  - {id: seed06, query: "Who is the landlord for listing S8110-A06?", answer_key: "landlord:S8110-A06"}
+  - {id: seed07, query: "What is the address of listing S8110-A07?", answer_key: "address:S8110-A07"}
+  - {id: seed08, query: "How many units are available at listing S8110-A08?", answer_key: "units:S8110-A08"}
+  - {id: seed09, query: "Who is the landlord for listing S8110-A09?", answer_key: "landlord:S8110-A09"}
+  - {id: seed10, query: "Is listing S8110-A10 still available?", answer_key: "available:S8110-A10"}
+cases:
+  # ---- 10 exact duplicates (should hit) ----
+  - {id: c01, category: exact_duplicate, seed: seed01, query: "How many units are available at listing S8110-A01?", answer_key: "units:S8110-A01", expected: hit}
+  - {id: c02, category: exact_duplicate, seed: seed02, query: "Who is the landlord for listing S8110-A02?", answer_key: "landlord:S8110-A02", expected: hit}
+  - {id: c03, category: exact_duplicate, seed: seed03, query: "What is the address of listing S8110-A03?", answer_key: "address:S8110-A03", expected: hit}
+  - {id: c04, category: exact_duplicate, seed: seed04, query: "Is listing S8110-A04 currently available?", answer_key: "available:S8110-A04", expected: hit}
+  - {id: c05, category: exact_duplicate, seed: seed05, query: "How many units are available at listing S8110-A05?", answer_key: "units:S8110-A05", expected: hit}
+  - {id: c06, category: exact_duplicate, seed: seed06, query: "Who is the landlord for listing S8110-A06?", answer_key: "landlord:S8110-A06", expected: hit}
+  - {id: c07, category: exact_duplicate, seed: seed07, query: "What is the address of listing S8110-A07?", answer_key: "address:S8110-A07", expected: hit}
+  - {id: c08, category: exact_duplicate, seed: seed08, query: "How many units are available at listing S8110-A08?", answer_key: "units:S8110-A08", expected: hit}
+  - {id: c09, category: exact_duplicate, seed: seed09, query: "Who is the landlord for listing S8110-A09?", answer_key: "landlord:S8110-A09", expected: hit}
+  - {id: c10, category: exact_duplicate, seed: seed10, query: "Is listing S8110-A10 still available?", answer_key: "available:S8110-A10", expected: hit}
+  # ---- 10 paraphrases that should hit (same listing, same attribute, different wording) ----
+  - {id: c11, category: paraphrase, seed: seed01, query: "What's the number of open units for S8110-A01?", answer_key: "units:S8110-A01", expected: hit}
+  - {id: c12, category: paraphrase, seed: seed02, query: "Which landlord owns listing S8110-A02?", answer_key: "landlord:S8110-A02", expected: hit}
+  - {id: c13, category: paraphrase, seed: seed03, query: "Where is listing S8110-A03 located?", answer_key: "address:S8110-A03", expected: hit}
+  - {id: c14, category: paraphrase, seed: seed04, query: "Can I rent listing S8110-A04 right now?", answer_key: "available:S8110-A04", expected: hit}
+  - {id: c15, category: paraphrase, seed: seed05, query: "How many vacancies does S8110-A05 have?", answer_key: "units:S8110-A05", expected: hit}
+  - {id: c16, category: paraphrase, seed: seed06, query: "Who owns the rental listed as S8110-A06?", answer_key: "landlord:S8110-A06", expected: hit}
+  - {id: c17, category: paraphrase, seed: seed07, query: "Tell me the street address for S8110-A07.", answer_key: "address:S8110-A07", expected: hit}
+  - {id: c18, category: paraphrase, seed: seed08, query: "Number of available units at S8110-A08?", answer_key: "units:S8110-A08", expected: hit}
+  - {id: c19, category: paraphrase, seed: seed09, query: "Which property manager handles listing S8110-A09?", answer_key: "landlord:S8110-A09", expected: hit}
+  - {id: c20, category: paraphrase, seed: seed10, query: "Is S8110-A10 open for new tenants?", answer_key: "available:S8110-A10", expected: hit}
+  # ---- 10 superficially similar questions with different correct answers (should miss) ----
+  - {id: c21, category: similar_different, seed: seed01, query: "How many units are available at listing S8110-A02?", answer_key: "units:S8110-A02", expected: miss}
+  - {id: c22, category: similar_different, seed: seed02, query: "Who is the landlord for listing S8110-A03?", answer_key: "landlord:S8110-A03", expected: miss}
+  - {id: c23, category: similar_different, seed: seed03, query: "What is the address of listing S8110-A04?", answer_key: "address:S8110-A04", expected: miss}
+  - {id: c24, category: similar_different, seed: seed04, query: "Is listing S8110-A01 currently available?", answer_key: "available:S8110-A01", expected: miss}
+  - {id: c25, category: similar_different, seed: seed05, query: "How many units are available at listing S8110-A06?", answer_key: "units:S8110-A06", expected: miss}
+  - {id: c26, category: similar_different, seed: seed06, query: "What is the address of listing S8110-A06?", answer_key: "address:S8110-A06", expected: miss}
+  - {id: c27, category: similar_different, seed: seed07, query: "What is the address of listing S8110-A08?", answer_key: "address:S8110-A08", expected: miss}
+  - {id: c28, category: similar_different, seed: seed08, query: "How many units are available at listing S8110-A09?", answer_key: "units:S8110-A09", expected: miss}
+  - {id: c29, category: similar_different, seed: seed09, query: "Who is the landlord for listing S8110-A10?", answer_key: "landlord:S8110-A10", expected: miss}
+  - {id: c30, category: similar_different, seed: seed10, query: "Is listing S8110-A05 still available?", answer_key: "available:S8110-A05", expected: miss}
+  # ---- 10 unrelated questions (should miss) ----
+  - {id: c31, category: unrelated, seed: null, query: "What is the maximum security deposit allowed in California?", answer_key: "none", expected: miss}
+  - {id: c32, category: unrelated, seed: null, query: "How do I report a landlord for housing discrimination?", answer_key: "none", expected: miss}
+  - {id: c33, category: unrelated, seed: null, query: "What is the difference between a lease and a month-to-month rental agreement?", answer_key: "none", expected: miss}
+  - {id: c34, category: unrelated, seed: null, query: "Can a landlord enter my apartment without notice?", answer_key: "none", expected: miss}
+  - {id: c35, category: unrelated, seed: null, query: "How does rent control work in San Jose?", answer_key: "none", expected: miss}
+  - {id: c36, category: unrelated, seed: null, query: "What documents do I need to apply for an apartment?", answer_key: "none", expected: miss}
+  - {id: c37, category: unrelated, seed: null, query: "How should I word a 30-day notice to vacate?", answer_key: "none", expected: miss}
+  - {id: c38, category: unrelated, seed: null, query: "What is a co-signer on a lease?", answer_key: "none", expected: miss}
+  - {id: c39, category: unrelated, seed: null, query: "Are pets allowed under the San Jose tenant ordinance?", answer_key: "none", expected: miss}
+  - {id: c40, category: unrelated, seed: null, query: "How can I dispute a late fee on my rent?", answer_key: "none", expected: miss}
