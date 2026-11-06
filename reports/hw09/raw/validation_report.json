@@ -1,0 +1,214 @@
+{
+  "baseline_results": [
+    {
+      "id": "va01",
+      "answer": "The current monthly rent for listing L203 is $1,950.",
+      "correct": true
+    },
+    {
+      "id": "va02",
+      "answer": "The rent is $2,675 per month.",
+      "correct": true
+    },
+    {
+      "id": "va03",
+      "answer": "The monthly rent for listing L207 is $3,500.",
+      "correct": true
+    },
+    {
+      "id": "va04",
+      "answer": "The pet policy for listing L202 allows dogs with a one-time $400 pet fee, but no cats are permitted.",
+      "correct": true
+    },
+    {
+      "id": "va05",
+      "answer": "Cats and dogs are allowed at listing L204, and there is a one-time $500 pet fee.",
+      "correct": true
+    },
+    {
+      "id": "va06",
+      "answer": "Yes, listing L210 allows pets. Cats are welcome with a one-time $150 pet fee; dogs are not allowed.",
+      "correct": true
+    },
+    {
+      "id": "va07",
+      "answer": "Water and trash are included in the rent.",
+      "correct": true
+    },
+    {
+      "id": "va08",
+      "answer": "The landlord pays water and trash.",
+      "correct": true
+    },
+    {
+      "id": "va09",
+      "answer": "First month's rent is $2,250 plus the security deposit of $2,250, totaling $4,500.",
+      "correct": true
+    },
+    {
+      "id": "va10",
+      "answer": "The total due at move-in is $6,200, which includes the first month's rent of $3,100 and the security deposit of $3,100.",
+      "correct": true
+    },
+    {
+      "id": "va11",
+      "answer": "The walk score for listing L209 is not provided in the listing ad.",
+      "correct": true
+    },
+    {
+      "id": "va12",
+      "answer": "The listing does not provide information about the distance to the nearest bus stop.",
+      "correct": true
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_id": "lesson_001",
+      "failure_pattern": "stale_price",
+      "failures_before": 0,
+      "failures_after": 1,
+      "fixed": [],
+      "regressions": [
+        "va09"
+      ],
+      "unsupported_answers": [],
+      "keep": false,
+      "reason": "failures 0->1; regressions ['va09']; unsupported answers []",
+      "after_results": [
+        {
+          "id": "va01",
+          "answer": "The current monthly rent for listing L203 is $1,950.",
+          "correct": true
+        },
+        {
+          "id": "va02",
+          "answer": "The current rent is $2,675/mo. The old price of $2,800/mo is no longer applicable.",
+          "correct": true
+        },
+        {
+          "id": "va03",
+          "answer": "The monthly rent for listing L207 is $3,500.",
+          "correct": true
+        },
+        {
+          "id": "va04",
+          "answer": "The pet policy for listing L202 allows dogs with a one-time $400 pet fee, but no cats are permitted.",
+          "correct": true
+        },
+        {
+          "id": "va05",
+          "answer": "Cats and dogs are allowed at listing L204, and there is a one-time $500 pet fee.",
+          "correct": true
+        },
+        {
+          "id": "va06",
+          "answer": "Yes, listing L210 allows pets. Cats are welcome with a one-time $150 pet fee; dogs are not allowed.",
+          "correct": true
+        },
+        {
+          "id": "va07",
+          "answer": "Water and trash are included in the rent.",
+          "correct": true
+        },
+        {
+          "id": "va08",
+          "answer": "The landlord pays water and trash.",
+          "correct": true
+        },
+        {
+          "id": "va09",
+          "answer": "First month's rent is $2,250 plus the security deposit of $2,250.",
+          "correct": false
+        },
+        {
+          "id": "va10",
+          "answer": "The total due at move-in is $6,200, which includes the first month's rent of $3,100 and the security deposit of $3,100.",
+          "correct": true
+        },
+        {
+          "id": "va11",
+          "answer": "The walk score for listing L209 is not provided in the listing ad.",
+          "correct": true
+        },
+        {
+          "id": "va12",
+          "answer": "The listing does not provide information about the distance to the nearest bus stop.",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "lesson_id": "lesson_002",
+      "failure_pattern": "controlled_risky_rule",
+      "failures_before": 0,
+      "failures_after": 0,
+      "fixed": [],
+      "regressions": [],
+      "unsupported_answers": [],
+      "keep": true,
+      "reason": "failures improved or unchanged, no regressions",
+      "after_results": [
+        {
+          "id": "va01",
+          "answer": "The current monthly rent for listing L203 is $1,950.",
+          "correct": true
+        },
+        {
+          "id": "va02",
+          "answer": "The rent per month at listing L204 is $2,675.",
+          "correct": true
+        },
+        {
+          "id": "va03",
+          "answer": "The monthly rent for listing L207 is $3,500.",
+          "correct": true
+        },
+        {
+          "id": "va04",
+          "answer": "The pet policy for listing L202 allows dogs with a one-time $400 pet fee and does not permit cats.",
+          "correct": true
+        },
+        {
+          "id": "va05",
+          "answer": "Cats and dogs are allowed at listing L204 with a one-time $500 pet fee.",
+          "correct": true
+        },
+        {
+          "id": "va06",
+          "answer": "Yes, pets are allowed with a one-time $150 pet fee for cats. Dogs are not permitted.",
+          "correct": true
+        },
+        {
+          "id": "va07",
+          "answer": "Water and trash are included in the rent. Electricity and internet are paid by the tenant.",
+          "correct": true
+        },
+        {
+          "id": "va08",
+          "answer": "The landlord pays water and trash. The tenant pays electricity.",
+          "correct": true
+        },
+        {
+          "id": "va09",
+          "answer": "First month's rent is $2,250 plus the security deposit of $2,250, totaling $4,500.",
+          "correct": true
+        },
+        {
+          "id": "va10",
+          "answer": "The total due at move-in is $6,200, which includes the first month's rent of $3,100 and the security deposit of $3,100.",
+          "correct": true
+        },
+        {
+          "id": "va11",
+          "answer": "The walk score for listing L209 is not mentioned in the listing ad.",
+          "correct": true
+        },
+        {
+          "id": "va12",
+          "answer": "The listing does not provide information about the distance to the nearest bus stop.",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

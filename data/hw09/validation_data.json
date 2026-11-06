@@ -1,0 +1,62 @@
+[
+  {
+    "id": "va01",
+    "listing_id": "L203",
+    "question": "What is the current monthly rent for listing L203?"
+  },
+  {
+    "id": "va02",
+    "listing_id": "L204",
+    "question": "How much is rent per month at listing L204 right now?"
+  },
+  {
+    "id": "va03",
+    "listing_id": "L207",
+    "question": "What is the monthly rent for listing L207 at the moment?"
+  },
+  {
+    "id": "va04",
+    "listing_id": "L202",
+    "question": "What is the pet policy for listing L202?"
+  },
+  {
+    "id": "va05",
+    "listing_id": "L204",
+    "question": "Which pets are allowed at listing L204, and are there any pet fees?"
+  },
+  {
+    "id": "va06",
+    "listing_id": "L210",
+    "question": "Does listing L210 allow pets? Please include any fees or restrictions."
+  },
+  {
+    "id": "va07",
+    "listing_id": "L201",
+    "question": "Which utilities are included in the rent at listing L201?"
+  },
+  {
+    "id": "va08",
+    "listing_id": "L208",
+    "question": "What utilities does the landlord pay at listing L208?"
+  },
+  {
+    "id": "va09",
+    "listing_id": "L201",
+    "question": "How much do I need to pay at move-in for listing L201 (first month's rent plus the security deposit)?"
+  },
+  {
+    "id": "va10",
+    "listing_id": "L202",
+    "question": "What is the total due at move-in for listing L202: first month's rent plus the security deposit?"
+  },
+  {
+    "id": "va11",
+    "listing_id": "L209",
+    "question": "What is the walk score for listing L209?"
+  },
+  {
+    "id": "va12",
+    "listing_id": "L212",
+    "question": "How far is the nearest bus stop from listing L212?"
+  }
+]

@@ -21,6 +21,15 @@ services:
       interval: 5s
       timeout: 10s
       retries: 20
+  redis:
+    image: redis/redis-stack-server:latest   # includes the RediSearch vector index used in Part 2
+    container_name: s8110-redis
+    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
 
   worker:
     build: {context: ., dockerfile: Dockerfile}
@@ -36,3 +45,5 @@ services:
     ports: ["8010:8010"]
     environment: {KAFKA_BOOTSTRAP: "kafka:29092", PYTHONUNBUFFERED: "1"}
     depends_on: {kafka: {condition: service_healthy}}
+
+  

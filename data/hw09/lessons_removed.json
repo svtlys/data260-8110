@@ -1,0 +1,19 @@
+[
+  {
+    "lesson_id": "lesson_001",
+    "failure_pattern": "stale_price",
+    "correction": "When the ad shows an old price and a new price (for example 'was $X, now $Y'), use the CURRENT (new) price. Mention the old price only as the previous price. For move-in costs use the current rent.",
+    "created_at": "2026-11-05T23:25:45+00:00",
+    "use_count": 0,
+    "applies_to": [
+      "rent",
+      "move_in"
+    ],
+    "source": "training_failures",
+    "evidence_count": 2,
+    "evidence_ids": [
+      "tr01",
+      "tr02"
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "step": "1. first ask (cache miss, answer stored with data_version)",
+    "question": "How many units are available at listing S8110-A01?",
+    "answer": "The listing S8110-A01 has 3 available units.",
+    "is_cached": false,
+    "similarity": null,
+    "latency_ms": 9630.13,
+    "matched_query": null,
+    "record_id": "S8110-A01",
+    "data_version": "194b628b40f5",
+    "stale_invalidated": false,
+    "stored": true,
+    "timings": {
+      "embed_ms": 405.8,
+      "search_ms": 1.76,
+      "agent_ms": 9209.47
+    },
+    "database_truth": "S8110-A01 has 3 unit(s) available."
+  },
+  {
+    "step": "2. ask again, NO invalidation -> stale hit",
+    "question": "How many units are available at listing S8110-A01?",
+    "answer": "The listing S8110-A01 has 3 available units.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 185.4,
+    "matched_query": "How many units are available at listing S8110-A01?",
+    "record_id": "S8110-A01",
+    "data_version": "194b628b40f5",
+    "stale_invalidated": false,
+    "stored": false,
+    "timings": {
+      "embed_ms": 182.13,
+      "search_ms": 3.17,
+      "version_check_ms": 0.0
+    },
+    "database_truth": "S8110-A01 has 0 unit(s) available."
+  },
+  {
+    "step": "3. ask again, data-version check -> stale entry dropped, agent re-run",
+    "question": "How many units are available at listing S8110-A01?",
+    "answer": "The listing S8110-A01 has 0 available units. A listing with 0 available units is not currently available.",
+    "is_cached": false,
+    "similarity": 1.0,
+    "latency_ms": 5393.64,
+    "matched_query": "How many units are available at listing S8110-A01?",
+    "record_id": "S8110-A01",
+    "data_version": "2a404a6330a3",
+    "stale_invalidated": true,
+    "stored": true,
+    "timings": {
+      "embed_ms": 6.53,
+      "search_ms": 1.5,
+      "version_check_ms": 1.01,
+      "agent_ms": 5380.24
+    },
+    "database_truth": "S8110-A01 has 0 unit(s) available."
+  },
+  {
+    "step": "4. ask again -> hit with the fresh answer",
+    "question": "How many units are available at listing S8110-A01?",
+    "answer": "The listing S8110-A01 has 0 available units. A listing with 0 available units is not currently available.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 52.77,
+    "matched_query": "How many units are available at listing S8110-A01?",
+    "record_id": "S8110-A01",
+    "data_version": "2a404a6330a3",
+    "stale_invalidated": false,
+    "stored": false,
+    "timings": {
+      "embed_ms": 49.57,
+      "search_ms": 1.66,
+      "version_check_ms": 1.44
+    },
+    "database_truth": "S8110-A01 has 0 unit(s) available."
+  }
+]

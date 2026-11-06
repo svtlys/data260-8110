@@ -1,0 +1,113 @@
+{
+  "student": "Alyssa Gomez",
+  "sid4": "8110",
+  "prefix": "s8110",
+  "seed": 8110,
+  "verify_seed": 268110,
+  "git_commit": "3e897c859709a6ffba428d9bf6a148a30d89c6bd",
+  "timestamp": "2026-11-06T00:25:45+00:00",
+  "code_sha256": "69a9c80099ab20bb58872efc70eff95a16b20f50175d1b0ba56ee5a44c54f6dd",
+  "summary": {
+    "PASS": 15,
+    "FAIL": 1,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "section 0 values",
+      "status": "PASS",
+      "detail": "{'SID4': '8110', 'PORT_BASE': 8010, 'PREFIX': 's8110', 'SEED': 8110, 'VERIFY_SEED': 268110, 'DOMAIN_ID': 6}",
+      "seconds": 0.0
+    },
+    {
+      "name": "offline unit tests",
+      "status": "FAIL",
+      "detail": "offline tests (Parts 1, 2, 4): no tests ran in 0.00s",
+      "seconds": 0.9
+    },
+    {
+      "name": "part 1: live counter + sync every 10",
+      "status": "PASS",
+      "detail": "25 increments returned 1..25; database synced at [10, 20] (every 10)",
+      "seconds": 0.1
+    },
+    {
+      "name": "part 1: every Redis key starts with PREFIX",
+      "status": "PASS",
+      "detail": "1 keys in Redis, all start with 's8110:'",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 2: vector index exists",
+      "status": "PASS",
+      "detail": "RediSearch index s8110:idx:cache exists",
+      "seconds": 0.1
+    },
+    {
+      "name": "part 2: semantic cache results",
+      "status": "PASS",
+      "detail": "12 queries, kinds=['exact duplicate', 'new', 'paraphrase'], hit rate 50.0%, avg cached 30.29 ms vs not cached 9792.33 ms",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 3.1: 40 labeled cases",
+      "status": "PASS",
+      "detail": "40 labeled cases, 10 seeds",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 3.1: cases committed before sweep",
+      "status": "PASS",
+      "detail": "cache_cases.yaml first committed 2026-11-05T17:28:43+00:00, sweep result written 2026-11-05T17:55:17+00:00",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 3.2/3.4: threshold sweep + chosen threshold",
+      "status": "PASS",
+      "detail": "thresholds [0.75, 0.8, 0.85, 0.9, 0.95], 40 cases, chosen threshold 0.95 (recomputed 0.95)",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 3.5: stale answer + invalidation",
+      "status": "PASS",
+      "detail": "stale hit served before invalidation; data-version check dropped it, re-ran the agent, then the fresh answer was cached",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 4: datasets",
+      "status": "PASS",
+      "detail": "train/validation/test = [12, 12, 20], questions only (no answer fields), no overlap, all listings in reference dataset",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 4.2/4.3: lessons validated",
+      "status": "PASS",
+      "detail": "1 kept of 2 candidates; every kept lesson passed validation; no lesson built from test questions",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 4.4: four variants",
+      "status": "PASS",
+      "detail": "Baseline: 18/20, 1.0 attempts, 1.59 s; Evaluator Repair: 20/20, 1.1 attempts, 1.68 s; Lesson Memory: 20/20, 1.0 attempts, 1.88 s; Validated Improvement: 20/20, 1.0 attempts, 1.7 s",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 4.1/4.2: demos",
+      "status": "PASS",
+      "detail": "controlled case ['REVISE', 'PASS'] in 2 attempts; lessons reused: ['lesson_002']",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 4.1: stopping condition",
+      "status": "PASS",
+      "detail": "no question used more than 2 attempts (stopping condition)",
+      "seconds": 0.0
+    },
+    {
+      "name": "application code unchanged by verification",
+      "status": "PASS",
+      "detail": "sha256 69a9c80099ab20bb...",
+      "seconds": 0.0
+    }
+  ]
+}

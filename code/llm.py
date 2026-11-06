@@ -48,7 +48,10 @@ def plan_steps(question: str) -> tuple:
     return parse_steps(text) or list(DEFAULT_STEPS), source
 
 
-def write_draft(question: str, plan: list) -> tuple:
-    """Writer brain: (draft answer, source)."""
+def write_draft(question: str, plan: list, context: str | None = None) -> tuple:
+    """Writer brain: (draft answer, source). `context` (optional) holds database facts the answer must be based on (HW9)."""
     steps = "\n".join(f"{i}. {s}" for i, s in enumerate(plan, 1))
+    if context:
+        return generate("Answer the question in one or two full sentences using ONLY the facts below. Do not add other facts.\n"
+                        f"Facts: {context}\nPlan:\n{steps}\nQuestion: {question}")
     return generate(f"Write a short, practical answer (under 120 words) to the question, following the plan.\nPlan:\n{steps}\nQuestion: {question}")

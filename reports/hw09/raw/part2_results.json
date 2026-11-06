@@ -1,0 +1,241 @@
+{
+  "threshold": 0.85,
+  "summary": {
+    "queries": 12,
+    "hits": 6,
+    "misses": 6,
+    "hit_rate_pct": 50.0,
+    "avg_latency_cached_ms": 30.29,
+    "avg_latency_not_cached_ms": 9792.33
+  },
+  "queries": [
+    {
+      "n": 1,
+      "kind": "new",
+      "question": "How many units are available at listing S8110-A01?",
+      "answer": "The listing S8110-A01 has 3 available units.",
+      "is_cached": false,
+      "similarity": null,
+      "latency_ms": 24767.96,
+      "matched_query": null,
+      "record_id": "S8110-A01",
+      "data_version": "194b628b40f5",
+      "stale_invalidated": false,
+      "stored": true,
+      "timings": {
+        "embed_ms": 532.25,
+        "search_ms": 1.79,
+        "agent_ms": 24213.45
+      }
+    },
+    {
+      "n": 2,
+      "kind": "new",
+      "question": "Who is the landlord for listing S8110-A02?",
+      "answer": "The landlord for listing S8110-A02 is Greenfield Properties. The property is located at 88 Oak Street, Oakland, CA, and has 1 available unit.",
+      "is_cached": false,
+      "similarity": 0.4962,
+      "latency_ms": 7067.81,
+      "matched_query": "How many units are available at listing S8110-A01?",
+      "record_id": "S8110-A02",
+      "data_version": "de281469a1f1",
+      "stale_invalidated": false,
+      "stored": true,
+      "timings": {
+        "embed_ms": 217.02,
+        "search_ms": 2.27,
+        "agent_ms": 6750.8
+      }
+    },
+    {
+      "n": 3,
+      "kind": "new",
+      "question": "What is the address of listing S8110-A03?",
+      "answer": "The address of listing S8110-A03 is 1200 Pine Blvd, Fremont, CA.",
+      "is_cached": false,
+      "similarity": 0.7138,
+      "latency_ms": 5653.16,
+      "matched_query": "Who is the landlord for listing S8110-A02?",
+      "record_id": "S8110-A03",
+      "data_version": "27b444964011",
+      "stale_invalidated": false,
+      "stored": true,
+      "timings": {
+        "embed_ms": 44.89,
+        "search_ms": 0.64,
+        "agent_ms": 5605.76
+      }
+    },
+    {
+      "n": 4,
+      "kind": "new",
+      "question": "Is listing S8110-A04 currently available?",
+      "answer": "Listing S8110-A04 is not currently available as it has 0 available units. A listing with 0 available units is not currently available.",
+      "is_cached": false,
+      "similarity": 0.7367,
+      "latency_ms": 6419.21,
+      "matched_query": "What is the address of listing S8110-A03?",
+      "record_id": "S8110-A04",
+      "data_version": "6fa23a2e127c",
+      "stale_invalidated": false,
+      "stored": true,
+      "timings": {
+        "embed_ms": 185.6,
+        "search_ms": 1.45,
+        "agent_ms": 6228.5
+      }
+    },
+    {
+      "n": 5,
+      "kind": "exact duplicate",
+      "question": "How many units are available at listing S8110-A01?",
+      "answer": "The listing S8110-A01 has 3 available units.",
+      "is_cached": true,
+      "similarity": 1.0,
+      "latency_ms": 43.73,
+      "matched_query": "How many units are available at listing S8110-A01?",
+      "record_id": "S8110-A01",
+      "data_version": "194b628b40f5",
+      "stale_invalidated": false,
+      "stored": false,
+      "timings": {
+        "embed_ms": 42.55,
+        "search_ms": 1.08,
+        "version_check_ms": 0.0
+      }
+    },
+    {
+      "n": 6,
+      "kind": "exact duplicate",
+      "question": "Is listing S8110-A04 currently available?",
+      "answer": "Listing S8110-A04 is not currently available as it has 0 available units. A listing with 0 available units is not currently available.",
+      "is_cached": true,
+      "similarity": 1.0,
+      "latency_ms": 8.42,
+      "matched_query": "Is listing S8110-A04 currently available?",
+      "record_id": "S8110-A04",
+      "data_version": "6fa23a2e127c",
+      "stale_invalidated": false,
+      "stored": false,
+      "timings": {
+        "embed_ms": 7.19,
+        "search_ms": 1.18,
+        "version_check_ms": 0.0
+      }
+    },
+    {
+      "n": 7,
+      "kind": "paraphrase",
+      "question": "What's the number of open units for S8110-A01?",
+      "answer": "The number of open units for S8110-A01 is 3. The listing is available with Bayview Rentals at 450 Maple Ave, San Jose, CA.",
+      "is_cached": false,
+      "similarity": 0.8489,
+      "latency_ms": 5566.5,
+      "matched_query": "How many units are available at listing S8110-A01?",
+      "record_id": "S8110-A01",
+      "data_version": "194b628b40f5",
+      "stale_invalidated": false,
+      "stored": true,
+      "timings": {
+        "embed_ms": 6.01,
+        "search_ms": 1.02,
+        "agent_ms": 5556.53
+      }
+    },
+    {
+      "n": 8,
+      "kind": "paraphrase",
+      "question": "Which landlord owns listing S8110-A02?",
+      "answer": "The landlord for listing S8110-A02 is Greenfield Properties. The property is located at 88 Oak Street, Oakland, CA, and has 1 available unit.",
+      "is_cached": true,
+      "similarity": 0.9459,
+      "latency_ms": 52.24,
+      "matched_query": "Who is the landlord for listing S8110-A02?",
+      "record_id": "S8110-A02",
+      "data_version": "de281469a1f1",
+      "stale_invalidated": false,
+      "stored": false,
+      "timings": {
+        "embed_ms": 49.77,
+        "search_ms": 2.32,
+        "version_check_ms": 0.0
+      }
+    },
+    {
+      "n": 9,
+      "kind": "paraphrase",
+      "question": "Where is listing S8110-A03 located?",
+      "answer": "The address of listing S8110-A03 is 1200 Pine Blvd, Fremont, CA.",
+      "is_cached": true,
+      "similarity": 0.9163,
+      "latency_ms": 8.83,
+      "matched_query": "What is the address of listing S8110-A03?",
+      "record_id": "S8110-A03",
+      "data_version": "27b444964011",
+      "stale_invalidated": false,
+      "stored": false,
+      "timings": {
+        "embed_ms": 6.99,
+        "search_ms": 1.79,
+        "version_check_ms": 0.0
+      }
+    },
+    {
+      "n": 10,
+      "kind": "new",
+      "question": "What is the maximum security deposit allowed in California?",
+      "answer": "In California, the maximum security deposit is generally two months' rent. However, some cities have lower limits, such as one month's rent. To determine the exact limit, check if the rental property is in a city with a specific local regulation. The maximum deposit amount is based on the property's monthly rent, so it cannot exceed twice the monthly rent unless a local law specifies a lower limit. Always verify local ordinances for accuracy.",
+      "is_cached": false,
+      "similarity": 0.2617,
+      "latency_ms": 9279.34,
+      "matched_query": "What's the number of open units for S8110-A01?",
+      "record_id": "none",
+      "data_version": "none",
+      "stale_invalidated": false,
+      "stored": true,
+      "timings": {
+        "embed_ms": 138.64,
+        "search_ms": 0.96,
+        "agent_ms": 9137.06
+      }
+    },
+    {
+      "n": 11,
+      "kind": "exact duplicate",
+      "question": "What is the address of listing S8110-A03?",
+      "answer": "The address of listing S8110-A03 is 1200 Pine Blvd, Fremont, CA.",
+      "is_cached": true,
+      "similarity": 1.0,
+      "latency_ms": 60.17,
+      "matched_query": "What is the address of listing S8110-A03?",
+      "record_id": "S8110-A03",
+      "data_version": "27b444964011",
+      "stale_invalidated": false,
+      "stored": false,
+      "timings": {
+        "embed_ms": 56.56,
+        "search_ms": 3.55,
+        "version_check_ms": 0.0
+      }
+    },
+    {
+      "n": 12,
+      "kind": "new",
+      "question": "How many units are available at listing S8110-A05?",
+      "answer": "The listing S8110-A01 has 3 available units.",
+      "is_cached": true,
+      "similarity": 0.9789,
+      "latency_ms": 8.33,
+      "matched_query": "How many units are available at listing S8110-A01?",
+      "record_id": "S8110-A01",
+      "data_version": "194b628b40f5",
+      "stale_invalidated": false,
+      "stored": false,
+      "timings": {
+        "embed_ms": 6.22,
+        "search_ms": 2.07,
+        "version_check_ms": 0.0
+      }
+    }
+  ]
+}

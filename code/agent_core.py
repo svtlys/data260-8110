@@ -6,7 +6,7 @@ import time
 
 from kafka_config import MAX_RETRIES, RETRY_BACKOFF_S, STATE_DIR, TOPIC_DEAD_LETTER
 
-CARRY = ("correlation_id", "entity_id", "run_id", "seq", "idx")
+CARRY = ("correlation_id", "entity_id", "run_id", "seq", "idx", "context")
 
 
 class SimulatedCrash(BaseException):

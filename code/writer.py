@@ -23,7 +23,7 @@ def make_draft(body: dict, msg) -> dict:
     if not isinstance(plan, list) or not plan or not isinstance(body.get("question"), str):
         raise ValueError("task has no valid plan/question")
     maybe_crash(body.get("correlation_id"))
-    draft, source = write_draft(body["question"], plan)
+    draft, source = write_draft(body["question"], plan, body.get("context"))
     return {**carry(body), "question": body["question"], "plan": plan, "draft": draft, "writer_llm": source,
             "writer_id": os.environ.get("WRITER_ID", "writer")}
 

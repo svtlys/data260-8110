@@ -1,0 +1,2084 @@
+{
+  "table": [
+    {
+      "variant": "Baseline",
+      "correct": 18,
+      "incorrect": 2,
+      "avg_attempts": 1.0,
+      "avg_latency_s": 1.59
+    },
+    {
+      "variant": "Evaluator Repair",
+      "correct": 20,
+      "incorrect": 0,
+      "avg_attempts": 1.1,
+      "avg_latency_s": 1.68
+    },
+    {
+      "variant": "Lesson Memory",
+      "correct": 20,
+      "incorrect": 0,
+      "avg_attempts": 1.0,
+      "avg_latency_s": 1.88
+    },
+    {
+      "variant": "Validated Improvement",
+      "correct": 20,
+      "incorrect": 0,
+      "avg_attempts": 1.0,
+      "avg_latency_s": 1.7
+    }
+  ],
+  "detail": {
+    "Baseline": {
+      "results": [
+        {
+          "id": "te01",
+          "listing_id": "L208",
+          "question": "What is the current monthly rent for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L208 is $2,150.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L208 is $2,150.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.514,
+          "lessons_used": []
+        },
+        {
+          "id": "te02",
+          "listing_id": "L209",
+          "question": "How much is rent per month at listing L209 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent is $2,950 per month.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent is $2,950 per month.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.016,
+          "lessons_used": []
+        },
+        {
+          "id": "te03",
+          "listing_id": "L210",
+          "question": "What is the monthly rent for listing L210 at the moment?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The monthly rent for listing L210 is $1,725.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The monthly rent for listing L210 is $1,725.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.296,
+          "lessons_used": []
+        },
+        {
+          "id": "te04",
+          "listing_id": "L211",
+          "question": "What is the current monthly rent for listing L211?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L211 is $2,825.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L211 is $2,825.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.577,
+          "lessons_used": []
+        },
+        {
+          "id": "te05",
+          "listing_id": "L212",
+          "question": "How much is rent per month at listing L212 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent for listing L212 is $2,050 per month.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent for listing L212 is $2,050 per month.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.226,
+          "lessons_used": []
+        },
+        {
+          "id": "te06",
+          "listing_id": "L205",
+          "question": "What is the pet policy for listing L205?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee; dogs are not permitted.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee; dogs are not permitted.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.099,
+          "lessons_used": []
+        },
+        {
+          "id": "te07",
+          "listing_id": "L206",
+          "question": "Which pets are allowed at listing L206, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.081,
+          "lessons_used": []
+        },
+        {
+          "id": "te08",
+          "listing_id": "L207",
+          "question": "Does listing L207 allow pets? Please include any fees or restrictions.",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No, listing L207 does not allow pets. The building is pet-free with no exceptions.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No, listing L207 does not allow pets. The building is pet-free with no exceptions.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.733,
+          "lessons_used": []
+        },
+        {
+          "id": "te09",
+          "listing_id": "L209",
+          "question": "What is the pet policy for listing L209?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.612,
+          "lessons_used": []
+        },
+        {
+          "id": "te10",
+          "listing_id": "L211",
+          "question": "Which pets are allowed at listing L211, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No pets are allowed. There are no pet fees.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No pets are allowed. There are no pet fees.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.177,
+          "lessons_used": []
+        },
+        {
+          "id": "te11",
+          "listing_id": "L202",
+          "question": "Which utilities are included in the rent at listing L202?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water, trash, and internet are included in the rent.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water, trash, and internet are included in the rent.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.232,
+          "lessons_used": []
+        },
+        {
+          "id": "te12",
+          "listing_id": "L203",
+          "question": "What utilities does the landlord pay at listing L203?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The landlord pays water, sewer, and trash.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The landlord pays water, sewer, and trash.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.126,
+          "lessons_used": []
+        },
+        {
+          "id": "te13",
+          "listing_id": "L204",
+          "question": "Which utilities are included in the rent at listing L204?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water and trash are included in the rent.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water and trash are included in the rent.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 0.713,
+          "lessons_used": []
+        },
+        {
+          "id": "te14",
+          "listing_id": "L203",
+          "question": "How much do I need to pay at move-in for listing L203 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The first month's rent is $1,950 plus the security deposit of $1,500.",
+              "verdict": "REVISE",
+              "pattern": "wrong_total",
+              "explanation": "Move-in total is missing or wrong.",
+              "feedback": "Move-in total = current rent $1,950 + security deposit $1,500 = $3,450. State $3,450."
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The first month's rent is $1,950 plus the security deposit of $1,500.",
+          "final_verdict": "REVISE",
+          "final_pattern": "wrong_total",
+          "correct": false,
+          "first_attempt_correct": false,
+          "first_pattern": "wrong_total",
+          "latency_s": 1.755,
+          "lessons_used": []
+        },
+        {
+          "id": "te15",
+          "listing_id": "L205",
+          "question": "What is the total due at move-in for listing L205: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 3.046,
+          "lessons_used": []
+        },
+        {
+          "id": "te16",
+          "listing_id": "L206",
+          "question": "How much do I need to pay at move-in for listing L206 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "First month's rent is $1,800 plus the security deposit of $1,800, totaling $3,600.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "First month's rent is $1,800 plus the security deposit of $1,800, totaling $3,600.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.156,
+          "lessons_used": []
+        },
+        {
+          "id": "te17",
+          "listing_id": "L208",
+          "question": "What is the total due at move-in for listing L208: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $2,150 for the first month's rent plus $2,000 for the security deposit.",
+              "verdict": "REVISE",
+              "pattern": "wrong_total",
+              "explanation": "Move-in total is missing or wrong.",
+              "feedback": "Move-in total = current rent $2,150 + security deposit $2,000 = $4,150. State $4,150."
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The total due at move-in is $2,150 for the first month's rent plus $2,000 for the security deposit.",
+          "final_verdict": "REVISE",
+          "final_pattern": "wrong_total",
+          "correct": false,
+          "first_attempt_correct": false,
+          "first_pattern": "wrong_total",
+          "latency_s": 2.463,
+          "lessons_used": []
+        },
+        {
+          "id": "te18",
+          "listing_id": "L201",
+          "question": "What is the school rating near listing L201?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing ad does not provide information about school ratings near L201.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing ad does not provide information about school ratings near L201.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.432,
+          "lessons_used": []
+        },
+        {
+          "id": "te19",
+          "listing_id": "L205",
+          "question": "Is the neighborhood around listing L205 safe at night?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing does not provide information about the safety of the neighborhood around listing L205 at night.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing does not provide information about the safety of the neighborhood around listing L205 at night.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.376,
+          "lessons_used": []
+        },
+        {
+          "id": "te20",
+          "listing_id": "L208",
+          "question": "What is the walk score for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The walk score for listing L208 is not provided in the listing ad.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The walk score for listing L208 is not provided in the listing ad.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.168,
+          "lessons_used": []
+        }
+      ],
+      "lessons_loaded": []
+    },
+    "Evaluator Repair": {
+      "results": [
+        {
+          "id": "te01",
+          "listing_id": "L208",
+          "question": "What is the current monthly rent for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L208 is $2,150.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L208 is $2,150.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.205,
+          "lessons_used": []
+        },
+        {
+          "id": "te02",
+          "listing_id": "L209",
+          "question": "How much is rent per month at listing L209 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent is $2,950 per month.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent is $2,950 per month.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.199,
+          "lessons_used": []
+        },
+        {
+          "id": "te03",
+          "listing_id": "L210",
+          "question": "What is the monthly rent for listing L210 at the moment?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The monthly rent for listing L210 is $1,725.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The monthly rent for listing L210 is $1,725.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.019,
+          "lessons_used": []
+        },
+        {
+          "id": "te04",
+          "listing_id": "L211",
+          "question": "What is the current monthly rent for listing L211?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L211 is $2,825.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L211 is $2,825.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.529,
+          "lessons_used": []
+        },
+        {
+          "id": "te05",
+          "listing_id": "L212",
+          "question": "How much is rent per month at listing L212 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent for listing L212 is $2,050 per month.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent for listing L212 is $2,050 per month.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.549,
+          "lessons_used": []
+        },
+        {
+          "id": "te06",
+          "listing_id": "L205",
+          "question": "What is the pet policy for listing L205?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee; dogs are not permitted.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee; dogs are not permitted.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.036,
+          "lessons_used": []
+        },
+        {
+          "id": "te07",
+          "listing_id": "L206",
+          "question": "Which pets are allowed at listing L206, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.977,
+          "lessons_used": []
+        },
+        {
+          "id": "te08",
+          "listing_id": "L207",
+          "question": "Does listing L207 allow pets? Please include any fees or restrictions.",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No, listing L207 does not allow pets. The building is pet-free with no exceptions.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No, listing L207 does not allow pets. The building is pet-free with no exceptions.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.724,
+          "lessons_used": []
+        },
+        {
+          "id": "te09",
+          "listing_id": "L209",
+          "question": "What is the pet policy for listing L209?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.563,
+          "lessons_used": []
+        },
+        {
+          "id": "te10",
+          "listing_id": "L211",
+          "question": "Which pets are allowed at listing L211, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No pets are allowed. There are no pet fees.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No pets are allowed. There are no pet fees.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.138,
+          "lessons_used": []
+        },
+        {
+          "id": "te11",
+          "listing_id": "L202",
+          "question": "Which utilities are included in the rent at listing L202?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water, trash, and internet are included in the rent.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water, trash, and internet are included in the rent.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.207,
+          "lessons_used": []
+        },
+        {
+          "id": "te12",
+          "listing_id": "L203",
+          "question": "What utilities does the landlord pay at listing L203?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The landlord pays water, sewer, and trash.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The landlord pays water, sewer, and trash.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.086,
+          "lessons_used": []
+        },
+        {
+          "id": "te13",
+          "listing_id": "L204",
+          "question": "Which utilities are included in the rent at listing L204?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water and trash are included in the rent.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water and trash are included in the rent.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 0.582,
+          "lessons_used": []
+        },
+        {
+          "id": "te14",
+          "listing_id": "L203",
+          "question": "How much do I need to pay at move-in for listing L203 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The first month's rent is $1,950 plus the security deposit of $1,500.",
+              "verdict": "REVISE",
+              "pattern": "wrong_total",
+              "explanation": "Move-in total is missing or wrong.",
+              "feedback": "Move-in total = current rent $1,950 + security deposit $1,500 = $3,450. State $3,450."
+            },
+            {
+              "attempt": 2,
+              "answer": "The total move-in payment is $3,450.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 2,
+          "final_answer": "The total move-in payment is $3,450.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": false,
+          "first_pattern": "wrong_total",
+          "latency_s": 2.954,
+          "lessons_used": []
+        },
+        {
+          "id": "te15",
+          "listing_id": "L205",
+          "question": "What is the total due at move-in for listing L205: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.946,
+          "lessons_used": []
+        },
+        {
+          "id": "te16",
+          "listing_id": "L206",
+          "question": "How much do I need to pay at move-in for listing L206 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "First month's rent is $1,800 plus the security deposit of $1,800, totaling $3,600.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "First month's rent is $1,800 plus the security deposit of $1,800, totaling $3,600.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.09,
+          "lessons_used": []
+        },
+        {
+          "id": "te17",
+          "listing_id": "L208",
+          "question": "What is the total due at move-in for listing L208: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $2,150 for the first month's rent plus $2,000 for the security deposit.",
+              "verdict": "REVISE",
+              "pattern": "wrong_total",
+              "explanation": "Move-in total is missing or wrong.",
+              "feedback": "Move-in total = current rent $2,150 + security deposit $2,000 = $4,150. State $4,150."
+            },
+            {
+              "attempt": 2,
+              "answer": "The total due at move-in is $4,150.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 2,
+          "final_answer": "The total due at move-in is $4,150.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": false,
+          "first_pattern": "wrong_total",
+          "latency_s": 3.767,
+          "lessons_used": []
+        },
+        {
+          "id": "te18",
+          "listing_id": "L201",
+          "question": "What is the school rating near listing L201?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing ad does not provide information about school ratings near L201.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing ad does not provide information about school ratings near L201.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.451,
+          "lessons_used": []
+        },
+        {
+          "id": "te19",
+          "listing_id": "L205",
+          "question": "Is the neighborhood around listing L205 safe at night?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing does not provide information about the safety of the neighborhood around listing L205 at night.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing does not provide information about the safety of the neighborhood around listing L205 at night.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.374,
+          "lessons_used": []
+        },
+        {
+          "id": "te20",
+          "listing_id": "L208",
+          "question": "What is the walk score for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The walk score for listing L208 is not provided in the listing ad.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The walk score for listing L208 is not provided in the listing ad.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.151,
+          "lessons_used": []
+        }
+      ],
+      "lessons_loaded": []
+    },
+    "Lesson Memory": {
+      "results": [
+        {
+          "id": "te01",
+          "listing_id": "L208",
+          "question": "What is the current monthly rent for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L208 is $2,150. The previous price was $2,290.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L208 is $2,150. The previous price was $2,290.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.378,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te02",
+          "listing_id": "L209",
+          "question": "How much is rent per month at listing L209 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent per month at listing L209 is $2,950.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent per month at listing L209 is $2,950.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.6,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te03",
+          "listing_id": "L210",
+          "question": "What is the monthly rent for listing L210 at the moment?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The monthly rent for listing L210 is $1,725.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The monthly rent for listing L210 is $1,725.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.683,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te04",
+          "listing_id": "L211",
+          "question": "What is the current monthly rent for listing L211?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L211 is $2,825.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L211 is $2,825.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.569,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te05",
+          "listing_id": "L212",
+          "question": "How much is rent per month at listing L212 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent per month at listing L212 is $2,050.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent per month at listing L212 is $2,050.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.764,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te06",
+          "listing_id": "L205",
+          "question": "What is the pet policy for listing L205?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee and does not permit dogs.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee and does not permit dogs.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.25,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te07",
+          "listing_id": "L206",
+          "question": "Which pets are allowed at listing L206, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.029,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te08",
+          "listing_id": "L207",
+          "question": "Does listing L207 allow pets? Please include any fees or restrictions.",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No, listing L207 does not allow pets. The building is pet-free, and there are no pet-related fees mentioned.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No, listing L207 does not allow pets. The building is pet-free, and there are no pet-related fees mentioned.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.087,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te09",
+          "listing_id": "L209",
+          "question": "What is the pet policy for listing L209?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.552,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te10",
+          "listing_id": "L211",
+          "question": "Which pets are allowed at listing L211, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No pets are allowed. There are no pet fees.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No pets are allowed. There are no pet fees.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.182,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te11",
+          "listing_id": "L202",
+          "question": "Which utilities are included in the rent at listing L202?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water, trash, and internet are included in the rent.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water, trash, and internet are included in the rent.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 0.885,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te12",
+          "listing_id": "L203",
+          "question": "What utilities does the landlord pay at listing L203?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The landlord pays water, sewer, and trash. Electricity and gas are paid by the tenant.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The landlord pays water, sewer, and trash. Electricity and gas are paid by the tenant.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.643,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te13",
+          "listing_id": "L204",
+          "question": "Which utilities are included in the rent at listing L204?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water and trash are included in the rent. Electricity, gas, and internet are paid by the tenant.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water and trash are included in the rent. Electricity, gas, and internet are paid by the tenant.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.931,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te14",
+          "listing_id": "L203",
+          "question": "How much do I need to pay at move-in for listing L203 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "First month's rent is $1,950 plus the security deposit of $1,500, totaling $3,450.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "First month's rent is $1,950 plus the security deposit of $1,500, totaling $3,450.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.499,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te15",
+          "listing_id": "L205",
+          "question": "What is the total due at move-in for listing L205: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 3.036,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te16",
+          "listing_id": "L206",
+          "question": "How much do I need to pay at move-in for listing L206 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "$3,600. First month's rent is $1,800 plus the security deposit of $1,800.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "$3,600. First month's rent is $1,800 plus the security deposit of $1,800.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.455,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te17",
+          "listing_id": "L208",
+          "question": "What is the total due at move-in for listing L208: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $4,150, which includes the first month's rent of $2,150 and the security deposit of $2,000.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The total due at move-in is $4,150, which includes the first month's rent of $2,150 and the security deposit of $2,000.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 3.167,
+          "lessons_used": [
+            "lesson_001",
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te18",
+          "listing_id": "L201",
+          "question": "What is the school rating near listing L201?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing does not provide information about school ratings near L201.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing does not provide information about school ratings near L201.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.124,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te19",
+          "listing_id": "L205",
+          "question": "Is the neighborhood around listing L205 safe at night?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing does not provide information about neighborhood safety.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing does not provide information about neighborhood safety.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.178,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te20",
+          "listing_id": "L208",
+          "question": "What is the walk score for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The walk score for listing L208 is not mentioned in the listing ad.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The walk score for listing L208 is not mentioned in the listing ad.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.621,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        }
+      ],
+      "lessons_loaded": [
+        "lesson_001",
+        "lesson_002"
+      ]
+    },
+    "Validated Improvement": {
+      "results": [
+        {
+          "id": "te01",
+          "listing_id": "L208",
+          "question": "What is the current monthly rent for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L208 is $2,150.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L208 is $2,150.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.28,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te02",
+          "listing_id": "L209",
+          "question": "How much is rent per month at listing L209 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent is $2,950 per month.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent is $2,950 per month.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.295,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te03",
+          "listing_id": "L210",
+          "question": "What is the monthly rent for listing L210 at the moment?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The monthly rent for listing L210 is $1,725.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The monthly rent for listing L210 is $1,725.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.239,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te04",
+          "listing_id": "L211",
+          "question": "What is the current monthly rent for listing L211?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The current monthly rent for listing L211 is $2,825.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The current monthly rent for listing L211 is $2,825.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.655,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te05",
+          "listing_id": "L212",
+          "question": "How much is rent per month at listing L212 right now?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The rent is $2,050 per month.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The rent is $2,050 per month.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.3,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te06",
+          "listing_id": "L205",
+          "question": "What is the pet policy for listing L205?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee and does not permit dogs.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L205 allows cats with a one-time $250 pet fee and does not permit dogs.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.218,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te07",
+          "listing_id": "L206",
+          "question": "Which pets are allowed at listing L206, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Dogs are allowed at listing L206 with a one-time $350 pet fee. Cats are not permitted.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.141,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te08",
+          "listing_id": "L207",
+          "question": "Does listing L207 allow pets? Please include any fees or restrictions.",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No, listing L207 does not allow pets. The building is pet-free, and there are no pet-related fees mentioned.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No, listing L207 does not allow pets. The building is pet-free, and there are no pet-related fees mentioned.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.704,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te09",
+          "listing_id": "L209",
+          "question": "What is the pet policy for listing L209?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The pet policy for listing L209 allows cats and dogs with a one-time $300 pet fee.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.675,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te10",
+          "listing_id": "L211",
+          "question": "Which pets are allowed at listing L211, and are there any pet fees?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "No pets are allowed. There are no pet fees.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "No pets are allowed. There are no pet fees.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.225,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te11",
+          "listing_id": "L202",
+          "question": "Which utilities are included in the rent at listing L202?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water, trash, and internet are included in the rent.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water, trash, and internet are included in the rent.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.303,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te12",
+          "listing_id": "L203",
+          "question": "What utilities does the landlord pay at listing L203?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The landlord pays water, sewer, and trash. Electricity and gas are paid by the tenant.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The landlord pays water, sewer, and trash. Electricity and gas are paid by the tenant.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.723,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te13",
+          "listing_id": "L204",
+          "question": "Which utilities are included in the rent at listing L204?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "Water and trash are included in the rent. Electricity, gas, and internet are paid by the tenant.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "Water and trash are included in the rent. Electricity, gas, and internet are paid by the tenant.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.347,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te14",
+          "listing_id": "L203",
+          "question": "How much do I need to pay at move-in for listing L203 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "First month's rent is $1,950 plus the security deposit of $1,500, totaling $3,450.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "First month's rent is $1,950 plus the security deposit of $1,500, totaling $3,450.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.242,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te15",
+          "listing_id": "L205",
+          "question": "What is the total due at move-in for listing L205: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The total due at move-in is $4,800, which includes the first month's rent of $2,400 and the security deposit of $2,400.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 3.193,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te16",
+          "listing_id": "L206",
+          "question": "How much do I need to pay at move-in for listing L206 (first month's rent plus the security deposit)?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "First month's rent is $1,800 plus the security deposit of $1,800, totaling $3,600.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "First month's rent is $1,800 plus the security deposit of $1,800, totaling $3,600.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 2.277,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te17",
+          "listing_id": "L208",
+          "question": "What is the total due at move-in for listing L208: first month's rent plus the security deposit?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The total due at move-in is $4,150, which includes the first month's rent of $2,150 and the security deposit of $2,000.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The total due at move-in is $4,150, which includes the first month's rent of $2,150 and the security deposit of $2,000.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 3.166,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te18",
+          "listing_id": "L201",
+          "question": "What is the school rating near listing L201?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing does not provide information about school ratings near L201.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing does not provide information about school ratings near L201.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 0.981,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te19",
+          "listing_id": "L205",
+          "question": "Is the neighborhood around listing L205 safe at night?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The listing does not provide information about neighborhood safety.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The listing does not provide information about neighborhood safety.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 0.816,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        },
+        {
+          "id": "te20",
+          "listing_id": "L208",
+          "question": "What is the walk score for listing L208?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The walk score for listing L208 is not mentioned in the listing ad.",
+              "verdict": "PASS",
+              "pattern": null,
+              "explanation": "Answer matches the reference data.",
+              "feedback": ""
+            }
+          ],
+          "n_attempts": 1,
+          "final_answer": "The walk score for listing L208 is not mentioned in the listing ad.",
+          "final_verdict": "PASS",
+          "final_pattern": null,
+          "correct": true,
+          "first_attempt_correct": true,
+          "first_pattern": null,
+          "latency_s": 1.238,
+          "lessons_used": [
+            "lesson_002"
+          ]
+        }
+      ],
+      "lessons_loaded": [
+        "lesson_002"
+      ]
+    }
+  }
+}

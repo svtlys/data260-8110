@@ -1,0 +1,86 @@
+{
+  "controlled_revision": {
+    "id": "demo_ctrl",
+    "listing_id": "L201",
+    "question": "What is the current monthly rent for listing L201?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "The rent is $2,400 per month.",
+        "verdict": "REVISE",
+        "pattern": "stale_price",
+        "explanation": "Answer gives the old price instead of the current rent.",
+        "feedback": "The listing's CURRENT rent is $2,250/month; $2,400 is the previous price. State $2,250 as the rent."
+      },
+      {
+        "attempt": 2,
+        "answer": "The current monthly rent is $2,250.",
+        "verdict": "PASS",
+        "pattern": null,
+        "explanation": "Answer matches the reference data.",
+        "feedback": ""
+      }
+    ],
+    "n_attempts": 2,
+    "final_answer": "The current monthly rent is $2,250.",
+    "final_verdict": "PASS",
+    "final_pattern": null,
+    "correct": true,
+    "first_attempt_correct": false,
+    "first_pattern": "stale_price",
+    "latency_s": 5.739,
+    "lessons_used": []
+  },
+  "lesson_reuse": {
+    "without_lessons": {
+      "id": "demo_reuse",
+      "listing_id": "L211",
+      "question": "How much is the monthly rent for listing L211 today?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The monthly rent for listing L211 is $2,825.",
+          "verdict": "PASS",
+          "pattern": null,
+          "explanation": "Answer matches the reference data.",
+          "feedback": ""
+        }
+      ],
+      "n_attempts": 1,
+      "final_answer": "The monthly rent for listing L211 is $2,825.",
+      "final_verdict": "PASS",
+      "final_pattern": null,
+      "correct": true,
+      "first_attempt_correct": true,
+      "first_pattern": null,
+      "latency_s": 1.523,
+      "lessons_used": []
+    },
+    "with_lessons": {
+      "id": "demo_reuse",
+      "listing_id": "L211",
+      "question": "How much is the monthly rent for listing L211 today?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The monthly rent for listing L211 today is $2,825.",
+          "verdict": "PASS",
+          "pattern": null,
+          "explanation": "Answer matches the reference data.",
+          "feedback": ""
+        }
+      ],
+      "n_attempts": 1,
+      "final_answer": "The monthly rent for listing L211 today is $2,825.",
+      "final_verdict": "PASS",
+      "final_pattern": null,
+      "correct": true,
+      "first_attempt_correct": true,
+      "first_pattern": null,
+      "latency_s": 1.738,
+      "lessons_used": [
+        "lesson_002"
+      ]
+    }
+  }
+}

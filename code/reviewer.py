@@ -1,7 +1,7 @@
 from agent_core import carry, run_main
 from kafka_config import GROUP_REVIEWER, TOPIC_DRAFTS, TOPIC_FINAL
 
-MIN_LEN = 40
+MIN_LEN = 20
 
 
 def review(body: dict, msg) -> dict | None:

@@ -1,0 +1,62 @@
+{
+  "seed01": {
+    "query": "How many units are available at listing S8110-A01?",
+    "answer": "The listing S8110-A01 has 3 available units.",
+    "record_id": "S8110-A01",
+    "data_version": "194b628b40f5"
+  },
+  "seed02": {
+    "query": "Who is the landlord for listing S8110-A02?",
+    "answer": "The landlord for listing S8110-A02 is Greenfield Properties. The property is located at 88 Oak Street, Oakland, CA, and has 1 available unit.",
+    "record_id": "S8110-A02",
+    "data_version": "de281469a1f1"
+  },
+  "seed03": {
+    "query": "What is the address of listing S8110-A03?",
+    "answer": "The address of listing S8110-A03 is 1200 Pine Blvd, Fremont, CA.",
+    "record_id": "S8110-A03",
+    "data_version": "27b444964011"
+  },
+  "seed04": {
+    "query": "Is listing S8110-A04 currently available?",
+    "answer": "Listing S8110-A04 is not currently available as it has 0 available units. A listing with 0 available units is not currently available.",
+    "record_id": "S8110-A04",
+    "data_version": "6fa23a2e127c"
+  },
+  "seed05": {
+    "query": "How many units are available at listing S8110-A05?",
+    "answer": "The listing S8110-A05 has 2 available units.",
+    "record_id": "S8110-A05",
+    "data_version": "4638cad9709e"
+  },
+  "seed06": {
+    "query": "Who is the landlord for listing S8110-A06?",
+    "answer": "The landlord for listing S8110-A06 is Summit Property Group. The property details indicate that the address is 15 Birch Lane, San Mateo, CA, with 4 available units.",
+    "record_id": "S8110-A06",
+    "data_version": "732ac8529a59"
+  },
+  "seed07": {
+    "query": "What is the address of listing S8110-A07?",
+    "answer": "The address of listing S8110-A07 is 902 Willow Way, Mountain View, CA.",
+    "record_id": "S8110-A07",
+    "data_version": "d067d0d07d4a"
+  },
+  "seed08": {
+    "query": "How many units are available at listing S8110-A08?",
+    "answer": "The listing S8110-A08 has 6 available units.",
+    "record_id": "S8110-A08",
+    "data_version": "0e042768b78a"
+  },
+  "seed09": {
+    "query": "Who is the landlord for listing S8110-A09?",
+    "answer": "The landlord for listing S8110-A09 is Summit Property Group. The property listing details indicate that the landlord is Summit Property Group.",
+    "record_id": "S8110-A09",
+    "data_version": "3f7b3ca88ff9"
+  },
+  "seed10": {
+    "query": "Is listing S8110-A10 still available?",
+    "answer": "Listing S8110-A10 is available with 1 unit at 34 Aspen Place, Milpitas, CA, and is managed by Greenfield Properties.",
+    "record_id": "S8110-A10",
+    "data_version": "0a5c2c8fc6ed"
+  }
+}

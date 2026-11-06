@@ -1,0 +1,276 @@
+{
+  "L201": {
+    "listing_id": "L201",
+    "current_rent": 2250,
+    "previous_rent": 2400,
+    "security_deposit": 2250,
+    "move_in_total": 4500,
+    "pets_allowed": [
+      "cats"
+    ],
+    "pets_not_allowed": [
+      "dogs"
+    ],
+    "no_pets": false,
+    "pet_fee": 300,
+    "utilities_included": [
+      "water",
+      "trash"
+    ],
+    "tenant_pays": [
+      "electricity",
+      "internet"
+    ]
+  },
+  "L202": {
+    "listing_id": "L202",
+    "current_rent": 3100,
+    "previous_rent": 3350,
+    "security_deposit": 3100,
+    "move_in_total": 6200,
+    "pets_allowed": [
+      "dogs"
+    ],
+    "pets_not_allowed": [
+      "cats"
+    ],
+    "no_pets": false,
+    "pet_fee": 400,
+    "utilities_included": [
+      "water",
+      "trash",
+      "internet"
+    ],
+    "tenant_pays": [
+      "electricity"
+    ]
+  },
+  "L203": {
+    "listing_id": "L203",
+    "current_rent": 1950,
+    "previous_rent": null,
+    "security_deposit": 1500,
+    "move_in_total": 3450,
+    "pets_allowed": [],
+    "pets_not_allowed": [
+      "pets"
+    ],
+    "no_pets": true,
+    "pet_fee": null,
+    "utilities_included": [
+      "water",
+      "sewer",
+      "trash"
+    ],
+    "tenant_pays": [
+      "electricity",
+      "gas"
+    ]
+  },
+  "L204": {
+    "listing_id": "L204",
+    "current_rent": 2675,
+    "previous_rent": 2800,
+    "security_deposit": 2675,
+    "move_in_total": 5350,
+    "pets_allowed": [
+      "cats",
+      "dogs"
+    ],
+    "pets_not_allowed": [],
+    "no_pets": false,
+    "pet_fee": 500,
+    "utilities_included": [
+      "water",
+      "trash"
+    ],
+    "tenant_pays": [
+      "electricity",
+      "gas",
+      "internet"
+    ]
+  },
+  "L205": {
+    "listing_id": "L205",
+    "current_rent": 2400,
+    "previous_rent": 2550,
+    "security_deposit": 2400,
+    "move_in_total": 4800,
+    "pets_allowed": [
+      "cats"
+    ],
+    "pets_not_allowed": [
+      "dogs"
+    ],
+    "no_pets": false,
+    "pet_fee": 250,
+    "utilities_included": [
+      "water"
+    ],
+    "tenant_pays": [
+      "electricity",
+      "gas",
+      "internet",
+      "trash"
+    ]
+  },
+  "L206": {
+    "listing_id": "L206",
+    "current_rent": 1800,
+    "previous_rent": null,
+    "security_deposit": 1800,
+    "move_in_total": 3600,
+    "pets_allowed": [
+      "dogs"
+    ],
+    "pets_not_allowed": [
+      "cats"
+    ],
+    "no_pets": false,
+    "pet_fee": 350,
+    "utilities_included": [
+      "water",
+      "trash",
+      "gas"
+    ],
+    "tenant_pays": [
+      "electricity"
+    ]
+  },
+  "L207": {
+    "listing_id": "L207",
+    "current_rent": 3500,
+    "previous_rent": 3700,
+    "security_deposit": 3500,
+    "move_in_total": 7000,
+    "pets_allowed": [],
+    "pets_not_allowed": [
+      "pets"
+    ],
+    "no_pets": true,
+    "pet_fee": null,
+    "utilities_included": [
+      "water",
+      "trash",
+      "internet"
+    ],
+    "tenant_pays": [
+      "electricity",
+      "gas"
+    ]
+  },
+  "L208": {
+    "listing_id": "L208",
+    "current_rent": 2150,
+    "previous_rent": 2290,
+    "security_deposit": 2000,
+    "move_in_total": 4150,
+    "pets_allowed": [
+      "cats"
+    ],
+    "pets_not_allowed": [
+      "dogs"
+    ],
+    "no_pets": false,
+    "pet_fee": 200,
+    "utilities_included": [
+      "water",
+      "trash"
+    ],
+    "tenant_pays": [
+      "electricity"
+    ]
+  },
+  "L209": {
+    "listing_id": "L209",
+    "current_rent": 2950,
+    "previous_rent": null,
+    "security_deposit": 2950,
+    "move_in_total": 5900,
+    "pets_allowed": [
+      "cats",
+      "dogs"
+    ],
+    "pets_not_allowed": [],
+    "no_pets": false,
+    "pet_fee": 300,
+    "utilities_included": [
+      "water",
+      "sewer",
+      "trash",
+      "electricity"
+    ],
+    "tenant_pays": [
+      "internet"
+    ]
+  },
+  "L210": {
+    "listing_id": "L210",
+    "current_rent": 1725,
+    "previous_rent": 1850,
+    "security_deposit": 1725,
+    "move_in_total": 3450,
+    "pets_allowed": [
+      "cats"
+    ],
+    "pets_not_allowed": [
+      "dogs"
+    ],
+    "no_pets": false,
+    "pet_fee": 150,
+    "utilities_included": [
+      "trash"
+    ],
+    "tenant_pays": [
+      "water",
+      "electricity",
+      "gas",
+      "internet"
+    ]
+  },
+  "L211": {
+    "listing_id": "L211",
+    "current_rent": 2825,
+    "previous_rent": 2975,
+    "security_deposit": 2825,
+    "move_in_total": 5650,
+    "pets_allowed": [],
+    "pets_not_allowed": [
+      "pets"
+    ],
+    "no_pets": true,
+    "pet_fee": null,
+    "utilities_included": [
+      "water",
+      "trash"
+    ],
+    "tenant_pays": [
+      "electricity",
+      "internet"
+    ]
+  },
+  "L212": {
+    "listing_id": "L212",
+    "current_rent": 2050,
+    "previous_rent": null,
+    "security_deposit": 2050,
+    "move_in_total": 4100,
+    "pets_allowed": [
+      "dogs"
+    ],
+    "pets_not_allowed": [
+      "cats"
+    ],
+    "no_pets": false,
+    "pet_fee": 275,
+    "utilities_included": [
+      "water",
+      "trash",
+      "sewer"
+    ],
+    "tenant_pays": [
+      "electricity",
+      "gas"
+    ]
+  }
+}

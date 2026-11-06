@@ -1,0 +1,102 @@
+[
+  {
+    "id": "te01",
+    "listing_id": "L208",
+    "question": "What is the current monthly rent for listing L208?"
+  },
+  {
+    "id": "te02",
+    "listing_id": "L209",
+    "question": "How much is rent per month at listing L209 right now?"
+  },
+  {
+    "id": "te03",
+    "listing_id": "L210",
+    "question": "What is the monthly rent for listing L210 at the moment?"
+  },
+  {
+    "id": "te04",
+    "listing_id": "L211",
+    "question": "What is the current monthly rent for listing L211?"
+  },
+  {
+    "id": "te05",
+    "listing_id": "L212",
+    "question": "How much is rent per month at listing L212 right now?"
+  },
+  {
+    "id": "te06",
+    "listing_id": "L205",
+    "question": "What is the pet policy for listing L205?"
+  },
+  {
+    "id": "te07",
+    "listing_id": "L206",
+    "question": "Which pets are allowed at listing L206, and are there any pet fees?"
+  },
+  {
+    "id": "te08",
+    "listing_id": "L207",
+    "question": "Does listing L207 allow pets? Please include any fees or restrictions."
+  },
+  {
+    "id": "te09",
+    "listing_id": "L209",
+    "question": "What is the pet policy for listing L209?"
+  },
+  {
+    "id": "te10",
+    "listing_id": "L211",
+    "question": "Which pets are allowed at listing L211, and are there any pet fees?"
+  },
+  {
+    "id": "te11",
+    "listing_id": "L202",
+    "question": "Which utilities are included in the rent at listing L202?"
+  },
+  {
+    "id": "te12",
+    "listing_id": "L203",
+    "question": "What utilities does the landlord pay at listing L203?"
+  },
+  {
+    "id": "te13",
+    "listing_id": "L204",
+    "question": "Which utilities are included in the rent at listing L204?"
+  },
+  {
+    "id": "te14",
+    "listing_id": "L203",
+    "question": "How much do I need to pay at move-in for listing L203 (first month's rent plus the security deposit)?"
+  },
+  {
+    "id": "te15",
+    "listing_id": "L205",
+    "question": "What is the total due at move-in for listing L205: first month's rent plus the security deposit?"
+  },
+  {
+    "id": "te16",
+    "listing_id": "L206",
+    "question": "How much do I need to pay at move-in for listing L206 (first month's rent plus the security deposit)?"
+  },
+  {
+    "id": "te17",
+    "listing_id": "L208",
+    "question": "What is the total due at move-in for listing L208: first month's rent plus the security deposit?"
+  },
+  {
+    "id": "te18",
+    "listing_id": "L201",
+    "question": "What is the school rating near listing L201?"
+  },
+  {
+    "id": "te19",
+    "listing_id": "L205",
+    "question": "Is the neighborhood around listing L205 safe at night?"
+  },
+  {
+    "id": "te20",
+    "listing_id": "L208",
+    "question": "What is the walk score for listing L208?"
+  }
+]

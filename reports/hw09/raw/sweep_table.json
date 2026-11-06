@@ -1,0 +1,140 @@
+{
+  "student": "Alyssa Gomez",
+  "sid4": "8110",
+  "miss_latency_ms_from_part2": 9792.33,
+  "costs": {
+    "c_miss": 0.01,
+    "c_hit": 0.0001,
+    "c_false_hit": 5.0
+  },
+  "table": [
+    {
+      "threshold": 0.75,
+      "hits": 27,
+      "false_hits": 10,
+      "misses": 13,
+      "hit_rate_pct": 67.5,
+      "false_hit_rate_pct": 25.0,
+      "mean_latency_ms": 3198.9,
+      "total_cost": 50.1327,
+      "false_hit_ids": [
+        "c21",
+        "c22",
+        "c23",
+        "c24",
+        "c25",
+        "c26",
+        "c27",
+        "c28",
+        "c29",
+        "c30"
+      ]
+    },
+    {
+      "threshold": 0.8,
+      "hits": 26,
+      "false_hits": 10,
+      "misses": 14,
+      "hit_rate_pct": 65.0,
+      "false_hit_rate_pct": 25.0,
+      "mean_latency_ms": 3443.7,
+      "total_cost": 50.1426,
+      "false_hit_ids": [
+        "c21",
+        "c22",
+        "c23",
+        "c24",
+        "c25",
+        "c26",
+        "c27",
+        "c28",
+        "c29",
+        "c30"
+      ]
+    },
+    {
+      "threshold": 0.85,
+      "hits": 24,
+      "false_hits": 10,
+      "misses": 16,
+      "hit_rate_pct": 60.0,
+      "false_hit_rate_pct": 25.0,
+      "mean_latency_ms": 3933.4,
+      "total_cost": 50.1624,
+      "false_hit_ids": [
+        "c21",
+        "c22",
+        "c23",
+        "c24",
+        "c25",
+        "c26",
+        "c27",
+        "c28",
+        "c29",
+        "c30"
+      ]
+    },
+    {
+      "threshold": 0.9,
+      "hits": 23,
+      "false_hits": 10,
+      "misses": 17,
+      "hit_rate_pct": 57.5,
+      "false_hit_rate_pct": 25.0,
+      "mean_latency_ms": 4178.2,
+      "total_cost": 50.1723,
+      "false_hit_ids": [
+        "c21",
+        "c22",
+        "c23",
+        "c24",
+        "c25",
+        "c26",
+        "c27",
+        "c28",
+        "c29",
+        "c30"
+      ]
+    },
+    {
+      "threshold": 0.95,
+      "hits": 20,
+      "false_hits": 9,
+      "misses": 20,
+      "hit_rate_pct": 50.0,
+      "false_hit_rate_pct": 22.5,
+      "mean_latency_ms": 4912.6,
+      "total_cost": 45.202,
+      "false_hit_ids": [
+        "c21",
+        "c22",
+        "c23",
+        "c24",
+        "c25",
+        "c26",
+        "c27",
+        "c28",
+        "c29"
+      ]
+    }
+  ],
+  "chosen_threshold": 0.95,
+  "sensitivity": [
+    {
+      "c_false_hit": 0.5,
+      "best_threshold": 0.95
+    },
+    {
+      "c_false_hit": 5.0,
+      "best_threshold": 0.95
+    },
+    {
+      "c_false_hit": 50.0,
+      "best_threshold": 0.95
+    },
+    {
+      "c_false_hit": 500.0,
+      "best_threshold": 0.95
+    }
+  ]
+}

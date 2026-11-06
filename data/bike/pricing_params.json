@@ -1,0 +1,9 @@
+{
+  "payg_unlock": 1.0,
+  "payg_per_min_classic": 0.15,
+  "payg_per_min_electric": 0.35,
+  "member_monthly": 10.0,
+  "member_included_min": 45,
+  "member_overage_per_min": 0.05,
+  "member_per_min_electric": 0.15
+}

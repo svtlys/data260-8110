@@ -1,0 +1,62 @@
+[
+  {
+    "id": "tr01",
+    "listing_id": "L201",
+    "question": "What is the current monthly rent for listing L201?"
+  },
+  {
+    "id": "tr02",
+    "listing_id": "L202",
+    "question": "How much is rent per month at listing L202 right now?"
+  },
+  {
+    "id": "tr03",
+    "listing_id": "L205",
+    "question": "What is the monthly rent for listing L205 at the moment?"
+  },
+  {
+    "id": "tr04",
+    "listing_id": "L201",
+    "question": "What is the pet policy for listing L201?"
+  },
+  {
+    "id": "tr05",
+    "listing_id": "L203",
+    "question": "Which pets are allowed at listing L203, and are there any pet fees?"
+  },
+  {
+    "id": "tr06",
+    "listing_id": "L208",
+    "question": "Does listing L208 allow pets? Please include any fees or restrictions."
+  },
+  {
+    "id": "tr07",
+    "listing_id": "L205",
+    "question": "Which utilities are included in the rent at listing L205?"
+  },
+  {
+    "id": "tr08",
+    "listing_id": "L207",
+    "question": "What utilities does the landlord pay at listing L207?"
+  },
+  {
+    "id": "tr09",
+    "listing_id": "L204",
+    "question": "How much do I need to pay at move-in for listing L204 (first month's rent plus the security deposit)?"
+  },
+  {
+    "id": "tr10",
+    "listing_id": "L210",
+    "question": "What is the total due at move-in for listing L210: first month's rent plus the security deposit?"
+  },
+  {
+    "id": "tr11",
+    "listing_id": "L203",
+    "question": "What is the school rating near listing L203?"
+  },
+  {
+    "id": "tr12",
+    "listing_id": "L206",
+    "question": "Is the neighborhood around listing L206 safe at night?"
+  }
+]

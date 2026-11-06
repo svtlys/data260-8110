@@ -1,0 +1,41 @@
+id,category,query,expected,answer_key,best_seed,best_query,best_answer_key,similarity,lookup_ms
+c01,exact_duplicate,How many units are available at listing S8110-A01?,hit,units:S8110-A01,seed01,How many units are available at listing S8110-A01?,units:S8110-A01,1.0,7.81
+c02,exact_duplicate,Who is the landlord for listing S8110-A02?,hit,landlord:S8110-A02,seed02,Who is the landlord for listing S8110-A02?,landlord:S8110-A02,1.0,7.59
+c03,exact_duplicate,What is the address of listing S8110-A03?,hit,address:S8110-A03,seed03,What is the address of listing S8110-A03?,address:S8110-A03,1.0,6.84
+c04,exact_duplicate,Is listing S8110-A04 currently available?,hit,available:S8110-A04,seed04,Is listing S8110-A04 currently available?,available:S8110-A04,1.0,6.84
+c05,exact_duplicate,How many units are available at listing S8110-A05?,hit,units:S8110-A05,seed05,How many units are available at listing S8110-A05?,units:S8110-A05,1.0,6.24
+c06,exact_duplicate,Who is the landlord for listing S8110-A06?,hit,landlord:S8110-A06,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,1.0,6.08
+c07,exact_duplicate,What is the address of listing S8110-A07?,hit,address:S8110-A07,seed07,What is the address of listing S8110-A07?,address:S8110-A07,1.0,10.7
+c08,exact_duplicate,How many units are available at listing S8110-A08?,hit,units:S8110-A08,seed08,How many units are available at listing S8110-A08?,units:S8110-A08,1.0,5.76
+c09,exact_duplicate,Who is the landlord for listing S8110-A09?,hit,landlord:S8110-A09,seed09,Who is the landlord for listing S8110-A09?,landlord:S8110-A09,1.0,5.33
+c10,exact_duplicate,Is listing S8110-A10 still available?,hit,available:S8110-A10,seed10,Is listing S8110-A10 still available?,available:S8110-A10,1.0,6.31
+c11,paraphrase,What's the number of open units for S8110-A01?,hit,units:S8110-A01,seed01,How many units are available at listing S8110-A01?,units:S8110-A01,0.8489,6.06
+c12,paraphrase,Which landlord owns listing S8110-A02?,hit,landlord:S8110-A02,seed02,Who is the landlord for listing S8110-A02?,landlord:S8110-A02,0.9459,6.96
+c13,paraphrase,Where is listing S8110-A03 located?,hit,address:S8110-A03,seed03,What is the address of listing S8110-A03?,address:S8110-A03,0.9163,6.34
+c14,paraphrase,Can I rent listing S8110-A04 right now?,hit,available:S8110-A04,seed04,Is listing S8110-A04 currently available?,available:S8110-A04,0.7191,6.4
+c15,paraphrase,How many vacancies does S8110-A05 have?,hit,units:S8110-A05,seed05,How many units are available at listing S8110-A05?,units:S8110-A05,0.7654,6.61
+c16,paraphrase,Who owns the rental listed as S8110-A06?,hit,landlord:S8110-A06,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.8316,6.96
+c17,paraphrase,Tell me the street address for S8110-A07.,hit,address:S8110-A07,seed07,What is the address of listing S8110-A07?,address:S8110-A07,0.8812,5.77
+c18,paraphrase,Number of available units at S8110-A08?,hit,units:S8110-A08,seed08,How many units are available at listing S8110-A08?,units:S8110-A08,0.9551,67.03
+c19,paraphrase,Which property manager handles listing S8110-A09?,hit,landlord:S8110-A09,seed03,What is the address of listing S8110-A03?,address:S8110-A03,0.734,6.68
+c20,paraphrase,Is S8110-A10 open for new tenants?,hit,available:S8110-A10,seed02,Who is the landlord for listing S8110-A02?,landlord:S8110-A02,0.6764,9.29
+c21,similar_different,How many units are available at listing S8110-A02?,miss,units:S8110-A02,seed08,How many units are available at listing S8110-A08?,units:S8110-A08,0.9867,6.66
+c22,similar_different,Who is the landlord for listing S8110-A03?,miss,landlord:S8110-A03,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.9877,4.86
+c23,similar_different,What is the address of listing S8110-A04?,miss,address:S8110-A04,seed07,What is the address of listing S8110-A07?,address:S8110-A07,0.9691,5.35
+c24,similar_different,Is listing S8110-A01 currently available?,miss,available:S8110-A01,seed04,Is listing S8110-A04 currently available?,available:S8110-A04,0.9617,5.22
+c25,similar_different,How many units are available at listing S8110-A06?,miss,units:S8110-A06,seed08,How many units are available at listing S8110-A08?,units:S8110-A08,0.9929,5.16
+c26,similar_different,What is the address of listing S8110-A06?,miss,address:S8110-A06,seed07,What is the address of listing S8110-A07?,address:S8110-A07,0.9818,4.84
+c27,similar_different,What is the address of listing S8110-A08?,miss,address:S8110-A08,seed07,What is the address of listing S8110-A07?,address:S8110-A07,0.9823,4.75
+c28,similar_different,How many units are available at listing S8110-A09?,miss,units:S8110-A09,seed08,How many units are available at listing S8110-A08?,units:S8110-A08,0.994,5.26
+c29,similar_different,Who is the landlord for listing S8110-A10?,miss,landlord:S8110-A10,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.9841,4.62
+c30,similar_different,Is listing S8110-A05 still available?,miss,available:S8110-A05,seed10,Is listing S8110-A10 still available?,available:S8110-A10,0.9491,5.63
+c31,unrelated,What is the maximum security deposit allowed in California?,miss,none,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.2616,123.52
+c32,unrelated,How do I report a landlord for housing discrimination?,miss,none,seed09,Who is the landlord for listing S8110-A09?,landlord:S8110-A09,0.5596,6.9
+c33,unrelated,What is the difference between a lease and a month-to-month rental agreement?,miss,none,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.3008,6.02
+c34,unrelated,Can a landlord enter my apartment without notice?,miss,none,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.4216,116.25
+c35,unrelated,How does rent control work in San Jose?,miss,none,seed09,Who is the landlord for listing S8110-A09?,landlord:S8110-A09,0.4553,7.01
+c36,unrelated,What documents do I need to apply for an apartment?,miss,none,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.3949,118.22
+c37,unrelated,How should I word a 30-day notice to vacate?,miss,none,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.1856,8.19
+c38,unrelated,What is a co-signer on a lease?,miss,none,seed09,Who is the landlord for listing S8110-A09?,landlord:S8110-A09,0.4636,8.18
+c39,unrelated,Are pets allowed under the San Jose tenant ordinance?,miss,none,seed06,Who is the landlord for listing S8110-A06?,landlord:S8110-A06,0.4028,6.86
+c40,unrelated,How can I dispute a late fee on my rent?,miss,none,seed09,Who is the landlord for listing S8110-A09?,landlord:S8110-A09,0.2924,6.12
