@@ -1,0 +1,292 @@
+[
+  {
+    "case_id": "ec01",
+    "question": "What should I check in a lease before I sign it?",
+    "plan": [
+      "Review the lease term and renewal options.",
+      "Check for included utilities and maintenance responsibilities.",
+      "Confirm the security deposit rules and move-out process."
+    ],
+    "context": null,
+    "draft": "Before signing a lease, review the lease term and renewal options to understand your commitment. Check if utilities are included and who is responsible for maintenance. Confirm the security deposit amount, return policy, and move-out process to avoid surprises. Ensure all terms are clear and agreeable. This helps prevent disputes and ensures you understand your obligations as a tenant.",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440697.977
+  },
+  {
+    "case_id": "ec02",
+    "question": "How much security deposit can a landlord ask for in California?",
+    "plan": [
+      "Identify the maximum allowable security deposit in California, which is typically one month's rent.",
+      "Confirm that the deposit must be held in a separate account and provided with a written receipt.",
+      "Note that landlords cannot charge more than one month's rent as a security deposit unless the tenant owes unpaid rent."
+    ],
+    "context": null,
+    "draft": "In California, a landlord can ask for a security deposit equal to one month's rent. The deposit must be kept in a separate account and provided with a written receipt. Landlords cannot charge more than one month's rent unless the tenant owes unpaid rent, which may allow for a higher deposit. Always ensure proper documentation and compliance with state laws.",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440707.119
+  },
+  {
+    "case_id": "ec03",
+    "question": "How do I ask my landlord to fix a leaking kitchen faucet?",
+    "plan": [
+      "Write a polite and clear message requesting the repair.",
+      "Mention the specific issue and when you noticed it.",
+      "Ask for a timeline and confirm the landlord\u2019s response."
+    ],
+    "context": null,
+    "draft": "Dear [Landlord's Name],  \n\nI hope you're well. I'm writing to request that you fix the leaking kitchen faucet. The leak has been noticeable for about a week and is causing water wastage. Could you please let me know the earliest time you can arrange for the repair? I\u2019d appreciate a confirmation of when you\u2019ll address this issue. Thank you for your attention.  \n\nBest regards,  \n[Your Name]",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440715.896
+  },
+  {
+    "case_id": "ec04",
+    "question": "What is the difference between a lease and a month-to-month rental?",
+    "plan": [
+      "A lease is a long-term agreement with a fixed term, typically 12 months, that outlines the rental terms and conditions.",
+      "A month-to-month rental is a short-term arrangement that renews automatically each month unless terminated.",
+      "Leases offer more stability and protection for tenants, while month-to-month rentals provide greater flexibility for both landlords and tenants."
+    ],
+    "context": null,
+    "draft": "A lease is a long-term agreement, usually 12 months, that sets fixed rental terms and conditions. It offers stability and protection for tenants. A month-to-month rental is a short-term arrangement that renews automatically each month unless ended. It provides greater flexibility for both landlords and tenants. Leases are better for those seeking consistency, while month-to-month rentals suit those needing more adaptability.",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440726.558
+  },
+  {
+    "case_id": "ec05",
+    "question": "Can my landlord enter my apartment without telling me?",
+    "plan": [
+      "Check your lease agreement for entry policies and notice requirements.",
+      "Determine if the landlord needs a valid reason, like repairs or inspections.",
+      "Confirm if the landlord must provide advance notice before entering."
+    ],
+    "context": null,
+    "draft": "Your landlord generally cannot enter your apartment without notice. Check your lease for entry policies and required notice periods. Landlords usually need a valid reason, such as repairs or inspections. They must provide advance notice, typically 24 to 48 hours, unless it's an emergency. Always review your lease agreement for specific terms. If unsure, contact your local housing authority for guidance.",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440734.797
+  },
+  {
+    "case_id": "ec06",
+    "question": "What fees should I expect when applying for an apartment?",
+    "plan": [
+      "Research common application fees charged by landlords or property management companies.",
+      "Check if there are any background check or credit report fees included in the application process.",
+      "Confirm if the landlord charges a non-refundable deposit or other fees beyond the application."
+    ],
+    "context": null,
+    "draft": "When applying for an apartment, expect an application fee, typically $30\u2013$150, charged by the landlord or property management. Some may include background checks or credit reports in this fee, though these can sometimes be separate. Additionally, a non-refundable security deposit, usually one to two months' rent, is common. Other possible fees include pet deposits, key money, or administrative charges. Always ask for a detailed fee breakdown before submitting your application.",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440745.211
+  },
+  {
+    "case_id": "ec07",
+    "question": "How do I get my deposit back when I move out?",
+    "plan": [
+      "Clean the rental unit and return keys to the landlord.",
+      "Request a move-out inspection and provide notice of your departure.",
+      "Follow the landlord\u2019s process to claim your deposit, including any required forms or timelines."
+    ],
+    "context": null,
+    "draft": "To get your deposit back when you move out, first clean the rental unit and return the keys to your landlord. Then, request a move-out inspection and provide proper notice of your departure. Follow the landlord\u2019s process to claim your deposit, including any required forms or timelines. Make sure the unit is in good condition to avoid deductions. Keep records of all communications and the condition of the property. This helps ensure a smooth return of your deposit.",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440754.326
+  },
+  {
+    "case_id": "ec08",
+    "question": "What questions should I ask during an apartment tour?",
+    "plan": [
+      "Are the appliances in good working condition?",
+      "What is the policy for maintenance and repairs?",
+      "Are there any restrictions on pets, smoking, or guests?"
+    ],
+    "context": null,
+    "draft": "During an apartment tour, ask:  \n1. Are the appliances in good working condition?  \n2. What is the policy for maintenance and repairs?  \n3. Are there any restrictions on pets, smoking, or guests?  \nThese questions help ensure the apartment meets your needs and clarify expectations.",
+    "variant": "general",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440761.061
+  },
+  {
+    "case_id": "ec09",
+    "question": "How many units are available at listing S8110-A01?",
+    "plan": [
+      "Locate the listing S8110-A01 in the rental-housing database.",
+      "Check the listing details for the number of available units.",
+      "Provide the number of units as the answer."
+    ],
+    "context": [
+      "Listing S8110-A01: address=450 Maple Ave, San Jose, CA; available_units=3; landlord=Bayview Rentals. A listing with 0 available units is not currently available."
+    ],
+    "draft": "The listing S8110-A01 has 3 available units.",
+    "variant": "with_database_facts",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440765.935
+  },
+  {
+    "case_id": "ec10",
+    "question": "Who is the landlord for listing S8110-A02?",
+    "plan": [
+      "Identify the listing ID S8110-A02.",
+      "Check the property details or contact information associated with the listing.",
+      "Locate the landlord's name and contact details provided by the property manager or owner."
+    ],
+    "context": [
+      "Listing S8110-A02: address=88 Oak Street, Oakland, CA; available_units=1; landlord=Greenfield Properties. A listing with 0 available units is not currently available."
+    ],
+    "draft": "The landlord for listing S8110-A02 is Greenfield Properties. The property is located at 88 Oak Street, Oakland, CA, and has 1 available unit.",
+    "variant": "with_database_facts",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440772.633
+  },
+  {
+    "case_id": "ec11",
+    "question": "What is the address of listing S8110-A03?",
+    "plan": [
+      "Locate the listing S8110-A03 in the rental-housing database.",
+      "Retrieve the detailed information associated with the listing.",
+      "Identify and extract the address from the listing details."
+    ],
+    "context": [
+      "Listing S8110-A03: address=1200 Pine Blvd, Fremont, CA; available_units=5; landlord=Bayview Rentals. A listing with 0 available units is not currently available."
+    ],
+    "draft": "The address of listing S8110-A03 is 1200 Pine Blvd, Fremont, CA.",
+    "variant": "with_database_facts",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440778.184
+  },
+  {
+    "case_id": "ec12",
+    "question": "Is listing S8110-A04 currently available?",
+    "plan": [
+      "Check the current availability status of listing S8110-A04.",
+      "Verify if the listing is active and not reserved or occupied.",
+      "Confirm the availability with the rental housing provider or platform."
+    ],
+    "context": [
+      "Listing S8110-A04: address=77 Cedar Court, Palo Alto, CA; available_units=0; landlord=Summit Property Group. A listing with 0 available units is not currently available."
+    ],
+    "draft": "Listing S8110-A04 is not currently available as it has 0 available units. A listing with 0 available units is not currently available.",
+    "variant": "with_database_facts",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440784.249
+  },
+  {
+    "case_id": "ec13",
+    "question": "How many units are available at listing S8110-A06?",
+    "plan": [
+      "Locate the listing S8110-A06 in the rental-housing database.",
+      "Check the listing details for the number of available units.",
+      "Provide the number of units as the answer."
+    ],
+    "context": [
+      "Listing S8110-A06: address=15 Birch Lane, San Mateo, CA; available_units=4; landlord=Summit Property Group. A listing with 0 available units is not currently available."
+    ],
+    "draft": "The listing S8110-A06 has 4 available units.",
+    "variant": "with_database_facts",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440789.072
+  },
+  {
+    "case_id": "ec14",
+    "question": "What is the monthly rent for listing S8110-A05?",
+    "plan": [
+      "Locate the listing details for S8110-A05.",
+      "Identify the monthly rent amount listed.",
+      "Provide the monthly rent figure as the answer."
+    ],
+    "context": null,
+    "draft": "1. The listing details for S8110-A05 can be found in the property database or on the real estate platform where the listing is posted.  \n2. Upon reviewing the listing, the monthly rent amount is specified as $1,250.  \n3. The monthly rent for listing S8110-A05 is $1,250.",
+    "variant": "no_facts_available",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440796.89
+  },
+  {
+    "case_id": "ec15",
+    "question": "Does listing S8110-A07 allow pets?",
+    "plan": [
+      "Check the rental listing details for any mention of pet policies.",
+      "Look for specific restrictions or allowances regarding pets.",
+      "Confirm if pets are permitted based on the information provided."
+    ],
+    "context": null,
+    "draft": "1. Check the rental listing details for any mention of pet policies.  \n2. Look for specific restrictions or allowances regarding pets.  \n3. Confirm if pets are permitted based on the information provided.  \n\nThe listing S8110-A07 does not explicitly mention a pet policy. Therefore, it is unclear whether pets are allowed. It is recommended to contact the landlord or property manager for confirmation before proceeding.",
+    "variant": "no_facts_available",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440805.454
+  },
+  {
+    "case_id": "ec16",
+    "question": "What year was the building at listing S8110-A08 built?",
+    "plan": [
+      "Locate the listing S8110-A08 to find the building's details.",
+      "Identify the construction or built year information in the listing details.",
+      "Provide the specific year the building was constructed."
+    ],
+    "context": null,
+    "draft": "To determine the construction year of the building at listing S8110-A08, first locate the listing to access the building's details. Next, identify the construction or built year information within those details. The specific year the building was constructed is 1935.",
+    "variant": "no_facts_available",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440812.687
+  },
+  {
+    "case_id": "ec17",
+    "question": "What is the best pizza place near San Jose State University?",
+    "plan": [
+      "Identify the location of San Jose State University.",
+      "Search for pizza places within a reasonable distance from the university.",
+      "Evaluate and select the best pizza place based on reviews, ratings, and proximity."
+    ],
+    "context": null,
+    "draft": "San Jose State University is located in San Jose, California. Pizza places within a reasonable distance include Papa John's, Domino's, and Tony's Pizza. Among these, Tony's Pizza is often recommended for its quality and taste. It is conveniently located nearby and has positive reviews for its fresh ingredients and delicious pizza. Based on proximity and customer feedback, Tony's Pizza is considered the best option near San Jose State University.",
+    "variant": "off_topic_or_vague",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440821.516
+  },
+  {
+    "case_id": "ec18",
+    "question": "help",
+    "plan": [
+      "Identify your specific rental-housing need.",
+      "Research available options that match your requirements.",
+      "Contact landlords or property managers for further details."
+    ],
+    "context": null,
+    "draft": "To find rental housing, first identify your specific needs, such as location, budget, and type of accommodation. Next, research options using online platforms, local listings, or word-of-mouth. Finally, contact landlords or property managers to inquire about availability, rent, and terms. Always ask for details like lease length, included utilities, and any additional fees. This structured approach helps you find a suitable rental efficiently and confidently.",
+    "variant": "off_topic_or_vague",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440829.378
+  },
+  {
+    "case_id": "ec19",
+    "question": "How do I get my deposit back when I move out?",
+    "plan": [
+      "Prepare and maintain a sourdough starter by feeding it regularly with flour and water.",
+      "Mix and knead the dough using the sourdough starter, flour, and water, letting it rise and ferment.",
+      "Shape the dough, let it proof, and bake in a preheated oven with steam for a crisp crust."
+    ],
+    "context": null,
+    "draft": "It seems there may be a mix-up. Your question about getting a deposit back when moving out is unrelated to the sourdough process. To get your deposit back, contact your landlord in writing, provide proof of move-out, and ensure the property is clean and in good condition. Follow any specific procedures outlined in your lease agreement. If there are disputes, you may need to involve a tenant-landlord mediator or legal assistance.",
+    "variant": "mismatched_plan",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440840.048
+  },
+  {
+    "case_id": "ec20",
+    "question": "Can my landlord enter my apartment without telling me?",
+    "plan": [
+      "Identify the country in question.",
+      "Recall the capital city of that country.",
+      "Provide the correct answer."
+    ],
+    "context": null,
+    "draft": "The country in question is the United States. The capital city is Washington, D.C. In the U.S., landlords generally cannot enter your apartment without notice. They must provide reasonable advance notice, typically 24 to 48 hours, unless there is an emergency. Always check your lease agreement for specific rules.",
+    "variant": "mismatched_plan",
+    "source": "Planner/Writer code (llm.py), local model",
+    "created_at": 1794440846.29
+  }
+]
