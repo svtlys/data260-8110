@@ -1,0 +1,228 @@
+{
+  "cache_miss": {
+    "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+    "path": "cache_miss",
+    "failing_stage": null,
+    "error": null,
+    "spans": [
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "request",
+        "start": "2026-11-11T23:09:32.574+00:00",
+        "end": "2026-11-11T23:09:43.934+00:00",
+        "start_ts": 1794438572.574493,
+        "end_ts": 1794438583.934629,
+        "duration_ms": 11360.14,
+        "status": "ok",
+        "attrs": {
+          "path": "cache_miss",
+          "approved": true
+        }
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "cache_lookup",
+        "start": "2026-11-11T23:09:32.574+00:00",
+        "end": "2026-11-11T23:09:32.988+00:00",
+        "start_ts": 1794438572.5745,
+        "end_ts": 1794438572.988036,
+        "duration_ms": 413.54,
+        "status": "ok",
+        "attrs": {
+          "path": "cache_miss",
+          "cache_hit": false
+        }
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "queue_inbox",
+        "start": "2026-11-11T23:09:33.054+00:00",
+        "end": "2026-11-11T23:09:33.563+00:00",
+        "start_ts": 1794438573.054595,
+        "end_ts": 1794438573.563693,
+        "duration_ms": 509.1,
+        "status": "ok",
+        "attrs": {
+          "topic": "s8110_inbox",
+          "partition": 0,
+          "offset": 19
+        }
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "planner",
+        "start": "2026-11-11T23:09:33.566+00:00",
+        "end": "2026-11-11T23:09:40.802+00:00",
+        "start_ts": 1794438573.566631,
+        "end_ts": 1794438580.802204,
+        "duration_ms": 7235.57,
+        "status": "ok"
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "queue_tasks",
+        "start": "2026-11-11T23:09:40.804+00:00",
+        "end": "2026-11-11T23:09:41.297+00:00",
+        "start_ts": 1794438580.804019,
+        "end_ts": 1794438581.297773,
+        "duration_ms": 493.75,
+        "status": "ok",
+        "attrs": {
+          "topic": "s8110_tasks",
+          "partition": 1,
+          "offset": 12
+        }
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "writer",
+        "start": "2026-11-11T23:09:41.300+00:00",
+        "end": "2026-11-11T23:09:43.393+00:00",
+        "start_ts": 1794438581.300999,
+        "end_ts": 1794438583.393695,
+        "duration_ms": 2092.7,
+        "status": "ok"
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "queue_drafts",
+        "start": "2026-11-11T23:09:43.394+00:00",
+        "end": "2026-11-11T23:09:43.438+00:00",
+        "start_ts": 1794438583.394675,
+        "end_ts": 1794438583.438317,
+        "duration_ms": 43.64,
+        "status": "ok",
+        "attrs": {
+          "topic": "s8110_drafts",
+          "partition": 0,
+          "offset": 19
+        }
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "reviewer",
+        "start": "2026-11-11T23:09:43.443+00:00",
+        "end": "2026-11-11T23:09:43.443+00:00",
+        "start_ts": 1794438583.443188,
+        "end_ts": 1794438583.443279,
+        "duration_ms": 0.09,
+        "status": "ok"
+      },
+      {
+        "trace_id": "ed335dd4-9b6c-4d46-9844-44483e3588be",
+        "stage": "queue_final",
+        "start": "2026-11-11T23:09:43.443+00:00",
+        "end": "2026-11-11T23:09:43.923+00:00",
+        "start_ts": 1794438583.443903,
+        "end_ts": 1794438583.923462,
+        "duration_ms": 479.56,
+        "status": "ok",
+        "attrs": {
+          "topic": "s8110_final",
+          "partition": 0,
+          "offset": 19
+        }
+      }
+    ]
+  },
+  "cache_hit": {
+    "trace_id": "ad060304-fc2e-4d84-ab93-652914f49f33",
+    "path": "cache_hit",
+    "failing_stage": null,
+    "error": null,
+    "spans": [
+      {
+        "trace_id": "ad060304-fc2e-4d84-ab93-652914f49f33",
+        "stage": "request",
+        "start": "2026-11-11T23:09:43.936+00:00",
+        "end": "2026-11-11T23:09:44.233+00:00",
+        "start_ts": 1794438583.936357,
+        "end_ts": 1794438584.233375,
+        "duration_ms": 297.02,
+        "status": "ok",
+        "attrs": {
+          "path": "cache_hit",
+          "approved": true
+        }
+      },
+      {
+        "trace_id": "ad060304-fc2e-4d84-ab93-652914f49f33",
+        "stage": "cache_lookup",
+        "start": "2026-11-11T23:09:43.936+00:00",
+        "end": "2026-11-11T23:09:44.232+00:00",
+        "start_ts": 1794438583.936375,
+        "end_ts": 1794438584.232965,
+        "duration_ms": 296.59,
+        "status": "ok",
+        "attrs": {
+          "path": "cache_hit",
+          "cache_hit": true,
+          "similarity": 1.0
+        }
+      }
+    ]
+  },
+  "failed": {
+    "trace_id": "c7c6bafe-1f72-4922-9063-e217f13e0976",
+    "path": "cache_miss",
+    "failing_stage": "planner",
+    "error": "ValueError: inbox message has no question",
+    "spans": [
+      {
+        "trace_id": "c7c6bafe-1f72-4922-9063-e217f13e0976",
+        "stage": "request",
+        "start": "2026-11-11T23:09:44.233+00:00",
+        "end": "2026-11-11T23:10:10.320+00:00",
+        "start_ts": 1794438584.233643,
+        "end_ts": 1794438610.320492,
+        "duration_ms": 26086.85,
+        "status": "error",
+        "error": "TimeoutError: no final answer for c7c6bafe-1f72-4922-9063-e217f13e0976 within 25s - are planner.py, writer.py, reviewer.py running?"
+      },
+      {
+        "trace_id": "c7c6bafe-1f72-4922-9063-e217f13e0976",
+        "stage": "cache_lookup",
+        "start": "2026-11-11T23:09:44.233+00:00",
+        "end": "2026-11-11T23:09:45.237+00:00",
+        "start_ts": 1794438584.233643,
+        "end_ts": 1794438585.237105,
+        "duration_ms": 1003.46,
+        "status": "ok",
+        "attrs": {
+          "path": "cache_miss",
+          "cache_hit": false,
+          "similarity": 0.129
+        }
+      },
+      {
+        "trace_id": "c7c6bafe-1f72-4922-9063-e217f13e0976",
+        "stage": "queue_inbox",
+        "start": "2026-11-11T23:09:45.237+00:00",
+        "end": "2026-11-11T23:09:45.242+00:00",
+        "start_ts": 1794438585.23737,
+        "end_ts": 1794438585.242168,
+        "duration_ms": 4.8,
+        "status": "ok",
+        "attrs": {
+          "topic": "s8110_inbox",
+          "partition": 0,
+          "offset": 20
+        }
+      },
+      {
+        "trace_id": "c7c6bafe-1f72-4922-9063-e217f13e0976",
+        "stage": "planner",
+        "start": "2026-11-11T23:09:45.242+00:00",
+        "end": "2026-11-11T23:09:46.756+00:00",
+        "start_ts": 1794438585.242394,
+        "end_ts": 1794438586.756076,
+        "duration_ms": 1513.68,
+        "status": "error",
+        "error": "ValueError: inbox message has no question",
+        "attrs": {
+          "attempts": 3
+        }
+      }
+    ]
+  }
+}

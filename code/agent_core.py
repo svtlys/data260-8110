@@ -5,6 +5,7 @@ import threading
 import time
 
 from kafka_config import MAX_RETRIES, RETRY_BACKOFF_S, STATE_DIR, TOPIC_DEAD_LETTER
+from tracing import record_span
 
 CARRY = ("correlation_id", "entity_id", "run_id", "seq", "idx", "context")
 
@@ -75,9 +76,16 @@ def send_to_dead_letter(producer, log: logging.Logger, stage: str, msg, body, er
     log.info("DEAD-LETTER correlation_id=%s after %d attempts -> %s (%s)", record["correlation_id"], attempts, TOPIC_DEAD_LETTER, error)
 
 
+def trace_queue_wait(msg, body, cid, received: float) -> None:
+    """Span for the time the message waited in Kafka: from the producer's `sent_at` until this agent received it."""
+    sent = body.get("sent_at") if isinstance(body, dict) else None
+    if cid and isinstance(sent, (int, float)):
+        record_span(cid, "queue_" + msg.topic.split("_", 1)[1], sent, received, topic=msg.topic, partition=msg.partition, offset=msg.offset)
+
+
 def process_one(name, msg, consumer, producer, out_topic, transform, opts: dict) -> None:
     """Handle one record. Offset handling: commit after success / after dead-lettering, never before (unless commit_early)."""
-    log = logging.getLogger(name)
+    received, log = time.time(), logging.getLogger(name)
     body = decode(msg.value)
     cid = body.get("correlation_id") if isinstance(body, dict) else None
     log.info("RECEIVED  topic=%s partition=%d offset=%d key=%s correlation_id=%s", msg.topic, msg.partition, msg.offset, msg.key_text(), cid)
@@ -93,12 +101,15 @@ def process_one(name, msg, consumer, producer, out_topic, transform, opts: dict)
     if opts.get("commit_early"):
         consumer.commit(msg)
         log.info("COMMITTED offset %d BEFORE processing (unsafe variant)", msg.offset + 1)
+    trace_queue_wait(msg, body, cid, received)
+    started = time.time()
     result, error = run_with_retries(log, transform, body, msg, opts.get("max_retries"), opts.get("backoff", RETRY_BACKOFF_S))
+    record_span(cid, name, started, time.time(), "error" if error else "ok", error, attempts=opts.get("max_retries") if error else None)
     if error is not None:
         send_to_dead_letter(producer, log, name, msg, body, error, opts["max_retries"])
     elif result is not None:
         key = opts.get("key_fn", default_key)(result)
-        part, off = producer.send(out_topic, result, key=key)
+        part, off = producer.send(out_topic, {**result, "sent_at": time.time()}, key=key)
         log.info("SENT      topic=%s partition=%d offset=%d key=%s correlation_id=%s", out_topic, part, off, key, cid)
     if seen is not None and cid and error is None:
         seen.add(cid)

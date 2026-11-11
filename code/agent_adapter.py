@@ -5,6 +5,7 @@ import uuid
 
 from cache_config import PREFIX
 from kafka_config import TOPIC_FINAL, TOPIC_INBOX
+from tracing import record_span
 
 logger = logging.getLogger("agent_adapter")
 
@@ -22,13 +23,13 @@ class PipelineClient:
             self.consumer.poll(0.5)
         self.producer = KafkaProducer(client_id="hw9-client")
 
-    def ask(self, question: str, context: str | None = None) -> tuple:
-        """(answer, approved). Raises TimeoutError when the pipeline does not answer in time."""
-        cid = str(uuid.uuid4())
-        message = {"correlation_id": cid, "question": question, **({"context": context} if context else {})}
+    def ask(self, question: str, context: str | None = None, trace_id: str | None = None, timeout: float | None = None) -> tuple:
+        """(answer, approved). trace_id (the correlation_id) is generated when not given. Raises TimeoutError when there is no answer in time."""
+        cid = trace_id or str(uuid.uuid4())
+        message = {"correlation_id": cid, "question": question, "sent_at": time.time(), **({"context": context} if context else {})}
         self.producer.send(TOPIC_INBOX, message, key=cid)
         logger.info("PIPELINE sent question correlation_id=%s", cid)
-        deadline = time.time() + self.timeout
+        deadline = time.time() + (timeout or self.timeout)
         while time.time() < deadline:
             msg = self.consumer.poll(1.0)
             if msg is None:
@@ -38,12 +39,14 @@ class PipelineClient:
             except ValueError:
                 continue
             if body.get("correlation_id") == cid:
+                if isinstance(body.get("sent_at"), (int, float)):
+                    record_span(cid, "queue_final", body["sent_at"], time.time(), topic=TOPIC_FINAL, partition=msg.partition, offset=msg.offset)
                 logger.info("PIPELINE final status=%s correlation_id=%s", body.get("status"), cid)
                 return body.get("answer", ""), body.get("status") == "approved"
-        raise TimeoutError(f"no final answer for {cid} within {self.timeout:.0f}s - are planner.py, writer.py, reviewer.py running?")
+        raise TimeoutError(f"no final answer for {cid} within {timeout or self.timeout:.0f}s - are planner.py, writer.py, reviewer.py running?")
 
-    def __call__(self, question: str, context: str | None = None) -> tuple:
-        return self.ask(question, context)
+    def __call__(self, question: str, context: str | None = None, trace_id: str | None = None) -> tuple:
+        return self.ask(question, context, trace_id)
 
     def close(self) -> None:
         self.consumer.close()
