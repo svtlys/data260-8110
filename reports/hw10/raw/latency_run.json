@@ -1,0 +1,133 @@
+{
+  "requests": 50,
+  "confirmed_cache_miss_by_span": 50,
+  "excluded_cache_hits": [],
+  "failed_requests": [],
+  "warmup": {
+    "trace_id": "c28c1672-8285-43d8-b24b-703b661957b5",
+    "question": "What does 'joint and several liability' mean on a shared lease?",
+    "cached": false
+  },
+  "table": [
+    {
+      "stage": "Cache lookup",
+      "p50_ms": 305.3,
+      "p95_ms": 406.8,
+      "pct_of_end_to_end": 0.9,
+      "n": 50
+    },
+    {
+      "stage": "Planner",
+      "p50_ms": 3856.8,
+      "p95_ms": 5043.6,
+      "pct_of_end_to_end": 11.4,
+      "n": 50
+    },
+    {
+      "stage": "Writer",
+      "p50_ms": 6284.3,
+      "p95_ms": 7708.4,
+      "pct_of_end_to_end": 18.5,
+      "n": 50
+    },
+    {
+      "stage": "Reviewer",
+      "p50_ms": 0.0,
+      "p95_ms": 0.1,
+      "pct_of_end_to_end": 0.0,
+      "n": 50
+    },
+    {
+      "stage": "Queue wait (total)",
+      "p50_ms": 27.2,
+      "p95_ms": 40.5,
+      "pct_of_end_to_end": 0.1,
+      "n": 50
+    },
+    {
+      "stage": "Evaluation",
+      "p50_ms": 24552.9,
+      "p95_ms": 29509.8,
+      "pct_of_end_to_end": 69.1,
+      "n": 50
+    },
+    {
+      "stage": "Unattributed (client, database lookup, cache write)",
+      "p50_ms": null,
+      "p95_ms": null,
+      "pct_of_end_to_end": 0.0,
+      "n": 50
+    },
+    {
+      "stage": "End-to-end (cache miss)",
+      "p50_ms": 35176.7,
+      "p95_ms": 40836.2,
+      "pct_of_end_to_end": 100.0,
+      "n": 50
+    }
+  ],
+  "dominant_stage": {
+    "stage": "Evaluation",
+    "p50_ms": 24552.9,
+    "p95_ms": 29509.8,
+    "pct_of_end_to_end": 69.1,
+    "n": 50
+  },
+  "cache_hit_latency": {
+    "n": 10,
+    "p50_ms": 12.1,
+    "p95_ms": 160.1
+  },
+  "trace_ids": [
+    "b4af1634-1de2-459f-85b9-d5267894465b",
+    "e8e1e194-e051-430c-a7ef-49ab1976f83d",
+    "57e9790a-3e2b-4b6c-8a29-2dbc0702ac22",
+    "83a602fc-28ec-4f8c-8910-827deb1d532d",
+    "bd222e74-836b-4820-952e-00f0bd80ec24",
+    "aa4233d8-7a8e-4a13-80fd-93b935f9afae",
+    "16593180-6309-4005-9fc1-c55e30face20",
+    "527bb8b0-53a2-4fc9-baab-fac25ade3eea",
+    "67b76d34-2aa2-4162-84fd-5c2dc3e4daf7",
+    "3b7fa062-9604-4d9e-a23f-7d31651c05de",
+    "ae026d64-f5cd-4185-86fa-6c2c06a1edb9",
+    "a57169a9-d366-4ba0-970c-0edc3ad800ca",
+    "4c5e9ae0-fe8a-44bb-99e7-87dbac01ca90",
+    "41401ebb-d385-4f7c-a9e4-6595919dfced",
+    "00ecccce-9c6b-4d40-962d-2e6739e60ca3",
+    "6b2921cb-a0a7-4ab6-926e-df387f420a01",
+    "7889471b-3be8-40db-9b0a-58bf8c9cb6f4",
+    "9dcfdc9a-d832-433d-a536-03f96414b77e",
+    "e1ea3562-5d42-410e-b7ad-610fde8f5b4e",
+    "291e7812-0c31-4624-bec0-0733833b91e6",
+    "4abd376e-6bd5-4b75-b54b-c22138d2eaf1",
+    "50319267-9a4f-43e2-9e84-bf926827e823",
+    "8bb27923-e165-45b6-9f6b-36343cc2d2ed",
+    "9b35cab9-2677-4ff2-892a-a991fa568d1d",
+    "67c1ebba-16b7-476e-93a2-3e9f4442e50e",
+    "9b2c89d3-a7e8-484f-b946-cf992baee944",
+    "139ffe6f-d28a-4b39-9e31-0e4677056a19",
+    "3cccfde2-b706-4337-9973-139ac4921ad7",
+    "b3e7cec4-8a04-4fcf-aee6-09f64434729a",
+    "75cb7a9c-acec-41c6-aad8-68fa13ec7270",
+    "4e27de2c-422f-4258-a3b4-406cb6d34009",
+    "d388c44c-add6-43a3-9c01-c4ebafc316a2",
+    "9b203a22-7525-43ba-88f3-80522666a964",
+    "c8121c8b-1975-4e02-8ce4-4ef2f806d0df",
+    "3f8852e6-0fce-4c97-9394-edecea69aa43",
+    "0dde71f7-0000-4cf8-854b-530bbf075cc6",
+    "05f73bbf-2509-49ad-a789-674fcb148671",
+    "075f5bb8-a2c3-454e-a2fd-da65f02ca29f",
+    "13037397-e589-401d-b2cb-54fceef8a190",
+    "13d81049-7da1-47da-9cb3-fd7c2bd6bdac",
+    "f6613ba3-0a66-4fd0-9d4e-0213df46b9ec",
+    "96739915-96c6-4307-a0f1-88c1a4b535f9",
+    "f762daac-5b9f-4ec1-be35-f08741b53631",
+    "e4b92d7e-c4ff-4090-856a-4bb6c37e878f",
+    "670a2628-d485-4e9c-9bb8-a6223cde0b52",
+    "09248f40-8338-4b04-8277-2185fd72bd53",
+    "d0ab4044-37ea-467b-a5d2-1be502f7b9c0",
+    "095a2f71-99f1-41fa-ac66-f250ddee3631",
+    "66d667bd-8c8d-4c2a-83b3-e1d6c30d363a",
+    "4180b3d5-5447-4297-b1e2-e5f9e57ef8b0"
+  ]
+}

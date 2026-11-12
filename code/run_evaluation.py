@@ -27,6 +27,7 @@ def main() -> int:
     service, store, client = build_service()
     collector, judge, records = make_collector(), DeepEvalJudge(), []
     print(f"student: Alyssa Gomez  SID4={SID4}  judge=local Ollama model via DeepEval GEval")
+    print(f"cleared {store.clear()} cached answers so that every question takes the full Kafka pipeline")
     for question in QUESTIONS:
         result = service.ask(question)
         if result.is_cached:

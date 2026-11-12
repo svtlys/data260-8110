@@ -1,0 +1,83 @@
+{
+  "student": "Alyssa Gomez",
+  "sid4": "8110",
+  "prefix": "s8110",
+  "seed": 8110,
+  "verify_seed": 268110,
+  "git_commit": "e6a900b910231c05e485b63cbd37a784d9be66f9",
+  "timestamp": "2026-11-12T05:36:12+00:00",
+  "code_sha256": "c244432ab86cabd6c8b29a9b21846d2c132e79436a2811bc0fca5603f7924070",
+  "summary": {
+    "PASS": 11,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "section 0 values",
+      "status": "PASS",
+      "detail": "{'SID4': '8110', 'PORT_BASE': 8010, 'PREFIX': 's8110', 'SEED': 8110, 'VERIFY_SEED': 268110, 'DOMAIN_ID': 6}",
+      "seconds": 0.0
+    },
+    {
+      "name": "offline unit tests",
+      "status": "PASS",
+      "detail": "offline tests (tracing, evaluator, judge validation, latency, dashboard): 38 passed, 1 warning in 1.57s",
+      "seconds": 3.1
+    },
+    {
+      "name": "part 4.1: span format and stages",
+      "status": "PASS",
+      "detail": "619 spans, 73 traces, stages ['cache_lookup', 'evaluation', 'planner', 'queue_drafts', 'queue_final', 'queue_inbox', 'queue_tasks', 'request', 'reviewer', 'writer'], malformed spans: 0",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 4.2: three required traces",
+      "status": "PASS",
+      "detail": "hit ['cache_lookup', 'request']; miss ['cache_lookup', 'planner', 'queue_drafts', 'queue_final', 'queue_inbox', 'queue_tasks', 'request', 'reviewer', 'writer']; failed at 'planner' (ValueError: inbox message has no question)",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 2: evaluation results",
+      "status": "PASS",
+      "detail": "5 end-to-end evaluations, scores in 1-5, each has an evaluation span; final-minus-draft differences: [0.0, 0.0, 0.0, 0.0, 0.0]",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 3.1: 20 frozen drafts and hand labels",
+      "status": "PASS",
+      "detail": "20 frozen drafts, 20 hand labels (labels used: ['1', '2', '3', '4', '5'])",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 3.1: labels committed before judge scores",
+      "status": "PASS",
+      "detail": "human_labels.csv first committed 2026-11-11T23:54:52+00:00, judge scores written 2026-11-12T00:09:50+00:00",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 3.2/3.3: judge statistics recomputed",
+      "status": "PASS",
+      "detail": "recomputed from CSV: Spearman -0.1355, mean abs difference 1.1, cases changed across 3 runs 0/20 (all match saved statistics)",
+      "seconds": 0.5
+    },
+    {
+      "name": "part 4.3: 50-request latency table",
+      "status": "PASS",
+      "detail": "50 confirmed cache misses; recomputed end-to-end p50 35176.7 ms; shares sum to 100.0%; dominant Evaluation (69.1%); cache-hit latency kept separate (n=10)",
+      "seconds": 0.0
+    },
+    {
+      "name": "part 1: dashboard files",
+      "status": "PASS",
+      "detail": "dashboard.py and dashboard_data.py present; uses st.cache_data and st.cache_resource (screenshots are in the report)",
+      "seconds": 0.0
+    },
+    {
+      "name": "application code unchanged by verification",
+      "status": "PASS",
+      "detail": "sha256 c244432ab86cabd6...",
+      "seconds": 0.0
+    }
+  ]
+}
