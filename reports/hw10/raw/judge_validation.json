@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "n_cases": 20,
+    "agreement_run1": {
+      "spearman_rho": -0.1355,
+      "spearman_p": 0.569,
+      "mean_abs_difference": 1.1,
+      "mean_signed_difference_judge_minus_human": 0.86
+    },
+    "agreement_run1_rounded_to_integers": {
+      "spearman_rho": -0.0039,
+      "spearman_p": 0.9869,
+      "mean_abs_difference": 1.1,
+      "mean_signed_difference_judge_minus_human": 0.9
+    },
+    "agreement_mean_of_runs": {
+      "spearman_rho": -0.1355,
+      "spearman_p": 0.569,
+      "mean_abs_difference": 1.1,
+      "mean_signed_difference_judge_minus_human": 0.86
+    },
+    "repeatability": {
+      "runs": 3,
+      "cases_with_any_change": 0,
+      "pct_cases_with_any_change": 0.0,
+      "pairwise_comparisons": 60,
+      "pairs_that_differ": 0,
+      "mean_abs_change": 0.0,
+      "max_abs_change": 0.0
+    },
+    "repeatability_rounded_to_integers": {
+      "runs": 3,
+      "cases_with_any_change": 0,
+      "pct_cases_with_any_change": 0.0,
+      "pairwise_comparisons": 60,
+      "pairs_that_differ": 0,
+      "mean_abs_change": 0.0,
+      "max_abs_change": 0
+    }
+  },
+  "labels": "labels committed at 2026-11-11 15:54:52",
+  "judge": {
+    "framework": "deepeval GEval",
+    "deepeval_version": "4.3.4",
+    "judge_model": "qwen3:8b",
+    "temperature": 0.0,
+    "seed": 8110,
+    "think": false,
+    "num_predict": 400,
+    "timeout_s": 90.0,
+    "scale": "1-5 = 1 + 4 * GEval score (0-1)",
+    "evaluation_steps": {
+      "plan_quality": [
+        "Read the renter's question (input) and the plan (actual output).",
+        "Check that the plan breaks the question into concrete steps that would lead to a useful answer.",
+        "Check that the steps are specific to this question (not generic filler), logically ordered and not redundant.",
+        "Check that no step is unrelated to the question or impossible to carry out.",
+        "Give a low score to a useless or irrelevant plan, a middle score to an acceptable but generic plan, and a high score to a clear, specific, well-ordered plan."
+      ],
+      "writer_helpfulness": [
+        "Read the renter's question (input) and the draft answer (actual output).",
+        "Check that the draft answers the question that was asked, directly and without padding.",
+        "Check that the statements are accurate. If facts are given in the context, the draft must agree with them and must not invent facts that are not in them; a contradiction or an invented fact deserves a low score.",
+        "Check that the draft is practical: a renter could act on it.",
+        "Give a low score to a wrong, irrelevant or unusable draft, a middle score to a partly useful one, and a high score to an accurate, complete and practical one."
+      ],
+      "final_helpfulness": [
+        "Read the renter's question (input) and the final answer (actual output).",
+        "Check that the answer is relevant: it addresses the question that was asked.",
+        "Check that the answer is helpful: complete enough, clear, concise and practical.",
+        "If facts are given in the context, the answer must agree with them and must not add facts that are not in them.",
+        "Give a low score to an irrelevant, wrong or unhelpful answer, a middle score to a partly helpful one, and a high score to a relevant, accurate and helpful one."
+      ]
+    }
+  },
+  "metric": "writer_helpfulness",
+  "ran_at": 1794442190.921514
+}
