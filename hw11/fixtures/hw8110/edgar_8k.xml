@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FICTIONAL test fixture for DATA260 HW11. Harbor Grocers (HRBR), Carousel Online (CRSL), Glowra Beauty (GLWR) and Voltaic Semiconductors (VLTX) are fictional; these filings do not exist. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EDGAR 8-K filings (fictional fixture)</title>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999911-26-000201</id>
+    <updated>2026-11-19T16:10:00-05:00</updated>
+    <title>CRSL: 8-K - Third quarter results</title>
+    <summary>(Fictional.) Carousel Online Inc. Item 2.02 Results of Operations and Financial Condition. Q3 revenue $9.8B, up 14 percent year over year.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999911/000999991126000201/0009999911-26-000201-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999911-26-000202</id>
+    <updated>2026-11-19T18:00:00-05:00</updated>
+    <title>CRSL: 8-K/A - Amendment to third quarter report</title>
+    <summary>(Fictional.) Carousel Online Inc. Amendment No. 1 to the 8-K filed November 19, to correct an exhibit number. No other changes.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999911/000999991126000202/0009999911-26-000202-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999912-26-000301</id>
+    <updated>2026-11-18T08:00:00-05:00</updated>
+    <title>HRBR: 8-K - Current report, acquisition</title>
+    <summary>(Fictional.) Harbor Grocers Inc. Item 2.01 Completion of Acquisition: agreement to acquire a regional grocery chain for $640M in cash.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999912/000999991226000301/0009999912-26-000301-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999912-26-000302</id>
+    <updated>2026-11-17T17:00:00-05:00</updated>
+    <title>HRBR: 8-K - Current report, board change</title>
+    <summary>(Fictional.) Harbor Grocers Inc. Item 5.02: an independent member of the board of directors resigned for personal reasons, effective December 31. No disagreement with the company.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999912/000999991226000302/0009999912-26-000302-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999913-26-000401</id>
+    <updated>2026-11-19T07:30:00-05:00</updated>
+    <title>VLTX: 8-K - Current report, supply agreement</title>
+    <summary>(Fictional.) Voltaic Semiconductors Inc. Item 1.01 Entry into a Material Definitive Agreement: a three-year, $2.1B chip supply agreement with a major customer.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999913/000999991326000401/0009999913-26-000401-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999914-26-000501</id>
+    <updated>2026-11-19T12:00:00-05:00</updated>
+    <title>GLWR: 8-K - Current report, non-reliance</title>
+    <summary>(Fictional.) Glowra Beauty Inc. Item 4.02 Non-Reliance on Previously Issued Financial Statements: the audit committee concluded that prior quarterly statements should no longer be relied upon.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999914/000999991426000501/0009999914-26-000501-index.htm" rel="alternate"/>
+  </entry>
+</feed>

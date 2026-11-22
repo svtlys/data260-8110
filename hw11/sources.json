@@ -1,0 +1,76 @@
+{
+  "topic": "Material changes for a stock watchlist: large daily price moves and new SEC 8-K filings",
+  "user_agent": "DATA260-stock-watch/1.0 alyssa.m.gomez01@sjsu.edu",
+  "note": "Approved-source allowlist. watch.py refuses any URL whose host is not listed here. SEC asks automated clients to send a User-Agent with a contact email: put yours in user_agent above.",
+  "sources": [
+    {
+      "id": "prices_live",
+      "type": "stooq",
+      "modes": [
+        "live"
+      ],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": [
+        "ulta.us",
+        "amzn.us",
+        "nvda.us",
+        "wmt.us"
+      ],
+      "threshold_pct": 2.0,
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_live",
+      "type": "edgar",
+      "modes": [
+        "live"
+      ],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "form": "8-K",
+      "per_company": 5,
+      "ciks": {
+        "ULTA": "0001403568",
+        "AMZN": "0001018724",
+        "NVDA": "0001045810",
+        "WMT": "0000104169"
+      }
+    },
+    {
+      "id": "prices_demo",
+      "type": "stooq",
+      "modes": [
+        "fixtures"
+      ],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": [
+        "nbrx.us",
+        "cbds.us",
+        "lksp.us",
+        "hrbr.us",
+        "vltx.us",
+        "glwr.us"
+      ],
+      "threshold_pct": 2.0,
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_demo",
+      "type": "edgar",
+      "modes": [
+        "fixtures"
+      ],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "fixture": "edgar_8k.xml",
+      "ciks": {}
+    },
+    {
+      "id": "newswire_demo",
+      "type": "rss",
+      "modes": [
+        "fixtures"
+      ],
+      "url": "https://example-newswire.example/markets/feed.xml",
+      "fixture": "newswire.xml"
+    }
+  ]
+}
