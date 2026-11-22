@@ -27,7 +27,7 @@
       ],
       "url": "https://www.sec.gov/cgi-bin/browse-edgar",
       "form": "8-K",
-      "per_company": 5,
+      "per_company": 10,
       "ciks": {
         "ULTA": "0001403568",
         "AMZN": "0001018724",
